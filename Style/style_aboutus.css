@@ -114,7 +114,8 @@ figcaption {
     display: block;
     margin: 40px auto;
 }
-footer {
+
+/* footer {
     background: #01BFC4;
     display: flex;
     justify-content: space-between;
@@ -127,7 +128,7 @@ footer .logo2 {
 footer #iconos {
     display: flex;
     justify-content: center;
-}
+} */
 .icono {
     width: 60px;
     height: 60px;

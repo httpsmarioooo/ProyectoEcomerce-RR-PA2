@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Nosotros</title>
     <link rel="stylesheet" href="../Style/style_aboutus.css">
+    <link rel="stylesheet" href="/Style/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
 </head>
 <body>
     <header>
@@ -79,7 +82,9 @@
         </div>
     </section>
     <button type="button" id="contactenos">Contáctenos</button>
-    <footer>
+
+
+    <!-- <footer class="footer">
         <figure><img src="../Images/logo2.png" class="logo2"></figure>
         <div>
             <h4>Nuestras redes</h4>
@@ -91,7 +96,186 @@
             </div>
             <h5>© 2025 JOURNEY</h5>
         </div>
-    </footer>
+    </footer> -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-2 mb-4 d-none d-md-block">
+                        <img src="/Images/logo2.png" class="logo2" style="width: 100px; padding-top: 30px;">
+                    </div>
+
+
+                    <div class="col-lg-2 col-md-2 mb-4 d-none d-md-block">
+                        <h5 class="pt-3 mb-5">About Us</h5>
+                        <ul class="list-inline enlaces-footer">
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">Our company</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">Our Coffee</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">About Starbucks</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Acordeón para móviles -->
+                    <div class="col-lg-2 col-md-2 mb-4 d-block d-md-none">
+                        <h5 class="pt-3 mb-3">
+                            <button class="btn btn-link text-decoration-none text-white button-h5"
+                                data-bs-toggle="collapse" data-bs-target="#aboutUs" aria-expanded="false"
+                                aria-controls="aboutUs">
+                                <strong>About Us</strong>
+                            </button>
+                        </h5>
+                        <div id="aboutUs" class="collapse">
+                            <ul class="list-inline enlaces-footer">
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration  text-list-hover">Our company</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration  text-list-hover">Our Coffee</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration  text-list-hover">College Achievement Plan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 mb-4 me-2 d-none d-md-block">
+                        <!-- Lista estática para pantallas medianas o más grandes -->
+                        <h5 class="pt-3 mb-5">Careers</h5>
+                        <ul class="list-inline enlaces-footer">
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">Our company</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">Our Coffee</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="" class="list-decoration text-list-hover">About Starbucks</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+
+                    <!-- Acordeón para dispositivos móviles -->
+                    <div class="col-lg-2 col-md-2 mb-4 me-2 d-block d-md-none">
+                        <h5 class="pt-3 mb-3">
+                            <button class="btn btn-link text-decoration-none text-white button-h5"
+                                data-bs-toggle="collapse" data-bs-target="#careersAccordion" aria-expanded="false"
+                                aria-controls="careersAccordion">
+                                <strong>Careers</strong>
+                            </button>
+                        </h5>
+                        <div id="careersAccordion" class="collapse">
+                            <ul class="list-inline enlaces-footer">
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration text-list-hover">Culture and Values</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration text-list-hover">Inclusion, Diversity,
+                                        & Belonging</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="list-decoration text-list-hover">College Achievement
+                                        Plan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="redes d-flex justify-content-end">
+                    <ul class="list-inline d-flex">
+                        <li class="me-2"><box-icon name='spotify' size='md' type='logo' color='#ffffff'></box-icon></li>
+                        <li class="me-2"><box-icon name='facebook-circle' size='md' type='logo' color='#ffffff'></box-icon></li>
+                        <li class="me-2"><box-icon name='pinterest' size='md' type='logo' color='#ffffff'></box-icon></li>
+                        <li class="me-2"><box-icon name='instagram-alt' size='md' type='logo' color='#ffffff'></box-icon></li>
+                        <li class="me-2"><box-icon name='youtube' size='md' type='logo' type='logo' color='#ffffff'></box-icon></li>
+                        <li class="me-2"><box-icon type='logo' size='md' name='twitter' color='#ffffff'></box-icon></li>
+                    </ul>
+                </div>
+                <hr>
+                <div>
+                    <div class="referencias d-flex flex-wrap justify-content-between align-items-center gap-3 pb-3">
+                        <!-- Enlaces alineados a la izquierda -->
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#" class="list-decoration text-list-hover">Texto</a>
+                            <a href="#" class="list-decoration text-list-hover">Texto</a>
+                            <a href="#" class="list-decoration text-list-hover">Texto</a>
+                            <a href="#" class="list-decoration text-list-hover">Texto</a>
+                        </div>
+                
+                        <!-- Derechos alineados a la derecha -->
+                        <div class="text-end">
+                            <p class="derechosJourney mb-0">
+                                <strong>© 2025 JOURNEY</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+
+                
+                <!-- <div class="d-flex">
+                    <div>
+                        <ul class="list-inline">
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Privacy
+                                    Notice</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Consumer
+                                    Health Privacy Notice</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Terms
+                                    of
+                                    Use</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Do
+                                    not share my personal information</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">CA
+                                    Supply Chain Act</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Accessibility</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href=""
+                                    class="list-decoration text-list-footer text-muted text-list-hover color-footer">Cookie
+                                    Preferences</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            <!--FOOTER-->
+</footer>
+
     
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
 </body>
 </html>

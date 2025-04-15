@@ -1,0 +1,21 @@
+.text-list-footer:hover {
+    text-decoration: underline;
+  }
+  
+
+  footer{
+    background-color: rgb(56, 162, 186);
+    color: rgb(255, 255, 255);
+  }
+
+  .enlaces-footer a {
+    color: #ffffff; /* verde por ejemplo */
+    text-decoration: none; /* quita subrayado si quieres */
+  }
+
+  .referencias a{
+    color: #ffffff;
+    text-decoration: none; /* quita subrayado si quieres */
+  }
+
+
