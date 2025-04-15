@@ -1,10 +1,32 @@
+nav {
+    margin: auto 1em auto auto;
+}
+nav a {
+    position: relative;
+    padding: 0 3em;
+}
+
 .text-list-footer:hover {
     text-decoration: underline;
   }
+
+  #ingresar {
+    margin: auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2.5em;
+}
+#ingresar img {
+    padding-top: 2px;
+    height: 20px;
+    padding-left: 10px;
+}
   
 
   footer{
-    background-color: rgb(56, 162, 186);
+    background-color: #0184A9;
     color: rgb(255, 255, 255);
   }
 
@@ -18,4 +40,23 @@
     text-decoration: none; /* quita subrayado si quieres */
   }
 
+  .btn-Contactenos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
 
+.btn-contact{
+    background-color: #0184A9;
+    padding: 12px 24px;
+    border-radius:410px;
+    border: none;
+    color: white;
+}
+
+.btn-contact:hover{
+    background-color: #E3FCF9;
+    color:#0184A9;
+    border: 1px solid #0184A9;
+}

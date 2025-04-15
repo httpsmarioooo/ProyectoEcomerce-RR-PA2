@@ -16,14 +16,14 @@ header {
     width: 250px;
     margin: 1em 2em;
 }
-nav {
+/* nav {
     margin: auto 1em auto auto;
 }
 nav a {
     position: relative;
     padding: 0 3em;
-}
-#ingresar {
+} */
+/* #ingresar {
     margin: auto 10px;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ nav a {
     padding-top: 2px;
     height: 20px;
     padding-left: 10px;
-}
+} */
 h1 {
     text-align: center;
     margin-top: 1em;
@@ -110,10 +110,10 @@ figcaption {
 #rol {
     font-size: 14px;
 }
-#contactenos {
+/* #contactenos {
     display: block;
     margin: 40px auto;
-}
+} */
 
 /* footer {
     background: #01BFC4;
