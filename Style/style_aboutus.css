@@ -88,7 +88,7 @@ main img {
     padding: 5px;
     box-sizing: border-box;
 }
-.miembros {
+/* .miembros {
     align-items: center;
     width: 700px;
 }
@@ -97,11 +97,16 @@ main img {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 10%;
-}
-.foto {
+} */
+
+
+
+
+/* .foto {
     width: 150px;
     height: auto;
     padding: 10px 25px 20px;
+    border-radius: 50%;
 }
 figcaption {
     font-size: 16px;
@@ -109,7 +114,7 @@ figcaption {
 }
 #rol {
     font-size: 14px;
-}
+} */
 /* #contactenos {
     display: block;
     margin: 40px auto;

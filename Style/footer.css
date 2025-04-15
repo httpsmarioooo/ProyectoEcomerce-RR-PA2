@@ -25,6 +25,45 @@ nav a {
 }
   
 
+
+.fotos img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+  text-align: center;
+  margin: 20px;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+.miembros {
+  padding: 40px 20px;
+}
+
+.subtitulos-finales {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.rol {
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+}
+
+
   footer{
     background-color: #0184A9;
     color: rgb(255, 255, 255);
