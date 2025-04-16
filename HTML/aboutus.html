@@ -9,11 +9,71 @@
     <link rel="stylesheet" href="/Style/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
 </head>
 
 <body>
-    <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <img src="/Images/logo1.png" alt="Logo JOURNEY" style="height: 50px;" />
+
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Enlaces (ocultos en móviles) -->
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Inicio</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Productos</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Nosotros</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Contáctenos</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn-ingresar d-flex align-items-center">
+                          <strong>Ingresar</strong>
+                          <box-icon name="door-open" type="solid" color="#0184A9" class="ms-2"></box-icon>
+                        </a>
+                      </li>
+                </ul>
+            </div>
+    </nav>
+
+
+
+    <!-- Offcanvas para móviles -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Inicio</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Productos</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Nosotros</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Contáctenos</strong></a></li>
+                <hr>
+                <li class="nav-item">
+                    <a href="#" class="btnoff-ingresar d-flex align-items-center">
+                      <strong>Ingresar</strong>
+                      <box-icon name="door-open" type="solid" color="#ffffff" class="ms-2"></box-icon>
+                    </a>
+                  </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <header>
         <figure><img src="../Images/logo1.png" alt="Imagen no disponible" class="logo1"></figure>
         <nav>
             <a href="...">Inicio</a>
@@ -22,7 +82,7 @@
             <a href="...">Contáctenos</a>
         </nav>
         <button type="button" id="ingresar">Ingresar<img src="../Images/ingresar_img.png" id="icono-ing"></button>
-    </header>
+    </header> -->
     <h1>Acerca de Nosotros</h1>
     <main>
         <div>
@@ -63,41 +123,41 @@
         <div class="miembros">
             <h2 class="subtitulos-finales">Nuestro equipo</h2>
             <section class="equipo">
-              
-              <div class="fila fotos">
-                <figure>
-                  <img src="../Images/mj.jpg" alt="Foto de María González">
-                  <figcaption>María González</figcaption>
-                  <figcaption class="rol">Diseñadora UX/UI</figcaption>
-                </figure>
-                <figure>
-                  <img src="../Images/carlos.jpg" alt="Foto de Carlos Torres">
-                  <figcaption>Carlos Torres</figcaption>
-                  <figcaption class="rol">Desarrollador Frontend</figcaption>
-                </figure>
-                <figure>
-                  <img src="../Images/tatiana.png" alt="Foto de Tatiana Casas">
-                  <figcaption>Tatiana Casas</figcaption>
-                  <figcaption class="rol">Testing y Documentación</figcaption>
-                </figure>
-              </div>
-          
-              <div class="fila fotos">
-                <figure>
-                  <img src="../Images/gabriel.jpg" alt="Foto de Gabriel Pinilla">
-                  <figcaption>Gabriel Pinilla</figcaption>
-                  <figcaption class="rol">Desarrollador Backend</figcaption>
-                </figure>
-                <figure>
-                  <img src="../Images/daniela.jpg" alt="Foto de Daniela Santacruz">
-                  <figcaption>Daniela Santacruz</figcaption>
-                  <figcaption class="rol">Desarrolladora Frontend</figcaption>
-                </figure>
-              </div>
-          
+
+                <div class="fila fotos">
+                    <figure>
+                        <img src="../Images/mj.jpg" alt="Foto de María González">
+                        <figcaption>María González</figcaption>
+                        <figcaption class="rol">Diseñadora UX/UI</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../Images/carlos.jpg" alt="Foto de Carlos Torres">
+                        <figcaption>Carlos Torres</figcaption>
+                        <figcaption class="rol">Desarrollador Frontend</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../Images/tatiana.png" alt="Foto de Tatiana Casas">
+                        <figcaption>Tatiana Casas</figcaption>
+                        <figcaption class="rol">Testing y Documentación</figcaption>
+                    </figure>
+                </div>
+
+                <div class="fila fotos">
+                    <figure>
+                        <img src="../Images/gabriel.jpg" alt="Foto de Gabriel Pinilla">
+                        <figcaption>Gabriel Pinilla</figcaption>
+                        <figcaption class="rol">Desarrollador Backend</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../Images/daniela.jpg" alt="Foto de Daniela Santacruz">
+                        <figcaption>Daniela Santacruz</figcaption>
+                        <figcaption class="rol">Desarrolladora Frontend</figcaption>
+                    </figure>
+                </div>
+
             </section>
-          </div>
-          
+        </div>
+
     </section>
     <div class="btn-Contactenos">
         <button class="btn-contact" type="button"><strong>Contáctenos</strong></button>

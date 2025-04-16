@@ -1,30 +1,44 @@
-nav {
-    margin: auto 1em auto auto;
+.navbar{
+  background-color: #0184A9;
+  height: 100px;
 }
-nav a {
-    position: relative;
-    padding: 0 3em;
+
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+
+.navbar .nav-link:hover {
+  color: #E3FCF9;
 }
 
 .text-list-footer:hover {
     text-decoration: underline;
   }
 
-  #ingresar {
-    margin: auto 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10em;
-    height: 2.5em;
+.btn-ingresar{
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #0184A9;
 }
-#ingresar img {
-    padding-top: 2px;
-    height: 20px;
-    padding-left: 10px;
+
+.btnoff-ingresar {
+  background-color: #0184A9; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 6px 12px; /* Espaciado interior (más pequeño) */
+  border-radius: 20px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado */
+  display: inline-flex; /* No ocupar todo el espacio, solo lo necesario */
+  justify-content: center; /* Centrar el contenido (texto e ícono) */
+  align-items: center; /* Alinear verticalmente el texto y el ícono */
+}
+
+.btnoff-ingresar box-icon {
+  margin-left: 6px; /* Espacio entre el texto y el ícono */
 }
   
-
 
 .fotos img {
   width: 150px;
