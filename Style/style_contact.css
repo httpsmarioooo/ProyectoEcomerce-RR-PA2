@@ -811,4 +811,34 @@ footer{
       font-size: 12px;
       padding: 12px;
     }
-  }  
+  } 
+
+
+
+
+
+
+/*-------------------------- CSS de la alerta -----------------------*/
+.mi-popup {
+  background-color: #DCEFED;
+  border: 2px solid #02537D;
+  border-radius: 15px;
+}
+.mi-titulo {
+  font-family: 'Fredoka', sans-serif !important;
+  font-size: 24px;
+  color: #02537D;
+}
+.mi-subtitulo {
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 16px;
+  color: #02537D;
+}
+.mi-boton {
+  background-color: #01BFC4 !important;
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif !important;
+}
