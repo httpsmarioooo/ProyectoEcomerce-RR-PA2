@@ -1,0 +1,15 @@
+footer {
+    margin-top: 100px;
+    background-color: #0184a9;
+    color: rgb(255, 255, 255);
+  }
+  
+  .enlaces-footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .referencias a {
+    color: #ffffff;
+    text-decoration: none;
+  }

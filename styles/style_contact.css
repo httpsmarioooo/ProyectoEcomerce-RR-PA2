@@ -1,5 +1,4 @@
 /*IMPORTAR FUENTES*/
-
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap");
@@ -13,65 +12,6 @@ body {
   color: #000000;
   font-size: 16px;
   font-weight: 900;
-}
-
-/*SECCIÓN NAV*/
-
-.navbar {
-  background-color: #0184a9;
-  height: 100px;
-}
-
-.navbar .nav-link {
-  color: #ffffff;
-}
-
-.navbar .nav-link:hover {
-  color: #e3fcf9;
-}
-
-.text-list-footer:hover {
-  text-decoration: underline;
-}
-
-.btn-ingresar {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 10px;
-  text-decoration: none;
-  color: #0184a9;
-}
-
-.btnoff-ingresar {
-  background-color: #0184a9; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 6px 12px; /* Espaciado interior (más pequeño) */
-  border-radius: 20px; /* Bordes redondeados */
-  text-decoration: none; /* Quitar subrayado */
-  display: inline-flex; /* No ocupar todo el espacio, solo lo necesario */
-  justify-content: center; /* Centrar el contenido (texto e ícono) */
-  align-items: center; /* Alinear verticalmente el texto y el ícono */
-}
-
-.btnoff-ingresar box-icon {
-  margin-left: 6px; /* Espacio entre el texto y el ícono */
-}
-
-/*SECCIÓN FOOTER*/
-footer {
-  margin-top: 100px;
-  background-color: #0184a9;
-  color: rgb(255, 255, 255);
-}
-
-.enlaces-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.referencias a {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 /*-------------------------- CSS de la alerta -----------------------*/
