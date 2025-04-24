@@ -12,7 +12,7 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
         Swal.fire({
             title: '¡Bien hecho!',
             text: 'Tu mensaje fue enviado, Pronto nos contáctaremos contigo.',
-            imageUrl: '../Images/BLUET.png', //Imagen BlueT
+            imageUrl: '/assets/images/BLUET.png', //Imagen BlueT
             imageWidth: 80,
             imageHeight: 80,
             imageAlt: 'Ícono personalizado',
@@ -32,7 +32,7 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
         Swal.fire({
             title: 'Email inválido',
             text: 'Por favor revisa que el correo esté bien escrito.',
-            imageUrl: '../Images/BlueT-triste.png', //Imagen BlueT
+            imageUrl: '/assets/images/BlueT-triste.png', //Imagen BlueT
             imageWidth: 80,
             imageHeight: 80,
             imageAlt: 'Ícono personalizado',
