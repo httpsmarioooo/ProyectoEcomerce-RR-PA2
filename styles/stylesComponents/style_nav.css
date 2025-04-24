@@ -15,25 +15,3 @@
     text-decoration: underline;
   }
   
-  .btn-ingresar {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 10px;
-    text-decoration: none;
-    color: #0184a9;
-  }
-  
-  .btnoff-ingresar {
-    background-color: #0184a9; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 6px 12px; /* Espaciado interior (más pequeño) */
-    border-radius: 20px; /* Bordes redondeados */
-    text-decoration: none; /* Quitar subrayado */
-    display: inline-flex; /* No ocupar todo el espacio, solo lo necesario */
-    justify-content: center; /* Centrar el contenido (texto e ícono) */
-    align-items: center; /* Alinear verticalmente el texto y el ícono */
-  }
-  
-  .btnoff-ingresar box-icon {
-    margin-left: 6px; /* Espacio entre el texto y el ícono */
-  }
