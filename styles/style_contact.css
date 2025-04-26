@@ -73,6 +73,10 @@ body {
   font-family: "Fredoka";
  color: #02537D;
 }
+.wp a{
+  text-decoration: none;
+  color: #02537D;
+}
 @media screen and (max-width: 945px) {
   .form-container{
     flex-direction: column;
