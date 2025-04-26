@@ -1,0 +1,87 @@
+/*SECCIÓN NAV*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+.navbar {
+  background-color: transparent;
+  font-family: "fredoka";
+  font-size: 20px;
+  background-image: url('/assets/images/navbar-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 170px; 
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+
+.navbar .nav-link:hover {
+  color: #E3FCF9;
+}
+
+.text-list-footer:hover {
+    text-decoration: underline;
+  }
+
+.btn-ingresar{
+  align-items: center;
+  justify-content: center;
+  background-color: #E3FCF9;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  color: #0184A9;
+  border:0;
+}
+
+.btn-carrito{
+  align-items: center;
+  justify-content: center;
+  background-color: #E3FCF9;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  color: #0184A9;
+  border:0;
+}
+
+.btnoff-ingresar {
+  background-color: #0184A9; 
+  color: white; 
+  padding: 6px 12px; 
+  border-radius: 20px; 
+  text-decoration: none; 
+  display: inline-flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.btnoff-ingresar {
+  border:0;
+  margin-left: 6px; /* Espacio entre el texto y el ícono */
+}
+
+
+.fotos img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+  text-align: center;
+  margin: 20px;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+}

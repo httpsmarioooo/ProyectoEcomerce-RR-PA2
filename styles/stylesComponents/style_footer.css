@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+footer{
+  background-color: transparent;
+  font-family: fredoka;
+  font-size: 20px;
+  margin-top: 100px;
+  background-image: url('/assets/images/footer-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(255, 255, 255);
+}
+
+.enlaces-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.referencias a{
+  color: #ffffff;
+  text-decoration: none;
+}

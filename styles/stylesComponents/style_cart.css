@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+#offcanvasRight{
+  font-family: fredoka;
+  color: #02537D;
+  background-color: #A9E8DB;
+  justify-content: center;
+}
+
+
+.btn-carrito {
+  border: none;
+  background-color: #E3FCF9;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #0184a9;
+}
+
+.btn-carrito:hover{
+  border: none;
+  background-color: #d8f6ff; 
+}
+
+.btnoff-carrito {
+  border: none;
+  background-color: #0184a9; 
+  color: white; 
+  padding: 6px 12px;
+  border-radius: 20px; 
+  text-decoration: none; 
+  display: inline-flex; 
+  justify-content: center; 
+  align-items: center; /
+}
+
+.btnoff-carrito:hover{
+  background-color: #033c4c; 
+}
+
+.btnoff-carrito box-icon {
+  margin-left: 6px; 
+}
+.total-box{
+  background-color: #E0F7E6;
+  border-radius: 30px;
+  margin:auto;
+  width:95%;
+}
+.offcanvas .btn{
+background-color: #0184A9;
+color: #E3FCF9;
+border:0;
+border-radius: 20px;
+}
