@@ -163,7 +163,7 @@ main > div {
       justify-content: center;
       align-items: flex-start;
       gap: 40px;
-      width: 90%;
+      width: 100vw;
       flex-wrap: wrap;
       margin-top: 60px;
     }
@@ -176,14 +176,11 @@ main > div {
       align-items: flex-start;
       gap: 60px;
       width: 460px;
-      margin: 0 auto;
-      margin-left: 130px;
     }
 
   /*VALORES*/
   #valoressubt{
     margin-top: 88px;
-    margin-left: 150px;
     margin-bottom: 35px;
     font-weight: 900;
     text-shadow: 2px 5px 10px #829aa4a2;
@@ -294,7 +291,6 @@ main > div {
     width: 500px;
     padding: 0;
     margin-bottom: 50px;
-    margin-left: 200px;
   }
 
   .miembros .fila {

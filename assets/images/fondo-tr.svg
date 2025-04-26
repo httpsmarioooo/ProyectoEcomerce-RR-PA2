@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0184a9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: rgba(224, 247, 230, .5);
+      }
+
+      .cls-3 {
+        fill: #01bfc4;
+      }
+
+      .cls-7 {
+        opacity: .5;
+      }
+
+      .cls-4 {
+        fill: rgba(169, 232, 219, .5);
+      }
+
+      .cls-5, .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-8 {
+        stroke: #02537d;
+        stroke-linecap: round;
+        stroke-width: 20px;
+      }
+
+      .cls-6 {
+        fill: #e3fcf9;
+      }
+
+      .cls-10 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-5" width="1440" height="1024"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="6"/>
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feFlood flood-color="#000" flood-opacity=".25"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="6"/>
+      <feGaussianBlur result="blur-2" stdDeviation="4"/>
+      <feFlood flood-color="#000" flood-opacity=".25"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-7">
+      <g class="cls-11">
+        <g>
+          <rect class="cls-1" width="1440" height="1024"/>
+          <path class="cls-4" d="m384,422C191.53,400.53,107,533.5,0,603.5v423.5h1440V461.5c-65,53.5-114,202-358,258-305,70-447-269.5-698-297.5Z"/>
+          <path class="cls-2" d="m1066.15,499c227.6,0,298.65,133.33,373.85,190.5v335.5H0v-225.5c22.46,0,195.16,75.5,429.75-26,318.93-137.99,362.69-274.5,636.4-274.5Z"/>
+          <g class="cls-9">
+            <path class="cls-6" d="m1001.14,757.41c-53.09,0-105.17-11.79-157.52-35.5-69.83-31.63-131.94-80.29-192.01-127.35-87.33-68.42-169.81-133.04-270.04-144.22-134.52-15.01-221.64,58.9-305.9,130.38-28.82,24.45-56.05,47.55-84.21,65.97-11.97,7.83-27.25,3.13-34.13-10.5-6.88-13.63-2.75-31.03,9.22-38.87,25.58-16.73,51.65-38.85,79.24-62.26,41.63-35.31,88.81-75.34,143.58-103.7,63.79-33.03,128.26-45.36,197.07-37.69,113.07,12.61,204.8,84.48,293.51,153.97,119.35,93.51,232.1,181.83,397.11,143.95,175.66-40.31,254.53-137.33,312.12-208.17,19.89-24.46,37.06-45.59,55.17-60.49,11.19-9.21,26.82-6.35,34.91,6.4,8.09,12.74,5.57,30.54-5.62,39.75-14.08,11.59-29.7,30.79-47.77,53.03-58.71,72.22-147.44,181.36-338.93,225.31-29.01,6.66-57.55,10-85.8,10Z"/>
+          </g>
+          <g class="cls-10">
+            <path class="cls-8" d="m1461,712c-64-66-165-213.5-393-213.5-274.18,0-314.86,144.07-637.5,274.5-235,95-408,26-430.5,26"/>
+          </g>
+          <circle class="cls-3" cx="213" cy="140" r="56"/>
+          <circle class="cls-3" cx="1305" cy="100" r="56"/>
+          <circle class="cls-3" cx="955" cy="364" r="56"/>
+          <circle class="cls-3" cx="673" cy="236" r="28"/>
+          <circle class="cls-3" cx="81" cy="216" r="20"/>
+          <circle class="cls-3" cx="517" cy="75" r="20"/>
+          <circle class="cls-3" cx="685" cy="479" r="20"/>
+          <circle class="cls-3" cx="1393" cy="176" r="20"/>
+          <circle class="cls-3" cx="1332.5" cy="276.5" r="12.5"/>
+          <circle class="cls-3" cx="1297.5" cy="207.5" r="12.5"/>
+          <circle class="cls-3" cx="1221.5" cy="363.5" r="12.5"/>
+          <circle class="cls-3" cx="1332.5" cy="524.5" r="12.5"/>
+          <circle class="cls-3" cx="911.5" cy="471.5" r="12.5"/>
+          <circle class="cls-3" cx="1016.5" cy="87.5" r="12.5"/>
+          <circle class="cls-3" cx="461.5" cy="338.5" r="12.5"/>
+          <circle class="cls-3" cx="192.5" cy="323.5" r="35.5"/>
+          <circle class="cls-3" cx="1284.5" cy="437.5" r="35.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
