@@ -167,7 +167,24 @@ main > div {
       flex-wrap: wrap;
       margin-top: 60px;
     }
-    
+
+
+
+
+    .valores div {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centra horizontalmente */
+      justify-content: center; /* Centra verticalmente */
+      height: 200px; /* O el alto que tú quieras */
+  }
+
+  .valores div:hover img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
     .valores {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -807,3 +824,4 @@ footer{
       padding: 12px;
     }
   }  
+
