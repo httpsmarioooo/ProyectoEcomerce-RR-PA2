@@ -1,0 +1,13 @@
+
+[
+    {
+        "id": 1,
+        "titulo": "Dados Abecedario",
+        "descripcion": "Juguete de dos dados con letras de abecedario en diferentes colores para estimulacion visual y rapido aprendizaje",
+        "precio": 10000,
+        "categoria" : "10-20",
+        "nivel": "leve",
+        "edad": "3-5",
+        "imagen": "https://static.vecteezy.com/system/resources/previews/023/297/570/non_2x/baby-toy-cartoon-png.png"
+    }
+]
