@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('../assets/images/FONDOADMIN.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+.overlay {
+        background-color: rgba(89, 148, 203, 0.386);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 1rem;
+        position: relative;
+        z-index: 1; 
+}
+  
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(124, 202, 242, 0.3) 12px, transparent 13px),
+        radial-gradient(circle at 80% 20%, rgba(91, 185, 198, 0.2) 18px, transparent 19px),
+        radial-gradient(circle at 30% 70%, rgba(25, 22, 203, 0.25) 20px, transparent 21px),
+        radial-gradient(circle at 90% 90%, rgba(80, 124, 237, 0.15) 14px, transparent 15px),
+        radial-gradient(circle at 50% 50%, rgba(173, 216, 230, 0.3) 10px, transparent 11px),
+        radial-gradient(circle at 25% 30%, rgba(135, 206, 250, 0.25) 16px, transparent 17px),
+        radial-gradient(circle at 70% 80%, rgba(100, 149, 237, 0.2) 22px, transparent 23px),
+        radial-gradient(circle at 40% 85%, rgba(30, 144, 255, 0.18) 14px, transparent 15px),
+        radial-gradient(circle at 85% 40%, rgba(0, 191, 255, 0.2) 19px, transparent 20px);
+    animation: moveBubbles 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+@keyframes moveBubbles {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+
+.container {
+    max-width: 480px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+
+h2 {
+    text-align: center;
+    color: #1e4e79;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    color: #19506e;
+    font-weight: 600;
+}
+
+.form-control, .form-select {
+    border: 2px solid #a3d5f7;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #f6fbff;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3799dc;
+    box-shadow: 0 0 10px rgba(55, 153, 220, 0.3);
+}
+
+.btn-success {
+    background-color: #3799dc;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin: 2rem auto 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #267bb5;
+    transform: scale(1.05);
+}
+
+#preview {
+    display: none;
+    margin-top: 10px;
+    max-height: 200px;
+    border: 3px dashed #67b4e7;
+    padding: 5px;
+    background-color: #e8f6ff;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+}
+  
