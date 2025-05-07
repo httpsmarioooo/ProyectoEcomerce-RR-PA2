@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="card h-100 custom-card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}">
                         <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
                         <div class="card-body">
-                            <h5 class="card-title">${producto.titulo}</h5>
-                            <h3 class="card-price">Precio $ ${producto.precio.toLocaleString()}</h3>
+                            <h5 class="card-title"><strong>${producto.titulo}</strong></h5>
+                            <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                             <button class="btn bt-productos"><strong>Comprar</strong></button>
                         </div>
                     </div>
