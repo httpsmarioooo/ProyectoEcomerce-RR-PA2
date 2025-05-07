@@ -1,14 +1,42 @@
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+
+body {
     margin: 0;
-}
-.custom-card {
-    width: 16rem; /* Ajusta según lo que necesites */
-    margin: 0.25rem; /* opcional para que no se peguen demasiado */
-  }
-  #productos-container > .col-md-4 {
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-bottom: 8px;
+    background-color: #e3fcf9 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 900;
   }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+.custom-card {
+  width: 16rem; /* Ajusta según lo que necesites */
+  margin: 0.25rem; /* opcional para que no se peguen demasiado */
+}
+#productos-container {
+  padding-top: 2rem;
+}
+
+.card.h-100{
+    border-radius: 20px;
+    background-color: #D8F6FF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+button.btn.bt-productos {
+    color: azure;
+    background-color: #02537D;
+}
+
+button.btn.bt-productos:hover {
+    color: azure;
+    background-color: #01BFC4;
+}
