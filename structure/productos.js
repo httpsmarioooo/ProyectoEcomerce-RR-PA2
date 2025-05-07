@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
             productos.forEach(producto => {
                 const card = document.createElement('div');
                 card.id = `card-${producto.id}`; // Id de producto
-                card.className = 'col-md-4 mb-4';
+                card.className = 'col-12 col-sm-6 col-md-4 d-flex justify-content-center p-0';
                 card.innerHTML = `
-                    <div class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" style="width: 18rem;">
+<div class="card h-100 custom-card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}">
                         <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
                         <div class="card-body">
                             <h5 class="card-title">${producto.titulo}</h5>
-                            <p class="card-text">${producto.descripcion}</p>
                             <h3 class="card-price">Precio $ ${producto.precio.toLocaleString()}</h3>
                             <a href="#" class="btn btn-primary">Comprar</a>
                         </div>

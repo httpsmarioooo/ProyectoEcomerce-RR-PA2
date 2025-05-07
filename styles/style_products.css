@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.custom-card {
+    width: 16rem; /* Ajusta según lo que necesites */
+    margin: 0.25rem; /* opcional para que no se peguen demasiado */
+  }
+  #productos-container > .col-md-4 {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+  }
+
