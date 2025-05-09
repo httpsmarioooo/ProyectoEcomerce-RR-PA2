@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style_products.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style_products2.css">
 </head>
+
 <body>
-    <h1>Productos</h1>
+    <!-- Aquí se cargará el navbar -->
+    <div id="navbar"></div>
+    <!------------------------------->
+
+    <!-- Aquí se cargará el carrito -->
+    <div id="cart-container"></div>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Inicio</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Productos</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Nosotros</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Contáctenos</strong></a></li>
+                <hr>
+                <li class="nav-item">
+                    <a href="#" class="btnoff-ingresar d-flex align-items-center">
+                        <strong>Ingresar</strong>
+                        <box-icon name="door-open" type="solid" color="#ffffff" class="ms-2"></box-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>PRODUCTOS</h1>
+
+    <!-- Aquí se cargará las cards -->
 
 <!-- CONTENEDOR DE FILTROS -->
 <div class="container my-4">
@@ -42,10 +78,25 @@
 
   <!-- Contenedor de productos -->
     <section>
-        <div id="productos-container"></div>
+        <div id="productos-container" class="row g-0 gy-4 justify-content-center"></div>
     </section>
+    <!------------------------------->
 
-<script src="../structure/productos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Aquí se cargará el footer -->
+    <div id="footer"></div>
+    <!------------------------------->
+
+    <!--Estructura-->
+    <script src="/structure/navbar.js"></script>
+    <script src="/structure/footer.js"></script>
+    <script src="/structure/cart.js"></script>
+    <script src="../structure/productos.js"></script>
+
+    <!--Librerias-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

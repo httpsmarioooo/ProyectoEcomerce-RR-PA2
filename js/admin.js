@@ -1,15 +1,10 @@
-const productos = [
-    { 
-        id: 1,
-        titulo: "Cubos de Apilamiento Sensoriales de Madera",
-        descripcion: "Estos cubos ofrecen experiencias sensoriales variadas mediante texturas (lisa, rugosa, tela suave), colores vibrantes y sonidos suaves como cascabeles. Fomentan la exploración táctil y visual, la coordinación ojo-mano y la comprensión de tamaños y orden. Son ideales para juegos compartidos y construcción de torres.",
-        precio: 85000,
-        categoria: "motricidad",
-        nivel: "leve",
-        edad: "3-5",
-        imagen: "../assets/imgProductos/leve-Cubos.png"
-    }
-];
+let productos = [];
+
+fetch('./productos.json')
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+    })
 
 document.getElementById('toyForm').addEventListener('submit', function(event) {
     event.preventDefault();
