@@ -1,0 +1,77 @@
+
+.filtros-container {
+  display: flex;
+  gap: 2rem;
+}
+.filtros-laterales {
+  width: 200px;
+}
+.filtro-opcion {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.filtro-subrayado label {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.edad-circulo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.edad-circulo span {
+  font-size: 1rem;
+}
+.edad-circulo input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  appearance: none;
+  background-color: #ccc;
+  display: inline-block;
+  position: relative;
+}
+.edad-circulo input[type="checkbox"]:checked {
+  background-color: #666;
+}
+
+.nivel-pill {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.nivel-pill input[type="checkbox"]:checked + span,
+.nivel-pill input[type="checkbox"]:checked {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.nivel-pill input[type="checkbox"] {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+.card {
+  height: 100%;
+}

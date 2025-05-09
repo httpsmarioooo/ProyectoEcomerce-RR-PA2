@@ -24,3 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 });
+
+function aplicarFiltros() {
+    const edades = Array.from(document.querySelectorAll('.filtro-edad:checked')).map(el => el.value);
+    const categorias = Array.from(document.querySelectorAll('.filtro-categoria:checked')).map(el => el.value);
+    const niveles = Array.from(document.querySelectorAll('.filtro-nivel:checked')).map(el => el.value);
+
+    document.querySelectorAll('#productos-container > div').forEach(card => {
+        const tieneEdad = edades.length === 0 || edades.some(edad => card.querySelector('.card').classList.contains(`edad-${edad}`));
+        const tieneCategoria = categorias.length === 0 || categorias.some(cat => card.querySelector('.card').classList.contains(`categoria-${cat}`));
+        const tieneNivel = niveles.length === 0 || niveles.some(niv => card.querySelector('.card').classList.contains(`nivel-${niv}`));
+
+        if (tieneEdad && tieneCategoria && tieneNivel) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+document.querySelectorAll('.filtro-edad, .filtro-categoria, .filtro-nivel').forEach(input => {
+    input.addEventListener('change', aplicarFiltros);
+});
