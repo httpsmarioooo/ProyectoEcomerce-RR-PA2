@@ -48,7 +48,7 @@
         "categoria" : "lenguaje-comunicacion",
         "nivel": "moderado",
         "edad": "3-5",
-        "imagen": "../assets/imgProductos/moderado-Tragik_1.jpg"
+        "imagen": "../assets/imgProductos/moderado-Tragik_1.png"
     },
     {
         "id": 6,
@@ -58,7 +58,7 @@
         "categoria" : "hablidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "../assets/imgProductos/moderado-Gestos_1.jpg"
+        "imagen": "../assets/imgProductos/moderado-Gestos_2.png"
     },
     {
         "id": 7,
@@ -68,7 +68,7 @@
         "categoria" : "hablidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "../assets/imgProductos/moderado-Party_yCo_1.jpg"
+        "imagen": "../assets/imgProductos/moderado-Party_yCo_1.png"
     },
     {
         "id": 8,
@@ -88,7 +88,7 @@
         "categoria" : "sensoriales",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos"
+        "imagen": "../assets/imgProductos/avanzado-MantaConPeso.png"
     },
     {
         "id": 10,
@@ -98,6 +98,6 @@
         "categoria" : "hablidades-sociales-emociones",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos"
+        "imagen": "../assets/imgProductos/avanzado-espejo-de-las-emociones.png"
     }
 ]
