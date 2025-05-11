@@ -1,9 +1,9 @@
-//Crear Card
+// Crear Card
 document.addEventListener('DOMContentLoaded', function () {
     fetch('productos.json')
         .then(response => response.json())
         .then(productos => {
-            const container = document.getElementById('productos-container');//ID contenedor productos---//& Verificar
+            const container = document.getElementById('productos-container'); // ID contenedor productos
 
             productos.forEach(producto => {
                 const card = document.createElement('div');
@@ -16,35 +16,92 @@ document.addEventListener('DOMContentLoaded', function () {
                             <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
                             <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
                             <div class="botones">
-                            <a href="#" class="btn-carrito-card"><img src="../assets/images/BLUET.png" class="imagen-carrito" alt="BlueT.Carrito"></a>
-                            <a href="../producto${producto.id}.html" target="_blank" id="${producto.id}" class="btn-verMas"><strong>Ver mas</strong></a>
+                                <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET.png" class="imagen-carrito" alt="BlueT.Carrito"></a>
+                                <a href="../producto${producto.id}.html" target="_blank" id="${producto.id}" class="btn-verMas"><strong>Ver mas</strong></a>
                             </div>
                         </div>
                     </div>
                 `;
-                container.appendChild(card);//Agregar card al contenedor
+                container.appendChild(card); // Agregar card al contenedor
             });
+            aplicarFiltros(); // Llamar función filtros luego de crear cards
         });
 });
 
+// variables de selección
+let nivelesSeleccionados = [];
+
+// FILTROS
 function aplicarFiltros() {
-    const edades = Array.from(document.querySelectorAll('.filtro-edad:checked')).map(el => el.value);
-    const categorias = Array.from(document.querySelectorAll('.filtro-categoria:checked')).map(el => el.value);
-    const niveles = Array.from(document.querySelectorAll('.filtro-nivel:checked')).map(el => el.value);
+    // Def const y obtener valores
+    const edades = [];
+    document.querySelectorAll('.filtro-edad:checked').forEach(el => {
+        edades.push(el.value);
+    });
 
-    document.querySelectorAll('#productos-container > div').forEach(card => {
-        const tieneEdad = edades.length === 0 || edades.some(edad => card.querySelector('.card').classList.contains(`edad-${edad}`));
-        const tieneCategoria = categorias.length === 0 || categorias.some(cat => card.querySelector('.card').classList.contains(`categoria-${cat}`));
-        const tieneNivel = niveles.length === 0 || niveles.some(niv => card.querySelector('.card').classList.contains(`nivel-${niv}`));
+    const categorias = [];
+    document.querySelectorAll('.filtro-categoria:checked').forEach(el => {
+        categorias.push(el.value);
+    });
 
-        if (tieneEdad && tieneCategoria && tieneNivel) {
-            card.style.display = "block";
+    const niveles = nivelesSeleccionados; // array niveles
+
+    // Escanear o recorrer cards
+    const cards = document.querySelectorAll('#productos-container > div');
+    cards.forEach(card => {
+        const claseCard = card.querySelector('.card').classList;
+
+        // Verificar filtros activados
+        let coincideEdad = (edades.length === 0);
+        edades.forEach(edad => {
+            if (claseCard.contains(`edad-${edad}`)) {
+                coincideEdad = true;
+            }
+        });
+
+        let coincideCategoria = (categorias.length === 0);
+        categorias.forEach(cat => {
+            if (claseCard.contains(`categoria-${cat}`)) {
+                coincideCategoria = true;
+            }
+        });
+
+        let coincideNivel = (niveles.length === 0);
+        niveles.forEach(niv => {
+            if (claseCard.contains(`nivel-${niv}`)) {
+                coincideNivel = true;
+            }
+        });
+
+        // Mostrar o no según filtro
+        if (coincideEdad && coincideCategoria && coincideNivel) {
+            card.style.display = "";
         } else {
             card.style.display = "none";
         }
     });
 }
 
-document.querySelectorAll('.filtro-edad, .filtro-categoria, .filtro-nivel').forEach(input => {
+// Filtro Nivel TEA 2
+const botonesNivel = document.querySelectorAll('.btn-nivel');
+botonesNivel.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const valor = btn.getAttribute('data-value');
+
+        if (nivelesSeleccionados.includes(valor)) {
+            // Quitar selección
+            nivelesSeleccionados = nivelesSeleccionados.filter(n => n !== valor);
+            btn.classList.remove('activo');
+        } else {
+            // Agregar selección
+            nivelesSeleccionados.push(valor);
+            btn.classList.add('activo');
+        }
+
+        aplicarFiltros();
+    });
+});
+
+document.querySelectorAll('.filtro-edad, .filtro-categoria').forEach(input => {
     input.addEventListener('change', aplicarFiltros);
 });

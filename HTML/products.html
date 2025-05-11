@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="/styles/style_products.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style_products2.css">
 </head>
 
@@ -44,43 +43,77 @@
 
     <h1>PRODUCTOS</h1>
 
-    <!-- Aquí se cargará las cards -->
-
-<!-- CONTENEDOR DE FILTROS -->
+<!-- CONTENEDOR DE FILTROS Y PRODUCTOS -->
 <div class="container my-4">
-  
-    <!-- Filtro Edad -->
-    <div>
-      <strong>Edad:</strong>
-      <label><input type="checkbox" class="filtro-edad" value="3-5"> 3-5</label>
-      <label><input type="checkbox" class="filtro-edad" value="6-8"> 6-8</label>
-      <label><input type="checkbox" class="filtro-edad" value="9-10"> 9-10</label>
-      <label><input type="checkbox" class="filtro-edad" value="todas-edades"> Todas las edades</label>
+    <div class="row">
+    
+     <!-- Filtro Nivel TEA -->
+     <div class="mt-2 text-center">
+        <strong>¡Filtra según tu universo!</strong><br>
+     <div id="filtro-nivel" class="d-flex justify-content-center gap-3 mt-2">
+        <img src="../assets/images/NIVEL1.png" class="btn-nivel" data-value="leve" alt="Nivel Leve">
+        <img src="../assets/images/NIVEL2.png" class="btn-nivel" data-value="moderado" alt="Nivel Moderado">
+        <img src="../assets/images/NIVEL3.png" class="btn-nivel" data-value="avanzado" alt="Nivel Avanzado">
     </div>
+</div>    
+    
+    <!-- COLUMNA FILTROS -->
+      <div class="col-md-3">
   
     <!-- Filtro Categoría -->
-    <div class="mt-2">
-      <strong>Categoría:</strong>
-      <label><input type="checkbox" class="filtro-categoria" value="motricidad"> Motricidad</label>
-      <label><input type="checkbox" class="filtro-categoria" value="sensoriales"> Sensoriales</label>
-      <label><input type="checkbox" class="filtro-categoria" value="lenguaje-comunicacion"> Lenguaje</label>
-      <label><input type="checkbox" class="filtro-categoria" value="hablidades-sociales-emociones"> Sociales y Emociones</label>
-    </div>
+        <div class="mt-4">
+          <strong style="margin-bottom: 1000px;">CATEGORÍA</strong>
+          <div class="categoria-filtros">
+            <label class="checkbox-label">
+              <input type="checkbox" class="filtro-categoria" value="motricidad"> Motricidad
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="filtro-categoria" value="lenguaje-comunicacion"> Lenguaje y comunicación
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="filtro-categoria" value="habilidades-sociales-emociones"> Habilidades sociales y emociones
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="filtro-categoria" value="sensoriales"> Sensoriales
+            </label>
+          </div>
+        </div>
   
-    <!-- Filtro Nivel TEA -->
-    <div class="mt-2">
-      <strong>Nivel TEA:</strong>
-      <label><input type="checkbox" class="filtro-nivel" value="leve"> Leve</label>
-      <label><input type="checkbox" class="filtro-nivel" value="moderado"> Moderado</label>
-      <label><input type="checkbox" class="filtro-nivel" value="avanzado"> Avanzado</label>
+  <!-- Filtro Edad -->
+  <div id="filtro-edad">
+    <strong>EDAD</strong>
+    <div class="grupo-filtros-edad-vertical">
+      <label class="btn-filtro-edad">
+        <input type="checkbox" class="filtro-edad" value="3-5" hidden>
+        <img src="/assets/images/EDAD1.png" alt="Edad 3-5" class="img-filtro">
+      </label>
+      <label class="btn-filtro-edad">
+        <input type="checkbox" class="filtro-edad" value="6-8" hidden>
+        <img src="/assets/images/EDAD2.png" alt="Edad 6-8" class="img-filtro">
+      </label>
+      <label class="btn-filtro-edad">
+        <input type="checkbox" class="filtro-edad" value="9-10" hidden>
+        <img src="/assets/images/EDAD3.png" alt="Edad 9-10" class="img-filtro">
+      </label>
+      <label class="btn-filtro-edad">
+        <input type="checkbox" class="filtro-edad" value="todas-edades" hidden>
+        <img src="/assets/images/EDAD4.png" alt="Todas las edades" class="img-filtro">
+      </label>
     </div>
-  </div>  
-
-  <!-- Contenedor de productos -->
-    <section>
-        <div id="productos-container" class="row g-0 gy-4 justify-content-center"></div>
-    </section>
-    <!------------------------------->
+  </div>
+  
+  
+      </div>
+  
+    <!-- Aquí se cargará las cards -->
+      <div class="col-md-9">
+        <section>
+          <div id="productos-container" class="row gx-4 gy-4"></div>
+        </section>
+      </div>
+  
+    </div>
+  </div>
 
     <!-- Aquí se cargará el footer -->
     <div id="footer"></div>

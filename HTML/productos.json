@@ -55,7 +55,7 @@
         "titulo": "GESTOS HASBRO",
         "descripcion": "El juego Gestos de Hasbro, para niños de 6 a 8 años, fortalece áreas clave en niños con autismo, como la interacción social y la comunicación. Requiere turnos, colaboración y atención a los demás, fomentando el contacto visual, la empatía y el trabajo en equipo, mejorando habilidades sociales.",
         "precio": 130000,
-        "categoria" : "hablidades-sociales-emociones",
+        "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
         "imagen": "../assets/imgProductos/moderado-Gestos_2.png"
@@ -65,7 +65,7 @@
         "titulo": "Party & Co",
         "descripcion": "Party & Co de Diset es ideal para niños autistas de 9 a 10 años. Sus dinámicas incluyen dibujos, música, gestos y preguntas que fomentan el trabajo en equipo y la interacción social. Además, estimula la comunicación verbal y no verbal, ayudando a expresar ideas y emociones de diversas formas.",
         "precio": 85000,
-        "categoria" : "hablidades-sociales-emociones",
+        "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
         "imagen": "../assets/imgProductos/moderado-Party_yCo_1.png"
@@ -95,7 +95,7 @@
         "titulo": "Espejo de las emociones",
         "descripcion": "El espejo de las emociones ayuda al niño a reconocer expresiones faciales al compararse con seis fotografías emocionales. Fomenta la imitación y la autoexploración emocional, fortaleciendo el lenguaje y la empatía. Es ideal para niños con TEA avanzado que necesitan apoyos visuales para comprender y expresar emociones.",
         "precio": 62000,
-        "categoria" : "hablidades-sociales-emociones",
+        "categoria" : "habilidades-sociales-emociones",
         "nivel": "avanzado",
         "edad": "todas-edades",
         "imagen": "../assets/imgProductos/avanzado-espejo-de-las-emociones.png"
