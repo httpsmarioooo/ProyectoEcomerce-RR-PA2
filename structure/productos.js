@@ -16,13 +16,32 @@ document.addEventListener('DOMContentLoaded', function () {
                         <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
                         <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
                         <div class="botones">
-                            <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET.png" class="imagen-carrito" alt="BlueT.Carrito"></a>
+                            <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET.png"  data-id="${producto.id}"class="imagen-carrito" alt="BlueT.Carrito"></a>
                             <a href="../producto${producto.id}.html" target="_blank" id="${producto.id}" class="btn-verMas"><strong>Ver mas</strong></a>
                         </div>
                     </div>
                 </div>`;
             container.appendChild(card); // Agregar card al contenedor
         });
+
+        // Evento para los botones del carrito en la card
+        container.addEventListener('click', function(e) {
+            // Si se hace clic en el ícono del carrito
+            if (e.target.classList.contains('imagen-carrito')) {
+                e.preventDefault();
+                const id = e.target.getAttribute('data-id');
+                const productoSeleccionado = productos.find(p => p.id == id);
+                agregarAlCarrito(productoSeleccionado);
+            }
+            // Si tienes el botón "Comprar" también
+            if (e.target.classList.contains('btn-comprar')) {
+                e.preventDefault();
+                const id = e.target.getAttribute('data-id');
+                const productoSeleccionado = productos.find(p => p.id == id);
+                agregarAlCarrito(productoSeleccionado);
+            }
+        });
+
         aplicarFiltros(); // Llamar función filtros luego de crear cards
     });
 });
@@ -104,3 +123,84 @@ botonesNivel.forEach(btn => {
 document.querySelectorAll('.filtro-edad, .filtro-categoria').forEach(input => {
     input.addEventListener('change', aplicarFiltros);
 });
+
+
+// Función para agregar al carrito
+function agregarAlCarrito(producto) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push(producto);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarVistaCarrito();
+    mostrarToast('Producto agregado al carrito');
+}
+
+
+// Actualiza la vista del carrito (ejemplo simple)
+function actualizarVistaCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const total = carrito.reduce((sum, prod) => sum + (prod.precio || 0), 0);
+    const totalCarrito = document.getElementById('totalCarrito');
+    if (totalCarrito) {
+        totalCarrito.textContent = `$${total.toLocaleString()}`;
+    }
+
+    // Mostrar productos en el carrito
+    const offcanvasBody = document.querySelector('.offcanvas-body');
+    if (offcanvasBody) {
+        // Limpiar contenido anterior, excepto el primer <p>
+        offcanvasBody.innerHTML = '<p>Aqui se mostraran los productos</p>';
+        if (carrito.length > 0) {
+            const list = document.createElement('ul');
+            list.className = 'list-group mb-3';
+            carrito.forEach((prod, idx) => {
+                const item = document.createElement('li');
+                item.className = 'list-group-item d-flex justify-content-between align-items-center';
+                item.innerHTML = `
+                    <span>${prod.titulo} <small class="text-muted">($${prod.precio.toLocaleString()})</small></span>
+                    <button class="btn btn-sm btn-danger btn-remove" data-index="${idx}">&times;</button>
+                `;
+                list.appendChild(item);
+            });
+            offcanvasBody.appendChild(list);
+
+            // Evento para eliminar productos del carrito
+            list.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-remove')) {
+                    const idx = e.target.getAttribute('data-index');
+                    carrito.splice(idx, 1);
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    actualizarVistaCarrito();
+                }
+            });
+        }
+    }
+}
+
+
+function mostrarToast(mensaje) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    const toast = document.createElement('div');
+    toast.className = 'toast align-items-center border-0 show';
+    toast.style.minWidth = '220px';
+    toast.style.marginBottom = '10px';
+    toast.innerHTML = `
+        <div class="toast d-flex">
+            <div class="toast-body">
+                ${mensaje}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    `;
+    container.appendChild(toast);
+
+    // Quitar el toast después de 2.5 segundos
+    setTimeout(() => {
+        toast.classList.remove('show');
+        toast.classList.add('hide');
+        setTimeout(() => toast.remove(), 300);
+    }, 1500);
+
+    // Cerrar manualmente
+    toast.querySelector('.btn-close').onclick = () => toast.remove();
+}
