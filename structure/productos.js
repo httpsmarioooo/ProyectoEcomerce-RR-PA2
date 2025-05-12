@@ -65,9 +65,9 @@ function aplicarFiltros() {
     const niveles = nivelesSeleccionados; // array niveles
 
     // Escanear o recorrer cards
-    const cards = document.querySelectorAll('#productos-container > div');
+    const cards = document.querySelectorAll('#productos-container .card');
     cards.forEach(card => {
-        const claseCard = card.querySelector('.card').classList;
+        const claseCard = card.classList;
 
         // Verificar filtros activados
         let coincideEdad = (edades.length === 0);
