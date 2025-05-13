@@ -1,20 +1,19 @@
+const signupForm = document.querySelector('#signupForm');
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.querySelector('#nameg').value.trim();
+    const email = document.querySelector('#emailg').value.trim();
+    const password = document.querySelector('#passwordg').value;
 
-const signupForm = document.querySelector('#signupForm')
-signupForm.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    const name = document.querySelector('#name').value
-    const email = document.querySelector('#email').value
-    const password = document.querySelector('#password').value
-
-    const Users = JSON.parse(localStorage.getItem('users')) || []
-    const isUserRegistered = Users.find(user => user.email === email)
-    if(isUserRegistered){
-        return alert('El usuario ya esta registado!')
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const isUserRegistered = users.find(user => user.email === email);
+    if (isUserRegistered) {
+        alert('El usuario ya está registrado!');
+        return;
     }
 
-    Users.push({name: name, email: email, password: password})
-    localStorage.setItem('users', JSON.stringify(Users))
-    alert('Registro Exitoso!')
-    window.location.href = 'login.html'
-
-})
+    users.push({ name: name, email: email, password: password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Registro Exitoso!');
+    window.location.href = '/html/logGoogle/loging.html';
+});

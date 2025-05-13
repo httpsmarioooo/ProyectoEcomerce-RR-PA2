@@ -74,6 +74,7 @@ section form label {
     width: 100%;
     padding: 0.2em;
     margin-bottom: 0.5em;
+    
 }
 
 section form input {
@@ -81,7 +82,7 @@ section form input {
     margin-bottom: 1em;
     padding: 0.8em;
     border-radius: 9px;
-    border: 2px solid rgba(0, 0, 0, .1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     outline-color: #717171;
 }
 
