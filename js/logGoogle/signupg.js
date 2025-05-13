@@ -20,3 +20,6 @@ signupForm.addEventListener('submit', (e) => {
     alert('Registro Exitoso!');
     window.location.href = '/html/logGoogle/loging.html';
 });
+
+
+//comentario entrega tarea 9
