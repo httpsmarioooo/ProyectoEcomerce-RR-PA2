@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, section, footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.producto-img img {
+  max-width: 100px;
+  margin: 10px auto;
+}
+
+.producto-precio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-carrito {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.envio-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.envio-circle {
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.ayuda {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.ayuda h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.logo-ayuda img {
+  width: 50px;
+  margin-top: 10px;
+}
+
+.otros-productos {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.productos-lista {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.producto-item {
+  background-color: #fff;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
