@@ -7,70 +7,29 @@ body, input, button, h1, h2, h3, h4, h5, h6 {
 * {
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
     background-color: #F0F4F8;
 }
+
+
+.googleRegister{
+    background-color: #FFFFFF;
+}
+
 section{
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 1em;
 }
 
-.allgoogle{
-    padding: 50px;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-}
-
-.googleLogin{
-    display: flex;
-}
-
-
-
-.googleLogo{
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 100%;
-    margin-bottom: 1em;
-    margin-right: 1rem;
-}
-
-.logoGoogle{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1em;
-}
-
-
-.btn-ingresar{
-    border-radius: 200px;
-    background-color: #0A58D0;
-    margin-left: 116px;
-}
-
-
-.btn-ingresar:hover{
-    background-color: #094fb9;
-    color: #fff;
-    font-family: var(--font-mono);
-    transition: var(--transition);
-}
-
-#loginForm{
-    border:none;
-}
-
 section h1{
-    color: #1F1F1F;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 section h2{
@@ -100,12 +59,13 @@ section form input{
     margin-bottom: 1em;
     padding: 0.8em;
     border-radius: 9px;
-    border: 2px solid rgba(0,0,0,.1);
+    border: none;
+    outline-color: #717171;
 }
 
 section form input[type='submit']{
     margin-top: 1.5em;
-    background-color: #003DFF;
+    background-color: #0A58D0;
     color: #fff;
     font-family: var(--font-mono);
     transition: var(--transition);
@@ -116,7 +76,7 @@ section form input[type='submit']:active{
 }
 
 section p{
-    margin-top: 1em;
+    margin-top: 1.5em;
 
 }
 
@@ -124,19 +84,4 @@ section p{
 section p a{
     text-decoration: none;
     color: #003DFF;
-}
-
-
-/* Home */
-
-section button{
-    background-color: #003DFF;
-    color: #fff;
-    font-family: var(--font-mono);
-    transition: var(--transition);
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 9px;
-    margin-top: 1.5em;
-    font-size: 1em;
 }

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body, input, button, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F4F8;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.allgoogle {
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.googleLogin {
+    display: flex;
+}
+
+.googleLogo {
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    margin-bottom: 1em;
+    margin-right: 1rem;
+}
+
+.logoGoogle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+
+#loginForm {
+    border: none;
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, .1);
+}
+
+section h1 {
+    color: #1F1F1F;
+    font-size: 2em;
+}
+
+section h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+}
+
+section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+section form input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    outline-color: #717171;
+}
+
+section p {
+    margin-top: 0.8em;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.btn-ingresar {
+    border-radius: 200px;
+    background-color: #0A58D0;
+    margin-left: auto;
+    margin-top: 1.5em;
+    padding: 0.5em 1.5em;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-ingresar:hover {
+    background-color: #094fb9;
+}
+
+/* -----------------------------
+   RESPONSIVE SOLO PARA MÓVILES
+----------------------------- */
+@media (max-width: 768px) {
+    .googleLogin {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .googleLogo {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #loginForm {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn-ingresar {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
