@@ -63,7 +63,7 @@ section {
   flex-wrap: wrap;
   max-width: 500px;
   border-radius: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+
 }
 
 section h1 {
@@ -88,7 +88,7 @@ section form input {
   width: 100%;
   margin-bottom: 1em;
   padding: 0.8em;
-  border-radius: 9px;
+  border-radius: 6px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   outline-color: #717171;
 }
