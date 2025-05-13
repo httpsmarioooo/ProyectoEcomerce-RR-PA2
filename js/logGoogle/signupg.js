@@ -12,7 +12,10 @@ signupForm.addEventListener('submit', (e) => {
         return;
     }
 
-    users.push({ name: name, email: email, password: password });
+    // Asignar un id único incremental
+    const newId = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+
+    users.push({ id: newId, name: name, email: email, password: password });
     localStorage.setItem('users', JSON.stringify(users));
     alert('Registro Exitoso!');
     window.location.href = '/html/logGoogle/loging.html';
