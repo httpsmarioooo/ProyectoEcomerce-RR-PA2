@@ -87,12 +87,12 @@ h1 {
     width: 40%;
 }
 .imagen-carrito{
-    width: 55px;
-    animation: moverCarrito 5s linear infinite alternate;
+    width: 80px;
+    animation: moverCarrito 2s linear infinite alternate;
 }
 @keyframes moverCarrito {
     0% {transform: translateX(0);}
-    100% {transform: translateX(40px);}
+    100% {transform: translateX(15px);}
 }
 .btn-verMas{
     background-color: #01BFC4;
