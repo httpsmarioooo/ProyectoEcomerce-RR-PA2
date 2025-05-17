@@ -1,0 +1,20 @@
+<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo azul -->
+    <rect width="1440" height="600" fill="#0184A9"/>
+    <!-- Burbujas -->
+    <circle cx="200" cy="100" r="30" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="400" cy="180" r="20" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="1000" cy="100" r="40" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="1200" cy="200" r="25" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="1300" cy="70" r="35" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="800" cy="150" r="15" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="600" cy="80" r="10" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="300" cy="250" r="15" fill="#01BFC4" opacity="0.7"/>
+    <circle cx="1100" cy="250" r="20" fill="#01BFC4" opacity="0.7"/>
+    <!-- Ola clara con borde blanco -->
+    <path d="M0,350 Q360,200 720,350 T1440,350 L1440,600 L0,600 Z"
+        fill="#55B6C2" stroke="#E3FCF9" stroke-width="16"/>
+    <!-- Ola azul con borde azul oscuro -->
+    <path d="M0,400 Q360,550 720,400 T1440,400 L1440,600 L0,600 Z"
+        fill="#9AD6D4" fill-opacity="0.6" stroke="#02537D" stroke-width="10"/>
+</svg>

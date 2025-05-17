@@ -1,4 +1,8 @@
-![Journey](assets/images/logo1.png)
+<p align="center">
+<img src="./assets/images/logo1.png" width="60%;" alt="Carlos Torres Profile Picture"/>
+</p>
+
+
 # Proyecto Ecomerce Journey 🐋
 
 Bienvenido a nuestra plataforma de e-commerce especializada en productos didácticos para niños y niñas con TEA (Trastorno del Espectro Autista). Diseñada para facilitar la exploración, compra y venta de materiales adaptados que fomentan el aprendizaje, la estimulación sensorial y el desarrollo integral. Con una interfaz moderna e intuitiva, ofrecemos un catálogo cuidadosamente seleccionado, filtros personalizados, carrito de compras eficiente y gestión segura de usuarios. Nuestra misión es brindar una experiencia accesible y confiable para familias y profesionales que buscan recursos educativos inclusivos y de calidad.
