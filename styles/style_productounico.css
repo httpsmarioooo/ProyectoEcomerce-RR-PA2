@@ -1,0 +1,323 @@
+#navbar {
+background-color:#e3fcf9 ;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito';
+  text-align: center;
+  margin: 0;}
+
+main {
+  background-color: #e3fcf9;
+  margin: 0;
+  padding-top: 0;
+  background-image: url("../assets/images/FONDOPRODUCTO.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nombre-producto {
+  text-align: center;
+  font-family: 'Fredoka';
+  font-size: 4vh;
+  margin: 0 10px 5px 10px;
+}
+
+.container-imagen-producto {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto 20px;
+}
+
+.plataforma {
+  position: absolute;
+  top: -40px;
+  width: 400px;
+  z-index: 1;
+}
+
+.producto {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 200px;
+  z-index: 2;
+}
+
+.precio-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 2px;
+}
+
+#precio {
+  font-size: 55px;
+  font-family: 'Nunito';
+  text-align: center;
+  font-weight: bold;
+}
+
+#btn-agregarcarrito {
+  border-width: thin;
+  padding: 0px;
+  margin-top: 50px;
+  background: transparent;
+  cursor: pointer;
+  width: 300px;
+  height: 160px;
+}
+
+.carrito-icon {
+  width: 200px;
+  height: auto;
+}
+
+/* Sección de envío - modificada */
+.shipping-section {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+}
+
+.onda-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#fecha-envio-btn {
+  position: absolute;
+  z-index: 2;
+  width: 110px;
+  height: 110px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#fecha-envio-btn input[type="date"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
+
+.product-card {
+  min-width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.ver-mas-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.producto-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 100px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.panel-izquierdo,
+.panel-derecho {
+  flex: 1;
+  max-height: 1000px;
+  height: 100%;
+}
+
+.panel-izquierdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-derecho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.help-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 16px 16px 16px 56px;
+  max-width: 500px;
+  margin-top: 150px;
+}
+
+.help-bubble {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  width: 100px;
+  height: auto;
+  z-index: 2;
+}
+
+.help-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem;
+  padding-left: 2.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.help-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 992px) {
+  .producto-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shipping-section {
+    width: 100%;
+    position: relative;
+  }
+  
+  .onda-icon {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  #fecha-envio-btn {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-imagen-producto {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .plataforma {
+    width: 100%;
+  }
+  
+  .producto {
+    width: 50%;
+  }
+  
+  #btn-agregarcarrito {
+    width: 250px;
+    height: 130px;
+  }
+  
+  .carrito-icon {
+    width: 170px;
+  }
+  
+  #fecha-envio-btn {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #nombre-producto {
+    font-size: 4vh;
+  }
+  
+  #precio {
+    font-size: 40px;
+  }
+  
+  #btn-agregarcarrito {
+    width: 200px;
+    height: 110px;
+  }
+  
+  .carrito-icon {
+    width: 140px;
+  }
+  
+  .help-section {
+    padding: 16px 16px 16px 40px;
+  }
+  
+  .help-bubble {
+    width: 80px;
+  }
+  
+  #fecha-envio-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 11px;
+  }
+}

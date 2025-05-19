@@ -2,59 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Producto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Producto</title> <!--MODIFICABLE-->
   <link rel="stylesheet" href="../styles/style_productounico.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
 <body>
 
-  <header class="producto-header">
-    <h1>Nombre del Producto</h1>
-    <div class="producto-img">
-      <img src="../assets/imgProductos/avanzado-clasificador-colores-formas.png" alt="Producto" />
-    </div>
-  </header>
+  <!-- Aquí se cargará el navbar -->
+  <div id="navbar"></div>
+  <!------------------------------->
 
-  <section class="producto-precio">
-    <p class="precio-label">Precio</p>
-    <div class="cantidad-control">
-      <button>-</button>
-      <span>1</span>
-      <button>+</button>
-    </div>
-    <button class="btn-carrito">Añadir al carrito</button>
-  </section>
+  <!-- Aquí se cargará el carrito -->
+  <div id="cart-container"></div>
 
-  <section class="envio-info">
-    <div class="icono-envio"></div>
-    <div class="envio-detalles">
-      <div class="envio-circle">ENVÍO</div>
-      <div class="texto-envio">
-        <p>Fecha de envío</p>
-        <p>Costo de envío</p>
+  <main>
+    <div class="producto-layout">
+      <!-- PANEL IZQUIERDO -->
+      <div class="panel-izquierdo">
+        <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1>
+
+        <div class="container-imagen-producto">
+          <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
+          <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto">
+        </div>
+
+        <!-- SECCIÓN AYUDA -->
+        <div class="help-section">
+          <img src="../assets/images/BLUET.png" alt="Burbuja diálogo" class="help-bubble">
+          <div class="help-card">
+            <h2>¿En qué te ayuda?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL DERECHO -->
+      <div class="panel-derecho">
+        <div class="precio-carrito">
+          <div id="precio">PRECIO</div>
+          <button id="btn-agregarcarrito">
+            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
+          </button>
+        </div>
+
+        <!-- SECCIÓN ENVÍO -->
+        <div class="shipping-section">
+          <img src="../assets/images/ENVIO.png" alt="ONDA" class="onda-icon">
+          <button id="fecha-envio-btn">TU FECHA DE ENVÍO</button>
+          <input type="text" id="fecha-envio-input" style="display:none" readonly>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <section class="ayuda">
-    <h2>¿En qué te ayuda?</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit, varius hendrerit
-      diam quis aliquet nascetur mi cursus, vel libero quisque sollicitudin nec dapibus.
-    </p>
-    <div class="logo-ayuda">
-      <img src="ruta/logo-bluet.png" alt="BlueT" />
-    </div>
-  </section>
+  <!-- Aquí se cargará el footer -->
+  <div id="footer"></div>
+  <!------------------------------->
 
-  <section class="otros-productos">
-    <h2>Otros productos</h2>
-    <div class="productos-lista">
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-    </div>
-  </section>
+  <!--Estructura-->
+  <script src="/structure/navbar.js"></script>
+  <script src="/structure/footer.js"></script>
+  <script src="/structure/cart.js"></script>
+  <!-------------->
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="../js/productounico.js"></script>
+
 </body>
 </html>
