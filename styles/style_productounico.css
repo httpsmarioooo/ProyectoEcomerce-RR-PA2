@@ -57,7 +57,7 @@ main {
 }
 
 #precio {
-  font-size: 55px;
+  font-size: 45px;
   font-family: 'Nunito';
   text-align: center;
   font-weight: bold;
@@ -236,6 +236,43 @@ main {
   font-weight: bold;
   color: #111;
 }
+
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-img {
+  width: 33.333%; /* 100% / 3 = para mostrar 3 a la vez */
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carrusel-btn.izquierda { left: 10px; }
+.carrusel-btn.derecha { right: 10px; }
+
 
 /* Media queries para responsividad */
 @media screen and (max-width: 992px) {
