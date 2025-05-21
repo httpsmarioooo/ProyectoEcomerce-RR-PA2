@@ -1,4 +1,4 @@
-.filtros-container {
+/* .filtros-container {
   display: flex;
   gap: 2rem;
 }
@@ -156,7 +156,3 @@ h1 {
   border-radius: 50%;
 }
 
-/* Tarjetas */
-.card {
-  height: 100%;
-}

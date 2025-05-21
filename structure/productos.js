@@ -2,15 +2,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     fetch('productos.json')
     .then(response => response.json())
-    .then(productos => {
-        const container = document.getElementById('productos-container'); // ID contenedor productos
+    .then(productosDesdeJSON  => {
+        const productosLocales = JSON.parse(localStorage.getItem('productosAct')) || [];
+        const productosCombinados = [...productosDesdeJSON, ...productosLocales];
 
-        productos.forEach(producto => {
+        //Map para filtrar duplicados por id
+        const mapProductos = new Map();
+
+        productosCombinados.forEach(producto => {
+        if (!mapProductos.has(producto.id)) {
+            mapProductos.set(producto.id, producto);
+        }
+        });
+
+        const todosLosProductos = Array.from(mapProductos.values());
+
+        const container = document.getElementById('productos-container'); // ID contenedor productos
+        container.innerHTML = '';
+
+        todosLosProductos.forEach(producto => {
             const card = document.createElement('div');
             card.id = `card-${producto.id}`; // Id de producto
-            card.className = 'col-12 col-sm-6 col-md-4 d-flex justify-content-center p-0';
+            card.style.marginTop = "8px";
+            card.style.marginBottom = "8px";
+            // card.className = 'col-12 col-sm-6 col-md-4 d-flex justify-content-center p-0';
+            //style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;"
             card.innerHTML = 
-                `<div class="card h-100 custom-card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
+                `<div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
                     <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
                     <div class="card-body" style="margin-bottom: 0;padding-bottom: 0;">
                         <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
@@ -30,14 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.target.classList.contains('imagen-carrito')) {
                 e.preventDefault();
                 const id = e.target.getAttribute('data-id');
-                const productoSeleccionado = productos.find(p => p.id == id);
+                const productoSeleccionado = todosLosProductos.find(p => p.id == id);
                 agregarAlCarrito(productoSeleccionado);
             }
             // Si tienes el botón "Comprar" también
             if (e.target.classList.contains('btn-comprar')) {
                 e.preventDefault();
                 const id = e.target.getAttribute('data-id');
-                const productoSeleccionado = productos.find(p => p.id == id);
+                const productoSeleccionado = todosLosProductos.find(p => p.id == id);
                 agregarAlCarrito(productoSeleccionado);
             }
         });
