@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     onClose: (selectedDates, dateStr) => {
       if (dateStr) {
         fechaBtn.textContent = dateStr;
-        fechaBtn.style.backgroundColor = "#4c9fd4";
-        fechaBtn.style.color = "white";
-        fechaInput.style.display = "none";
       }
     },
   });
