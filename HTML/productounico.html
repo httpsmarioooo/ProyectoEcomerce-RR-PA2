@@ -20,15 +20,32 @@
   <div id="cart-container"></div>
 
   <main>
-    <div class="producto-layout">
-      <!-- PANEL IZQUIERDO -->
-      <div class="panel-izquierdo">
+    <div class="container-inicial">
         <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1>
-
         <div class="container-imagen-producto">
           <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
           <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto">
         </div>
+
+        <div class="precio-carrito">
+          <div id="precio">50000</div>
+        </div>
+
+        <div>
+          <button id="btn-agregarcarrito">
+            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
+          </button>
+
+          <div class="shipping-section">
+              <button id="fecha-envio-btn">
+                <span id="fecha-texto">TU FECHA DE ENVÍO</span>
+                <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
+                <input type="text" id="fecha-envio-input" readonly>
+              </button>
+          </div>
+        </div>
+
+
 
         <!-- SECCIÓN AYUDA -->
         <div class="help-section">
@@ -39,24 +56,6 @@
           </div>
         </div>
       </div>
-
-      <!-- PANEL DERECHO -->
-      <div class="panel-derecho">
-        <div class="precio-carrito">
-          <div id="precio">50000</div>
-          <button id="btn-agregarcarrito">
-            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
-          </button>
-        </div>
-
-        <!-- SECCIÓN ENVÍO -->
-        <div class="shipping-section">
-          <img src="../assets/images/ENVIO.png" alt="ONDA" class="onda-icon">
-          <button id="fecha-envio-btn">TU FECHA DE ENVÍO</button>
-          <input type="text" id="fecha-envio-input" style="display:none" readonly>
-        </div>
-      </div>
-    </div>
     
   </main>
       <!-- SECCIÓN CARRUSEL -->
@@ -96,8 +95,6 @@
   <!-- Aquí se cargará el footer -->
   <div id="footer"></div>
   <!------------------------------->
-  
-  <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
 
   <!--Estructura-->
   <script src="/structure/navbar.js"></script>
