@@ -19,15 +19,33 @@
   <div id="cart-container"></div>
 
   <main>
-    <div class="producto-layout">
-      <!-- PANEL IZQUIERDO -->
-      <div class="panel-izquierdo">
+    <div class="container-inicial">
         <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1>
-
         <div class="container-imagen-producto">
           <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
           <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto">
         </div>
+
+        <div class="precio-carrito">
+          <div id="precio">PRECIO</div>
+        </div>
+
+        <div>
+          <button id="btn-agregarcarrito">
+            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
+          </button>
+        </div>
+
+                <!-- SECCIÓN ENVÍO -->
+        <div class="shipping-section">
+<button id="fecha-envio-btn">
+  <span id="fecha-texto">TU FECHA DE ENVÍO</span>
+  <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
+  <input type="text" id="fecha-envio-input" readonly>
+</button>
+        </div>
+
+
 
         <!-- SECCIÓN AYUDA -->
         <div class="help-section">
@@ -39,37 +57,8 @@
         </div>
       </div>
 
-      <!-- PANEL DERECHO -->
-      <div class="panel-derecho">
-        <div class="precio-carrito">
-          <div id="precio">PRECIO</div>
-          <button id="btn-agregarcarrito">
-            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
-          </button>
-        </div>
+      <!-- SECCIÓN CARRUSEL -->
 
-        <!-- SECCIÓN ENVÍO -->
-        <div class="shipping-section">
-          <img src="../assets/images/ENVIO.png" alt="ONDA" class="onda-icon">
-          <button id="fecha-envio-btn">TU FECHA DE ENVÍO</button>
-          <input type="text" id="fecha-envio-input" style="display:none" readonly>
-        </div>
-      </div>
-    </div>
-
-      <!-- SECCIÓN ENVÍO -->
-<div class="carrusel-container">
-  <button class="carrusel-btn izquierda">&#10094;</button>
-  <div class="carrusel">
-    <img src="../assets/imgCarrusel/img1.png" class="carrusel-img" alt="Imagen 1">
-    <img src="../assets/imgCarrusel/img2.png" class="carrusel-img" alt="Imagen 2">
-    <img src="../assets/imgCarrusel/img3.png" class="carrusel-img" alt="Imagen 3">
-    <img src="../assets/imgCarrusel/img4.png" class="carrusel-img" alt="Imagen 4">
-    <img src="../assets/imgCarrusel/img5.png" class="carrusel-img" alt="Imagen 5">
-    <img src="../assets/imgCarrusel/img6.png" class="carrusel-img" alt="Imagen 6">
-  </div>
-  <button class="carrusel-btn derecha">&#10095;</button>
-</div>
 
 
 
@@ -78,8 +67,6 @@
   <!-- Aquí se cargará el footer -->
   <div id="footer"></div>
   <!------------------------------->
-  
-  <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
 
   <!--Estructura-->
   <script src="/structure/navbar.js"></script>

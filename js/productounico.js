@@ -1,27 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ================= CALENDARIO =====================
-  const fechaBtn = document.getElementById("fecha-envio-btn");
-  const fechaInput = document.getElementById("fecha-envio-input");
+// ================= CALENDARIO =====================
+const fechaBtn = document.getElementById("fecha-envio-btn");
+const fechaInput = document.getElementById("fecha-envio-input");
+const fechaTexto = document.getElementById("fecha-texto");
 
-  fechaInput.style.display = "none";
+const today = new Date();
+today.setDate(today.getDate() + 3);
 
-  const today = new Date();
-  today.setDate(today.getDate() + 3);
+const fp = flatpickr(fechaInput, {
+  minDate: today,
+  dateFormat: "Y-m-d",
+  onClose: (selectedDates, dateStr) => {
+    if (dateStr) {
+      fechaTexto.textContent = dateStr;
+    }
+  },
+});
 
-  const fp = flatpickr(fechaInput, {
-    minDate: today,
-    dateFormat: "Y-m-d",
-    onClose: (selectedDates, dateStr) => {
-      if (dateStr) {
-        fechaBtn.textContent = dateStr;
-      }
-    },
-  });
+fechaBtn.addEventListener("click", () => {
+  fp.open();
+});
 
-  fechaBtn.addEventListener("click", () => {
-    fechaInput.style.display = "inline-block";
-    fp.open();
-  });
 
   // ================= CARRUSEL =====================
   const carrusel = document.querySelector(".carrusel");
