@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/styles/stylesComponents/style_cart.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -42,7 +43,7 @@
       <!-- PANEL DERECHO -->
       <div class="panel-derecho">
         <div class="precio-carrito">
-          <div id="precio">PRECIO</div>
+          <div id="precio">50000</div>
           <button id="btn-agregarcarrito">
             <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
           </button>
@@ -56,24 +57,41 @@
         </div>
       </div>
     </div>
+    
+  </main>
+      <!-- SECCIÓN CARRUSEL -->
+  <swiper-container class="mySwiper" space-between="30" slides-per-view="1" loop="true"  navigation="true" breakpoints='{
+    "640": { "slidesPerView": 2, "spaceBetween": 20 },
+    "768": { "slidesPerView": 3, "spaceBetween": 30 },
+    "1024": { "slidesPerView": 4, "spaceBetween": 40 }
+  }'>
+    <swiper-slide>
+      <img src="..." alt="Producto 1">
+      <p>Descripción producto 1</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 2">
+      <p>Descripción producto 2</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 3">
+      <p>Descripción producto 3</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 4">
+      <p>Descripción producto 4</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 5">
+      <p>Descripción producto 5</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 6">
+      <p>Descripción producto 6</p>
+    </swiper-slide>
+    
+  </swiper-container>
 
-      <!-- SECCIÓN ENVÍO -->
-<div class="carrusel-container">
-  <button class="carrusel-btn izquierda">&#10094;</button>
-  <div class="carrusel">
-    <img src="../assets/imgCarrusel/img1.png" class="carrusel-img" alt="Imagen 1">
-    <img src="../assets/imgCarrusel/img2.png" class="carrusel-img" alt="Imagen 2">
-    <img src="../assets/imgCarrusel/img3.png" class="carrusel-img" alt="Imagen 3">
-    <img src="../assets/imgCarrusel/img4.png" class="carrusel-img" alt="Imagen 4">
-    <img src="../assets/imgCarrusel/img5.png" class="carrusel-img" alt="Imagen 5">
-    <img src="../assets/imgCarrusel/img6.png" class="carrusel-img" alt="Imagen 6">
-  </div>
-  <button class="carrusel-btn derecha">&#10095;</button>
-</div>
-
-
-
-</main>
 
   <!-- Aquí se cargará el footer -->
   <div id="footer"></div>
@@ -89,7 +107,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="../js/productounico.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </body>
 </html>
