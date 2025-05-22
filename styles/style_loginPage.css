@@ -87,6 +87,15 @@ input#remember{
     font-size: 13px;
     margin-bottom: 0;
 }
+
+label {
+    font-family: 'Nunito', sans-serif !important;
+    color: #0184A9;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
 h6.divider{
     font-family: 'Fredoka', sans-serif !important;
     color: #02537d !important;
