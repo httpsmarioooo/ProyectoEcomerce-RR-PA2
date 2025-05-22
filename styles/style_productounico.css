@@ -4,21 +4,30 @@ background-color:#e3fcf9 ;
   padding: 0;
 }
 
-body {
-  font-family: 'Nunito';
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  margin: 0;}
 
-main {
-  background-color: #e3fcf9;
+html, body {
+  height: 100%;
   margin: 0;
-  padding-top: 0;
+  padding: 0;
   background-image: url("../assets/images/FONDOPRODUCTO.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Nunito';
 }
+
+
+main {
+  min-height: 100vh;
+  background-image: url("../assets/images/FONDOPRODUCTO.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding-top: 0;
+}
+
 
 #nombre-producto {
   text-align: center;
@@ -112,15 +121,16 @@ main {
 
 #fecha-envio-btn #fecha-texto {
   position: absolute;
-  top: 50%;
-  left: 65%;
+  top: 60%;
+  left: 54%;
   transform: translate(-50%, -50%);
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 20px;
-  text-align: right;
+  font-size: 30px;
+  text-align: CENTER;
   z-index: 2;
   pointer-events: none;
+  font-family: 'Nunito';
 }
 
 #fecha-envio-btn input[type="text"] {
