@@ -2,59 +2,117 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Producto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Producto</title> <!--MODIFICABLE-->
   <link rel="stylesheet" href="../styles/style_productounico.css" />
+  <link rel="stylesheet" href="/styles/stylesComponents/style_cart.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <main>
 
-  <header class="producto-header">
-    <h1>Nombre del Producto</h1>
-    <div class="producto-img">
-      <img src="../assets/imgProductos/avanzado-clasificador-colores-formas.png" alt="Producto" />
-    </div>
-  </header>
+  <!-- Aquí se cargará el navbar -->
+  <div id="navbar"></div>
+  <!------------------------------->
 
-  <section class="producto-precio">
-    <p class="precio-label">Precio</p>
-    <div class="cantidad-control">
-      <button>-</button>
-      <span>1</span>
-      <button>+</button>
-    </div>
-    <button class="btn-carrito">Añadir al carrito</button>
-  </section>
+  <!-- Aquí se cargará el carrito -->
+  <div id="cart-container"></div>
 
-  <section class="envio-info">
-    <div class="icono-envio"></div>
-    <div class="envio-detalles">
-      <div class="envio-circle">ENVÍO</div>
-      <div class="texto-envio">
-        <p>Fecha de envío</p>
-        <p>Costo de envío</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="ayuda">
-    <h2>¿En qué te ayuda?</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit, varius hendrerit
-      diam quis aliquet nascetur mi cursus, vel libero quisque sollicitudin nec dapibus.
-    </p>
-    <div class="logo-ayuda">
-      <img src="ruta/logo-bluet.png" alt="BlueT" />
-    </div>
-  </section>
+<!-- SECCIÓN PRODUCTO -->
+        <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1>
+        <div class="container-imagen-producto">
+          <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
+          <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto">
+        </div>
 
-  <section class="otros-productos">
-    <h2>Otros productos</h2>
-    <div class="productos-lista">
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-      <div class="producto-item">PRODUCTO</div>
-    </div>
-  </section>
+        <div class="precio-carrito">
+          <div id="precio">50000</div>
+        </div>
+
+<!-- SECCIÓN AGREGAR CARRITO -->
+        <section id="btns_compra">
+          <button id="btn-agregarcarrito">
+            <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
+          </button>
+
+<!-- SECCIÓN ENVIO -->
+          <div class="shipping-section">
+              <button id="fecha-envio-btn">
+                <span id="fecha-texto">TU FECHA <br> DE ENVÍO</span>
+                <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
+                <input type="text" id="fecha-envio-input" readonly>
+              </button>
+          </div>
+        </section>
+
+<!-- SECCIÓN AYUDA -->
+        <div class="help-section">
+          <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
+          <div class="help-card">
+            <h2>¿En qué te ayuda?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+          </div>
+        </div>
+
+<!-- SECCIÓN CARRUSEL -->
+
+<section class="otrosprod-section">
+  <h2 class="otrosprodh">OTROS PRODUCTOS</h2>
+</section>
+
+ <!-- SECCIÓN CARRUSEL -->
+  <swiper-container class="mySwiper" space-between="0" slides-per-view="1" loop="true"  navigation="true" breakpoints='{
+    "640": { "slidesPerView": 2, "spaceBetween": 0 },
+    "768": { "slidesPerView": 3, "spaceBetween": 0 },
+    "1024": { "slidesPerView": 4, "spaceBetween": 0 }
+  }'autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide>
+      <img src="..." alt="Producto 1">
+      <p>Título producto 1</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 2">
+      <p>Título producto 2</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 3">
+      <p>Título producto 3</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 4">
+      <p>Título producto 4</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 5">
+      <p>Título producto 5</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 6">
+      <p>Título producto 6</p>
+    </swiper-slide>
+    
+  </swiper-container>
+
+  <!-- Aquí se cargará el footer -->
+  <div id="footer"></div>
+  <!------------------------------->
+  <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+
+  <!--Estructura-->
+  <script src="/structure/navbar.js"></script>
+  <script src="/structure/footer.js"></script>
+  <script src="/structure/cart.js"></script>
+  <!-------------->
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="../js/productounico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </body>
 </html>
