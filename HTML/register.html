@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-    <link rel="stylesheet" href="../styles/style_register.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../styles/style_register.css" />
 
+</head>
 <body>
   <!-- Navbar -->
   <div id="navbar"></div>
@@ -18,38 +18,41 @@
  <!-- Registro -->
 <div class="register-container">
     <div class="left-panel">
-      <img src="../assets/images/BlueT-Preocupada.png" alt="oficinistapromedio">
+      <img src="../assets/images/BLUETOFICINISTA.png" alt="oficinistapromedio"/>
         </div>
 
     <div class="right-panel">
-    <h1>Registro</h1>
-     <form id="formulario" class="form-login">
-        <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" required>
+    <form id="formulario" class="form-login">
+      <h1>Registro</h1>
+      <label for="usuario" class="text-login">Usuario</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" required>
 
-        <label for="nombre" class="text-login">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+      <label for="nombre" class="text-login">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
 
-        <label for="telefono" class="text-login">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 300 123 4567" required>
+      <label for="telefono" class="text-login">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 300 123 4567" required>
 
-        <label for="correo" class="text-login">Correo</label>
-        <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
+      <label for="correo" class="text-login">Correo</label>
+      <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
 
-        <label for="contrasena" class="text-login">Contraseña</label>
-        <input type="password" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña" required>
+      <label for="contrasena" class="text-login">Contraseña</label>
+      <input type="password" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña" required>
         
-        <label for="confirmar" class="text-login">Confirmar contraseña</label>
-        <input type="password" id="confirmar" name="confirmar" placeholder="Confirma tu contraseña" required>
+      <label for="confirmar" class="text-login">Confirmar contraseña</label>
+      <input type="password" id="confirmar" name="confirmar" placeholder="Confirma tu contraseña" required>
  
-           <button type="submit" class="social-btn">Registrarme</button>
-          </form>
+      <button type="submit" class="social-btn">Registrarme</button>
 
-          <h5>¿Ya tienes una cuenta?</h5>
-          <a href="login.html" id = "iniciaaqui" >Inicia sesión aquí</a>
-        </div>
+      <div class="extra-links">
+       <h5>¿Ya tienes una cuenta?</h5>
+       <a href="login.html" id="iniciaaqui">Inicia sesión aquí</a>
+      </div>
+    </form>
+    </div>
 
-          <!--Estructura-->
+          
+  <!--Estructura-->
   <script src="/structure/navbar.js"></script>
   <script src="/structure/cart.js"></script>
   <!-------------->
@@ -57,5 +60,10 @@
   <!--Js-->
   <script src="/js/register.js"></script>
   <!------>
+  <!--Librerias-->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
 </body>
 </html>
