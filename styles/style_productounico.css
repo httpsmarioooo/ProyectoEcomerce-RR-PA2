@@ -124,7 +124,7 @@ main {
   top: 60%;
   left: 54%;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
+  color: 	#DDF0FF;
   font-weight: bold;
   font-size: 30px;
   text-align: CENTER;
@@ -360,3 +360,357 @@ main {
   z-index: 3;
 }
 
+#navbar {
+background-color:#e3fcf9 ;
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/images/FONDOPRODUCTO.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Nunito';
+}
+
+
+main {
+  min-height: 100vh;
+  background-image: url("../assets/images/FONDOPRODUCTO.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding-top: 0;
+}
+
+
+#nombre-producto {
+  text-align: center;
+  font-family: 'Fredoka';
+  font-size: 4vh;
+  margin: 0 10px 5px 10px;
+}
+
+.container-imagen-producto {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto 20px;
+}
+
+.plataforma {
+  position: absolute;
+  top: -40px;
+  width: 400px;
+  z-index: 1;
+}
+
+.producto {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 200px;
+  z-index: 2;
+}
+
+.precio-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 2px;
+}
+
+#precio {
+  font-size: 45px;
+  font-family: 'Nunito';
+  text-align: center;
+  font-weight: bold;
+}
+#btns_compra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9%;
+}
+
+
+#btn-agregarcarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid ;
+  border-width: 5px;
+  border-color: #0184A9;
+  border-radius: 20px;
+  background-image: url(/assets/images/water_bubbles.png);
+  background-size:cover; 
+  cursor: pointer;
+  box-shadow: 3px 3px 15px #1e1d2c8a;
+  width: 300px;
+  height: 100px;
+  margin:10%;
+}
+
+.carrito-icon {
+  width: 150px;
+  height: auto;
+}
+
+.shipping-section {
+  margin: 10%;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+#fecha-envio-btn {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#fecha-envio-btn .enviobluet {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+#fecha-envio-btn #fecha-texto {
+  position: absolute;
+  top: 60%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: CENTER;
+  z-index: 2;
+  pointer-events: none;
+  font-family: 'Nunito';
+}
+
+#fecha-envio-btn input[type="text"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 3;
+}
+
+
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
+
+.product-card {
+  min-width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.ver-mas-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.help-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 16px 16px 16px 56px;
+  max-width: 500px;
+  margin-top: 150px;
+}
+
+.help-bubble {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  width: 100px;
+  height: auto;
+  z-index: 2;
+}
+
+.help-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem;
+  padding-left: 2.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.help-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #111;
+}
+
+  swiper-container {
+      margin: 5% 0;
+      width: 100%;
+      height: 300px;
+    }
+    swiper-slide {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    swiper-slide img {
+      width: 70%;
+      height: 70%;
+    }
+
+/* Media queries para responsividad */
+@media screen and (max-width: 992px) {
+  .producto-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shipping-section {
+    width: 100%;
+    position: relative;
+  }
+  
+  .onda-icon {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  #fecha-envio-btn {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-imagen-producto {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .plataforma {
+    width: 100%;
+  }
+  
+  .producto {
+    width: 50%;
+  }
+  
+  #btn-agregarcarrito {
+    width: 250px;
+    height: 130px;
+  }
+  
+  .carrito-icon {
+    width: 170px;
+  }
+  
+  #fecha-envio-btn {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #nombre-producto {
+    font-size: 4vh;
+  }
+  
+  #precio {
+    font-size: 40px;
+  }
+  
+  #btn-agregarcarrito {
+    width: 200px;
+    height: 110px;
+  }
+  
+  .carrito-icon {
+    width: 140px;
+  }
+  
+  .help-section {
+    padding: 16px 16px 16px 40px;
+  }
+  
+  .help-bubble {
+    width: 80px;
+  }
+  
+  #fecha-envio-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 11px;
+  }
+}
+
+.enviobluet{
+  size: 2px;
+  size-adjust: 10px;
+}
+
+#fecha-envio-btn input[type="text"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 3;
+}

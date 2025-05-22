@@ -32,7 +32,7 @@
 
         <div>
           <button id="btn-agregarcarrito">
-            <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
+            <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
           </button>
         </div>
 
@@ -45,8 +45,6 @@
 </button>
         </div>
 
-
-
         <!-- SECCIÓN AYUDA -->
         <div class="help-section">
           <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
@@ -55,18 +53,46 @@
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
           </div>
         </div>
-      </div>
+      </div>      
+</main>
 
       <!-- SECCIÓN CARRUSEL -->
-
-
-
-
-</main>
+  <swiper-container class="mySwiper" space-between="30" slides-per-view="1" loop="true"  navigation="true" breakpoints='{
+    "640": { "slidesPerView": 2, "spaceBetween": 20 },
+    "768": { "slidesPerView": 3, "spaceBetween": 30 },
+    "1024": { "slidesPerView": 4, "spaceBetween": 40 }
+  }'>
+    <swiper-slide>
+      <img src="..." alt="Producto 1">
+      <p>Descripción producto 1</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 2">
+      <p>Descripción producto 2</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 3">
+      <p>Descripción producto 3</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 4">
+      <p>Descripción producto 4</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 5">
+      <p>Descripción producto 5</p>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="..." alt="Producto 6">
+      <p>Descripción producto 6</p>
+    </swiper-slide>
+    
+  </swiper-container>
 
   <!-- Aquí se cargará el footer -->
   <div id="footer"></div>
   <!------------------------------->
+  <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
 
   <!--Estructura-->
   <script src="/structure/navbar.js"></script>
@@ -76,6 +102,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="../js/productounico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 </body>

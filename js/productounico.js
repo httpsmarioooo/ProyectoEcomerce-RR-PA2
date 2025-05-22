@@ -22,54 +22,27 @@ fechaBtn.addEventListener("click", () => {
 });
 
 
-  // ================= CARRUSEL =====================
-  const carrusel = document.querySelector(".carrusel");
-  const imagenes = document.querySelectorAll(".carrusel-img");
-  const btnIzq = document.querySelector(".carrusel-btn.izquierda");
-  const btnDer = document.querySelector(".carrusel-btn.derecha");
-
-  const imagenesVisibles = 3;
-  const totalSlides = Math.ceil(imagenes.length / imagenesVisibles);
-  let index = 0;
-
-  function actualizarCarrusel() {
-    const porcentaje = (index * 100) / imagenesVisibles;
-    carrusel.style.transform = `translateX(-${porcentaje}%)`;
-  }
-
-  btnDer.addEventListener("click", () => {
-    index = (index + 1) % totalSlides;
-    actualizarCarrusel();
-  });
-
-  btnIzq.addEventListener("click", () => {
-    index = (index - 1 + totalSlides) % totalSlides;
-    actualizarCarrusel();
-  });
-
-  setInterval(() => {
-    index = (index + 1) % totalSlides;
-    actualizarCarrusel();
-  }, 4000);
-
   // ================= CARRITO =====================
   const btnAgregarCarrito = document.getElementById("btn-agregarcarrito");
 
   btnAgregarCarrito.addEventListener("click", () => {
-    const productoUnico = {
-      titulo: document.getElementById("nombre-producto").textContent,
-      precio: document.getElementById("precio").textContent,
-    };
-    agregarAlCarrito(productoUnico);
-  });
+  const precioTexto = document.getElementById("precio").textContent;
+  const precioNumero = parseInt(precioTexto.replace(/[^0-9]/g, ""), 10);
+
+  const productoUnico = {
+    titulo: document.getElementById("nombre-producto").textContent,
+    precio: precioNumero,
+  };
+
+  agregarAlCarrito(productoUnico);
+});
 
   function agregarAlCarrito(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    carrito.push(producto);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    mostrarToast("Producto agregado al carrito");
-  }
-
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito.push(producto);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarToast("Producto agregado al carrito");
+}
   function mostrarToast(mensaje) {
     const container = document.getElementById("toast-container");
     if (!container) return;
@@ -95,4 +68,5 @@ fechaBtn.addEventListener("click", () => {
 
     toast.querySelector(".btn-close").onclick = () => toast.remove();
   }
+
 });
