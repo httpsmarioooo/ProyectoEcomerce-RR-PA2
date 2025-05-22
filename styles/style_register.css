@@ -1,7 +1,6 @@
 /* Reset general */
-#navbar
-{
-  background-color: #0184A9;
+#navbar {
+  background-color: #0184a9;
 }
 
 * {
@@ -10,9 +9,10 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #fff;
 }
 
@@ -45,7 +45,9 @@ html, body {
 }
 
 @keyframes movimientoBlueT {
-  100% { transform: translateY(15px); }
+  100% {
+    transform: translateY(15px);
+  }
 }
 
 .right-panel {
@@ -72,7 +74,7 @@ html, body {
 /* TEXTOS */
 .form-login h1 {
   font-size: 2rem;
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
   color: #009bb1;
   text-align: center;
 }
@@ -124,7 +126,7 @@ html, body {
 .extra-links h5,
 .extra-links a {
   font-size: 0.95rem;
-  color: #02537D;
+  color: #02537d;
   margin-top: 0.5rem;
   display: block;
   text-decoration: none;
@@ -140,7 +142,8 @@ html, body {
     flex-direction: row;
   }
 
-  .left-panel, .right-panel {
+  .left-panel,
+  .right-panel {
     width: 50%;
     height: 100vh;
   }
