@@ -27,8 +27,7 @@ fechaBtn.addEventListener("click", () => {
 
   btnAgregarCarrito.addEventListener("click", () => {
   const precioTexto = document.getElementById("precio").textContent;
-  const precioNumero = parseInt(precioTexto.replace(/[^0-9]/g, ""), 10);
-
+  const precioNumero = parseInt(precioTexto.replace(/[^0-9]/g, ""), 10); // Elimina todo lo que no sea número
   const productoUnico = {
     titulo: document.getElementById("nombre-producto").textContent,
     precio: precioNumero,
