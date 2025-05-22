@@ -28,9 +28,16 @@
       <label for="password" class="text-login">Contraseña</label>
       <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
 
+
       <div class="checkbox">
         <input type="checkbox" id="remember" name="remember">
         <label for="remember">Recuérdame</label>
+      </div>
+
+
+      <div class="verContrasena">
+        <input type="checkbox" id="togglePassword">
+        <label for="togglePassword">Ver contraseña</label>
       </div>
 
       <button type="button" class="social-btn">Ingresar</button> <!--<button type="submit" class="main-btn">Ingresar</button>-->
@@ -54,5 +61,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"></script>
+      <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        if (togglePassword && passwordInput) {
+          togglePassword.addEventListener('change', function () {
+            passwordInput.type = this.checked ? 'text' : 'password';
+          });
+        }
+      </script>
 </body>
 </html>
