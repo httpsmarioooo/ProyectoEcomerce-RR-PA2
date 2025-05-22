@@ -73,6 +73,13 @@ main {
   text-align: center;
   font-weight: bold;
 }
+#btns_compra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9%;
+}
+
 
 #btn-agregarcarrito {
   display: flex;
@@ -82,13 +89,13 @@ main {
   border-width: 5px;
   border-color: #0184A9;
   border-radius: 20px;
-  margin-top: 50px;
   background-image: url(/assets/images/water_bubbles.png);
   background-size:cover; 
   cursor: pointer;
+  box-shadow: 3px 3px 15px #1e1d2c8a;
   width: 300px;
   height: 100px;
-  box-shadow: 3px 3px 15px #1e1d2c8a;
+  margin:10%;
 }
 
 .carrito-icon {
@@ -97,11 +104,9 @@ main {
 }
 
 .shipping-section {
-  position: absolute;
-  width: 100%;
+  margin: 10%;
+  width: 300px;
   height: 150px;
-  margin-top: 80px;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +138,7 @@ main {
   transform: translate(-50%, -50%);
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   text-align: CENTER;
   z-index: 2;
   pointer-events: none;
