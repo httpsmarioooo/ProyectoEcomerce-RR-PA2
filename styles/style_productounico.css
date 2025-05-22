@@ -1,4 +1,4 @@
-#navbar {
+.navbar {
  position: absolute;
  top: 0;
  z-index: 3;
@@ -118,7 +118,8 @@ main {
 .help-bubble {
   position: relative;
   top:50px;
-  width: 25vw;
+  right: 25%;
+  width: 15vw;
   height: auto;
   z-index: 2;
 }
@@ -157,9 +158,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 9%;
+  margin:9% 0 0 0;
 }
-
 
 #btn-agregarcarrito {
   position: relative;
@@ -336,7 +336,10 @@ main {
   height: 120px;
   margin:5%;
 }
+}.help-bubble {
+  top:30px;
 }
+
 @media screen and (max-width: 788px) {
   #nombre-producto {
     margin-top: 30%;
