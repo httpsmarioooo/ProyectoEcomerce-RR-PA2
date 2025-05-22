@@ -1,7 +1,15 @@
 #navbar {
-background-color:#e3fcf9 ;
-  margin: 0;
-  padding: 0;
+ position: absolute;
+ top: 0;
+ z-index: 3;
+ width: 100vw;
+ background: none;
+}
+
+#footer{
+ z-index: 3;
+ width: 100vw;
+ background-color: none;
 }
 
 html, body {
@@ -16,6 +24,7 @@ html, body {
 }
 
 main {
+
   min-height: 100vh;
   background-image: url("../assets/images/FONDOPRODUCTO.png");
   background-repeat: no-repeat;
@@ -24,6 +33,7 @@ main {
   background-position: center;
   margin: 0;
   padding-top: 0;
+  
 }
 
 
@@ -31,7 +41,7 @@ main {
   text-align: center;
   font-family: 'Fredoka';
   font-size: 8vh;
-  margin: 0 10px 5px 10px;
+  margin: 10% 10px 5px 10px;
   padding: 50px;
   padding-bottom: 0px;
   color: #235563;
@@ -99,17 +109,16 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
-  padding: 16px 16px 16px 156px;
-  max-width: 500px;
-  margin-top: 150px;
+  max-width: 100vw;
 }
 
 .help-bubble {
-  position: absolute;
-  top: -235px;
-  left: 0px;
-  width: 300px;
+  position: relative;
+  top:50px;
+  width: 25vw;
   height: auto;
   z-index: 2;
 }
@@ -118,17 +127,16 @@ main {
   background-color:#e3f8fc;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1rem 1.25rem;
-  padding-left: 2.5rem;
   font-size: 0.95rem;
-  width: 1200px;
-  height: 150px;
+  width: 85vw;
+  height: auto;
   color: #1a3e48;
+  padding: 2%;
 }
 
 .help-card h2 {
   margin: 0 0 0.5rem 0;
-  font-size: 5vh;
+  font-size: 20px;
   font-weight: bold;
   color: #1a3e48;
 }
@@ -154,6 +162,8 @@ main {
 
 
 #btn-agregarcarrito {
+  position: relative;
+  top:25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +176,7 @@ main {
   cursor: pointer;
   box-shadow: 3px 3px 15px #1e1d2c8a;
   width: 300px;
-  height: 100px;
+  height: 120px;
   margin:10%;
 }
 
@@ -216,25 +226,7 @@ main {
   pointer-events: none;
   font-family: 'Nunito';
 }
-  swiper-container {
-      margin: 5% 0;
-      width: 100%;
-      height: 300px;
-    }
-    swiper-slide {
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-    }
-    swiper-slide img {
-      width: 70%;
-      height: 70%;
-    }
-
-    #btns_compra{
+  #btns_compra{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,13 +253,6 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.help-card h2 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.05rem;
-  font-weight: bold;
-  color: #111;
-}
-
   swiper-container {
       margin: 5% 0;
       width: 100%;
@@ -288,6 +273,9 @@ main {
 
 /* Media queries para responsividad */
 @media screen and (max-width: 992px) {
+  #nombre-producto {
+    margin-top: 20%;
+  }
   .producto-layout {
     flex-direction: column;
     align-items: center;
@@ -338,4 +326,52 @@ main {
   justify-content: center;
   margin-top: 32px;
 }
+.shipping-section {
+  margin: 5%;
+  width: 300px;
+  height: 150px;
+}
+#btn-agregarcarrito {
+  width: 300px;
+  height: 120px;
+  margin:5%;
+}
+}
+@media screen and (max-width: 788px) {
+  #nombre-producto {
+    margin-top: 30%;
+  }
+
+  #btns_compra{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 9%;
+}
+.shipping-section {
+  margin-top: 20%;
+  width: 300px;
+  height: 150px;
+}
+.help-section {
+margin-top: 10%;
+}.help-bubble {
+  width: 50vw;
+  position: relative;
+  top:20px;
+  z-index: 2;
+}
+}
+@media screen and (max-width: 428px) {
+  .container-imagen-producto{
+    width: 90vw;
+  }
+  .plataforma{
+    width:90vw;
+  }
+  .producto{
+    width:50vw;
+    bottom:50px;
+  }
 }
