@@ -9,8 +9,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <main>
 
   <!-- Aquí se cargará el navbar -->
   <div id="navbar"></div>
@@ -19,8 +21,8 @@
   <!-- Aquí se cargará el carrito -->
   <div id="cart-container"></div>
 
-  <main>
-    <div class="container-inicial">
+
+<!-- SECCIÓN PRODUCTO -->
         <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1>
         <div class="container-imagen-producto">
           <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
@@ -31,23 +33,23 @@
           <div id="precio">50000</div>
         </div>
 
+<!-- SECCIÓN AGREGAR CARRITO -->
         <section id="btns_compra">
-            <button id="btn-agregarcarrito">
-              <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
-            </button>
+          <button id="btn-agregarcarrito">
+            <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
+          </button>
 
+<!-- SECCIÓN ENVIO -->
           <div class="shipping-section">
               <button id="fecha-envio-btn">
-                <span id="fecha-texto">TU FECHA DE ENVÍO</span>
+                <span id="fecha-texto">TU FECHA <br> DE ENVÍO</span>
                 <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
                 <input type="text" id="fecha-envio-input" readonly>
               </button>
           </div>
         </section>
 
-
-
-        <!-- SECCIÓN AYUDA -->
+<!-- SECCIÓN AYUDA -->
         <div class="help-section">
           <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
           <div class="help-card">
@@ -55,42 +57,12 @@
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
           </div>
         </div>
-      </div>
-    
-  </main>
-      <!-- SECCIÓN CARRUSEL -->
-  <swiper-container class="mySwiper" space-between="30" slides-per-view="1" loop="true"  navigation="true" breakpoints='{
-    "640": { "slidesPerView": 2, "spaceBetween": 20 },
-    "768": { "slidesPerView": 3, "spaceBetween": 30 },
-    "1024": { "slidesPerView": 4, "spaceBetween": 40 }
-  }'>
-    <swiper-slide>
-      <img src="..." alt="Producto 1">
-      <p>Descripción producto 1</p>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="..." alt="Producto 2">
-      <p>Descripción producto 2</p>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="..." alt="Producto 3">
-      <p>Descripción producto 3</p>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="..." alt="Producto 4">
-      <p>Descripción producto 4</p>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="..." alt="Producto 5">
-      <p>Descripción producto 5</p>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="..." alt="Producto 6">
-      <p>Descripción producto 6</p>
-    </swiper-slide>
-    
-  </swiper-container>
 
+<!-- SECCIÓN CARRUSEL -->
+
+<section class="otrosprod-section">
+  <h2 class="otrosprodh">OTROS PRODUCTOS</h2>
+</section>
 
   <!-- Aquí se cargará el footer -->
   <div id="footer"></div>
