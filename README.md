@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./assets/images/logo1.png" width="60%;" alt="Carlos Torres Profile Picture"/>
+<img src="./assets/images/logo1.png" width="60%;" alt="journey"/>
 </p>
 
 

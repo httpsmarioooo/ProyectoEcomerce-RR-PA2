@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/images/logo1.png" width="60%;" alt="Carlos Torres Profile Picture"/></p>
+<p align="center"><img src="../assets/images/logo1.png" width="60%;" alt="Journey"/></p>
 
 # 📬 Datos de Contacto - Proyecto JOURNEY
 ## Journey 
