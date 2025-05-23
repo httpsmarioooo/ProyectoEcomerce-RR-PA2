@@ -1,0 +1,22 @@
+[
+    {
+        
+        "titulo": "Pictogramas o Tablero de Comunicación PECS",
+        "descripcion": "Facilita la comunicación funcional en niños no verbales o con dificultades del lenguaje, permitiéndoles expresar deseos, emociones y pensamientos mediante imágenes. Promueve el lenguaje receptivo y expresivo, fomenta la autonomía y reduce la frustración por no poder comunicarse verbalmente. Se puede usar en hogar, colegio o salidas, e incluye tarjetas plastificadas, tablero de velcro y pictogramas por categorías.",
+        "precio": 65000,
+        "categoria": "lenguaje y comunicación",
+        "nivel": "avanzado",
+        "edad": "todas-edades",
+        "imagen": "../assets/imgProductos/avanzado-pictogramas.png"
+    },
+    {
+        
+        "titulo": "Caja de Aprendizaje para Clasificar Colores y Formas",
+        "descripcion": "Estimula la motricidad fina mediante el agarre y clasificación de piezas con formas y colores variados. Promueve la discriminación visual, el pensamiento lógico, la secuenciación y la autorregulación emocional. Ideal para juego estructurado e interacción guiada, con piezas seguras, coloridas y resistentes, en una caja contenedora de madera o plástico libre de BPA (tóxico Bisfenol A).",
+        "precio": 90000,
+        "categoria": "motricidad",
+        "nivel": "avanzado",
+        "edad": "todas-edades",
+        "imagen": "../assets/imgProductos/avanzado-clasificador-colores-formas.png"
+    }
+]
