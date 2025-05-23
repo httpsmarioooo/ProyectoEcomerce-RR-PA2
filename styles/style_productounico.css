@@ -111,9 +111,9 @@ main {
 
 .help-bubble {
   position: relative;
-  top: 50px;
+  top: 40px;
   left:-25%;
-  width: 15vw;
+  width: 10vw;
   height: auto;
   z-index: 3;
 }
@@ -277,7 +277,7 @@ main {
     }
 
 /* Media queries para responsividad */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   #nombre-producto {
     margin-top: 20%;
   }
@@ -342,7 +342,8 @@ main {
   margin:5%;
 }
 .help-bubble {
-  top:30px;
+  top:20px;
+  width: 20vw;
    left:-35%;
 }
 .help-card{
@@ -372,9 +373,8 @@ swiper-slide div {
 .help-section {
 margin-top: 10%;
 }.help-bubble {
-  width: 50vw;
   position: relative;
-  top:20px;
+  top:10px;
   z-index: 2;
 }
 }
