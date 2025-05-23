@@ -8,73 +8,92 @@
     <link rel="stylesheet" href="/styles/style_admin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/assets/images/logo2.png" type="image/x-icon">
+    <script>
+        // Redirige si no hay sesión de admin
+        const usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioActivo'));
+        if (!usuarioActivo || usuarioActivo.rol !== 'admin') {
+            window.location.href = "index.html";
+        }
+    </script>
+
 </head>
 
 <body>
+
+
     <div class="overlay">
-    <div class="container">
-        <h2 class="text-center">AGREGAR PRODUCTO</h2>
-        <form id="toyForm">
-            <div class="mb-3">
-                <label for="titulo" class="form-label">Título</label>
-                <input type="text" class="form-control" id="titulo" required>
-            </div>
+        <div class="container">
+            <h2 class="text-center">AGREGAR PRODUCTO</h2>
+            <form id="toyForm">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="titulo" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción</label>
-                <textarea class="form-control" id="descripcion" rows="3" maxlength ="250" required></textarea>
-            </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="descripcion" rows="3" maxlength="250" required></textarea>
+                </div>
 
-            <div class="mb-3">
-                <label for="precio" class="form-label">Precio (COP)</label>
-                <input type="number" class="form-control" id="precio" required>
-            </div>
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio (COP)</label>
+                    <input type="number" class="form-control" id="precio" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="categoria" class="form-label">Categoría</label>
-                <select class="form-select" id="categoria" required>
-                    <option value="Motricidad">Motricidad</option>
-                    <option value="LenguajeComunicación">Lenguaje y comunicación</option>
-                    <option value="HablidadesSocialesEmociones">Hablidades sociales y emociones</option>
-                    <option value="Sensoriales">Sensoriales</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select class="form-select" id="categoria" required>
+                        <option value="Motricidad">Motricidad</option>
+                        <option value="LenguajeComunicación">Lenguaje y comunicación</option>
+                        <option value="HablidadesSocialesEmociones">Hablidades sociales y emociones</option>
+                        <option value="Sensoriales">Sensoriales</option>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label for="nivel" class="form-label">Nivel</label>
-                <select class="form-select" id="nivel" required>
-                    <option value="leve">Leve</option>
-                    <option value="moderado">Moderado</option>
-                    <option value="avanzado">Avanzado</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label for="nivel" class="form-label">Nivel</label>
+                    <select class="form-select" id="nivel" required>
+                        <option value="leve">Leve</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label for="edad" class="form-label">Edad recomendada</label>
-                <select class="form-select" id="edad" required>
-                    <option value="3-5">3-5</option>
-                    <option value="6-8">6-8</option>
-                    <option value="9-10">9-10</option>
-                    <option value="todas-edades">Todas las edades</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad recomendada</label>
+                    <select class="form-select" id="edad" required>
+                        <option value="3-5">3-5</option>
+                        <option value="6-8">6-8</option>
+                        <option value="9-10">9-10</option>
+                        <option value="todas-edades">Todas las edades</option>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label for="imagen" class="form-label">Subir Imagen</label>
-                <input type="file" class="form-control" id="imagen" accept="image/*">
-            </div>
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">Subir Imagen</label>
+                    <input type="file" class="form-control" id="imagen" accept="image/*">
+                </div>
 
-            <!-- Vista previa -->
-            <div class="mb-3">
-                <label class="form-label">Vista previa de la imagen:</label><br>
-                <img id="preview" src="" alt="Vista previa" class="img-fluid border rounded"
-                    style="max-height: 200px; display: none;">
-            </div>
+                <!-- Vista previa -->
+                <div class="mb-3">
+                    <label class="form-label">Vista previa de la imagen:</label><br>
+                    <img id="preview" src="" alt="Vista previa" class="img-fluid border rounded"
+                        style="max-height: 200px; display: none;">
+                </div>
 
-            <button type="submit" class="btn btn-success">Agregar al JSON</button>
-        </form>
+                <button type="submit" class="btn btn-success">Agregar al JSON</button>
+                <button type="button" class="btn btn-success" id="btn-ir-inicio">Inicio</button>
+
+            </form>
+        </div>
     </div>
-</div>
+
+    <script>
+        document.getElementById('btn-ir-inicio').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
 
 
     <!--Librerias-->
