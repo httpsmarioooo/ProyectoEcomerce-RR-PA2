@@ -46,6 +46,7 @@ body {
 }
 #bluet img{
   width:30vw;
+  transform: scaleX(-1);
 }
 .form-check-input{
   box-shadow: 1px 1px 2px #00000032 inset;
