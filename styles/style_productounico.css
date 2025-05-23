@@ -210,12 +210,12 @@ main {
 
 #fecha-envio-btn #fecha-texto {
   position: absolute;
-  top: 60%;
-  left: 54%;
+  top: 58%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 20px;
+  color: #2f768ad8;
+  font-weight: 900;
+  font-size: 22px;
   text-align: CENTER;
   z-index: 2;
   pointer-events: none;
@@ -275,6 +275,42 @@ main {
       width: auto;
       height: 70%;
     }
+
+    .btn-products {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #5ad2e2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px #0184A9;;
+  width: 200px;
+}
+
+
+.btn-products:hover {
+  background-color: #30e5f9;
+}
+
+
+.btn-products i {
+  font-size: 16px;
+}
+
+
+#btn-products-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
 
 /* Media queries para responsividad */
 @media screen and (max-width: 1024px) {
