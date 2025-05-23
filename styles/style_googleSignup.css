@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body, input, button, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #F0F4F8;
+}
+
+
+.googleRegister{
+    background-color: #FFFFFF;
+      border-radius: 20px;
+}
+
+section{
+    display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+section h1{
+    font-size: 3em;
+}
+
+section h2{
+    text-align:center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em
+}
+
+section form{
+    padding: 1.5em;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,.1);
+}
+
+section form label{
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+section form input{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    outline-color: #717171;
+}
+
+section form input[type='submit']{
+    margin-top: 1.5em;
+    background-color: #0A58D0;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+} 
+
+section form input[type='submit']:active{
+    transform: scale(0.97);
+}
+
+section p{
+    margin-top: 1.5em;
+
+}
+
+
+section p a{
+    text-decoration: none;
+    color: #003DFF;
+}

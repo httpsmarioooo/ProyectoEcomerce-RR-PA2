@@ -1,0 +1,159 @@
+/* Reset general */
+#navbar {
+  background-color: #0184a9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  background-color: #fff;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* PANELES */
+.left-panel {
+  width: 100%;
+  background-image: url("../assets/images/onda_registro 1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.left-panel img {
+  max-height: 40vh;
+  height: auto;
+  width: auto;
+  animation: movimientoBlueT 2s linear infinite alternate;
+}
+
+@keyframes movimientoBlueT {
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+.right-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  background-color: #fff;
+}
+
+/* FORMULARIO */
+.form-login {
+  width: 100%;
+  max-width: 420px;
+  background: #d2f1f5;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(2, 83, 125, 0.12);
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* TEXTOS */
+.form-login h1 {
+  font-size: 2rem;
+  font-family: "Fredoka", sans-serif;
+  color: #009bb1;
+  text-align: center;
+}
+
+.text-login {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #024f63;
+}
+
+/* INPUTS */
+.form-login input {
+  padding: 11px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+  box-shadow: inset 0 2px 6px rgba(165, 168, 168, 0.13);
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-login input:focus {
+  border: 1px solid #00bcd4;
+  outline: none;
+}
+
+/* BOTÓN */
+.social-btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.social-btn:hover {
+  background-color: #009bb1;
+}
+
+/* ENLACES */
+.extra-links {
+  text-align: center;
+}
+
+.extra-links h5,
+.extra-links a {
+  font-size: 0.95rem;
+  color: #02537d;
+  margin-top: 0.5rem;
+  display: block;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 991px) {
+  .register-container {
+    flex-direction: row;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .right-panel {
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .form-login {
+    margin: auto;
+  }
+}

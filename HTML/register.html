@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Regístate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style_register.css" />
+
 </head>
+
 <body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
 
-  <div class="registro-container">
+  <!-- Carrito -->
+  <div id="cart-container"></div>
 
-    <h1 class="titulo-principal">Registro</h1>
-
-    <div class="imagen-contenedor">
-      <img src="-" alt="imagen-registro" class="imagen">
+  <!-- Registro -->
+  <div class="register-container">
+    <div class="left-panel">
+      <img src="../assets/images/BLUETOFICINISTA.png" alt="oficinistapromedio" />
     </div>
 
-      <div class="espacio-formulario">
-        <label for="usuario" class="etiqueta">Usuario</label>
-        <input type="text" id="usuario" name="usuario" class="input">
-      </div>
+    <div class="right-panel">
+      <form id="formulario" class="form-login">
+        <h1>Registro</h1>
+        <label for="usuario" class="text-login">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" required>
 
-      <div class="espacio-formulario">
-        <label for="nombre" class="etiqueta">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" class="input">
-      </div>
+        <label for="nombre" class="text-login">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
 
-      <div class="espacio-formulario">
-        <label for="correo" class="etiqueta">Correo</label>
-        <input type="email" id="correo" name="correo" class="input">
-      </div>
+        <label for="telefono" class="text-login">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 300 123 4567" required>
 
-      <div class="espacio-formulario">
-        <label for="contrasena" class="etiqueta">Contraseña</label>
-        <input type="password" id="contrasena" name="contrasena" class="input">
-      </div>
+        <label for="correo" class="text-login">Correo</label>
+        <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
 
-      <div class="espacio-formulario">
-        <label for="confirmar" class="etiqueta">Confirmar contraseña</label>
-        <input type="password" id="confirmar" name="confirmar" class="input">
-      </div>
+        <label for="contrasena" class="text-login">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña" required>
 
-      <div class="boton-contenedor">
-        <button type="submit" class="boton-registrarse">Registrarme</button>
-      </div>
+        <label for="confirmar" class="text-login">Confirmar contraseña</label>
+        <input type="password" id="confirmar" name="confirmar" placeholder="Confirma tu contraseña" required>
 
-         <div class="boton-contenedor">
-        <button type="submit" class="boton-registrarse-con">O regístrate con Google</button>
-      </div>
 
-      <div class="enlace-login">
-        <a href="login.html">Ya tengo una cuenta</a>
-      </div>
 
-    </form>
+        <div class="verContrasena" style="display: flex; align-items: center; gap: 8px; margin-bottom: 1em;">
+          <input type="checkbox" id="togglePassword" style="width: 15px; height: 22px;">
+          <label for="togglePassword" class="text-login" style="font-size: 1em; cursor: pointer;">Ver contraseña</label>
+        </div>
 
-  </div>
+
+        <button type="submit" class="social-btn">Registrarme</button>
+
+        <div class="extra-links">
+          <h5>¿Ya tienes una cuenta?</h5>
+          <a href="login.html" id="iniciaaqui">Inicia sesión aquí</a>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Script para mostrar/ocultar la contraseña -->
+    <script>
+      const togglePassword = document.getElementById('togglePassword');
+      const passwordInput = document.getElementById('contrasena');
+      const confirmInput = document.getElementById('confirmar');
+
+      if (togglePassword && passwordInput && confirmInput) {
+        togglePassword.addEventListener('change', function () {
+          const type = this.checked ? 'text' : 'password';
+          passwordInput.type = type;
+          confirmInput.type = type;
+        });
+      }
+    </script>
+
+    <!--Estructura-->
+    <script src="/structure/navbar.js"></script>
+    <script src="/structure/cart.js"></script>
+    <!-------------->
+
+    <!--Js-->
+    <script src="/js/register.js"></script>
+    <!------>
+    <!--Librerias-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
 
 </body>
+
 </html>

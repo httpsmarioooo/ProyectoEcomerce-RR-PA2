@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+/* font-family: 'Montserrat', sans-serif !important;
+font-family: 'Fredoka', sans-serif !important;
+font-family: 'Nunito', sans-serif !important; */
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    background: url('../styles/stylesComponents/fondo-olas.svg') no-repeat bottom;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif !important;
+}
+body .login-container{
+    justify-self: center;
+}
+.login-container{
+    width: 20%;
+    background-color: #DCEFED;
+    border-radius: 40px;
+    box-shadow: 0 8px 24px rgba(2,83,125,0.10);
+    padding: 40px 32px 32px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    text-align: center !important; 
+    font-family: 'Fredoka', sans-serif !important;
+    color: #02537d !important;
+    font-size: 30px !important;
+    font-weight: bolder;
+    margin-bottom: 20px !important;
+}
+.form-login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+label.text-login{
+    font-family: 'Nunito', sans-serif !important;
+    color: #02537D;
+    font-weight: bold;
+}
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 6px #a5a8a8a1 inset;
+    background: #fff;
+    font-size: 1rem;
+}
+.form-login button{
+    font-family: 'Nunito', sans-serif !important;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #01BFC4;
+    border-radius: 11px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    box-shadow: 0 2px 3px #717272a1;
+    cursor: pointer;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+input#remember{
+    border: transparent;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px #a5a8a8a1 inset;
+}
+.checkbox label{
+    font-family: 'Nunito', sans-serif !important;
+    color: #0184A9;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+label {
+    font-family: 'Nunito', sans-serif !important;
+    color: #0184A9;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+h6.divider{
+    font-family: 'Fredoka', sans-serif !important;
+    color: #02537d !important;
+    font-weight: bolder;
+    text-align: center;
+    margin: 18px 0 10px 0;
+    font-size: 1.1rem;
+}
+.social-btn img{
+    width: 35px;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 0.98rem;
+}
+.register h5{
+    font-family: 'Nunito', sans-serif !important;
+    color: #02537D !important;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.register a{
+    font-family: 'Nunito', sans-serif !important;
+    color: #0184A9 !important;
+    font-size: 13px;
+}
+
+/* Máximo 1200px */
+/* @media (min-width: 1200px) {
+    .login-container {
+    width: 50%;
+    }
+} */
+/* Mínimo 900px y máximo 1190px */
+@media (min-width: 900px) and (max-width: 1190px) {
+.login-container{
+    width: 60%;
+    padding: 40px 50px 32px;
+    margin: 40px 0;
+}
+}
+/* Mínimo 600px y máximo 890px */
+@media (min-width: 600px) and (max-width: 890px) {
+.login-container{
+    width: 70%;
+    padding: 40px 60px 32px;
+    margin: 40px 0;
+}
+}
+/* Máximo 590px */
+@media (max-width: 590px) {
+.login-container{
+    width: 80%;
+    padding: 40px 40px 32px;
+    margin: 40px 0;
+}
+}
+
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.6em;
+  border-radius: 9px;
+  border: 2px solid rgba(0,0,0,.1);
+  outline-color: #717171;
+  font-size: 1em;
+}

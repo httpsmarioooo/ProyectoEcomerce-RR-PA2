@@ -112,3 +112,8 @@ body {
     border: none;
     transition: opacity 0.3s, transform 0.3s;
 }
+
+.btn-remove:hover {
+  background: #c0392b !important;
+  color: #fff !important;
+}

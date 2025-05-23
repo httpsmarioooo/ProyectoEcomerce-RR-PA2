@@ -1,0 +1,5 @@
+<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ola clara con borde blanco -->
+    <path d="M0,350 Q360,200 720,350 T1440,350 L1440,600 L0,600 Z"
+        fill="#55B6C2" stroke="#E3FCF9" stroke-width="16"/>
+</svg>
