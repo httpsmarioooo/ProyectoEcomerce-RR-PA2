@@ -32,7 +32,7 @@ main {
 #nombre-producto {
   text-align: center;
   font-family: 'Fredoka';
-  font-size: 8vh;
+  font-size: 60px;
   margin: 5% 10px 5px 10px;
   padding: 50px;
   padding-bottom: 0px;
@@ -51,7 +51,7 @@ main {
   left: 48%;
   transform: translateX(-50%);
   bottom: 10px;
-  width: 200px;
+  width: 170px;
   z-index: 2;
 }
 
@@ -123,7 +123,7 @@ main {
   background-color:#e3f8fc;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-size: 0.95rem;
+  font-size: 20px;
   width: 60vw;
   height: auto;
   color: #1a3e48;
