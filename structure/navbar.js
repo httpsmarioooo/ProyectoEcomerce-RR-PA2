@@ -39,15 +39,17 @@ fetch("/components/navbar.html")
                 const li = document.createElement('li');
                 li.className = 'nav-item';
                 li.innerHTML = `
-                    <button id="logout-btn-off" class="btnoff-ingresar d-flex align-items-center" style="background:#fff;border:none;cursor:pointer;">
-                        <strong>Cerrar sesión</strong>
-                        <box-icon name="log-out" type="solid" color="#0184A9" class="ms-2"></box-icon>
+                    <button id="logout-btn-off"
+                        class="btnoff-ingresar d-flex align-items-center justify-content-center w-100"
+                        style="background:#0184A9;color:#fff;border:none;cursor:pointer;padding:12px 0;border-radius:8px;font-weight:bold;font-size:1.1em;">
+                        <strong style="color:#fff;">Cerrar sesión</strong>
+                        <box-icon name="log-out" type="solid" color="#fff" class="ms-2"></box-icon>
                     </button>
                 `;
                 offcanvasMenu.appendChild(li);
                 document.getElementById('logout-btn-off').addEventListener('click', function () {
                     sessionStorage.removeItem('usuarioActivo');
-                    window.location.href = '/index.html';
+                    window.location.href = '/html/index.html';
                 });
             }
         }, 300);
