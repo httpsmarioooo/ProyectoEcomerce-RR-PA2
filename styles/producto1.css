@@ -1,0 +1,275 @@
+#navbar {
+background-color:transparent;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/images/FONDOPRODUCTO.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Nunito';
+}
+
+main {
+  min-height: 100vh;
+  background-image: url("../assets/images/FONDOPRODUCTO.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding-top: 0;
+}
+
+
+#nombre-producto {
+  text-align: center;
+  font-family: 'Fredoka';
+  font-size: 8vh;
+  margin: 0 10px 5px 10px;
+  padding: 50px;
+  padding-bottom: 0px;
+  color: #235563;
+}
+
+.container-imagen-producto {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto 20px;
+}
+
+.producto {
+  position: absolute;
+  left: 48%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 200px;
+  z-index: 2;
+}
+
+.precio-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 2px;
+}
+
+#precio {
+  font-size: 45px;
+  font-family: 'Nunito';
+  text-align: center;
+  color: #235563;
+}
+
+#fecha-envio-btn #fecha-texto {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: 	#2f768a;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: CENTER;
+  z-index: 2;
+  pointer-events: none;
+  font-family: 'Fredoka';
+}
+
+#fecha-envio-btn input[type="text"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 3;
+}
+
+.help-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 16px 16px 16px 156px;
+  max-width: 500px;
+  margin-top: 150px;
+}
+
+.help-bubble {
+  position: absolute;
+  top: -235px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+  z-index: 2;
+}
+
+.help-card {
+  background-color:#e3f8fc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem;
+  padding-left: 2.5rem;
+  font-size: 0.95rem;
+  width: 1200px;
+  height: 150px;
+  color: #1a3e48;
+}
+
+.help-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 5vh;
+  font-weight: bold;
+  color: #1a3e48;
+}
+
+.enviobluet{
+  size: 2px;
+  size-adjust: 10px;
+}
+
+.plataforma {
+  position: absolute;
+  top: -40px;
+  left: -8px;
+  width: 400px;
+  z-index: 1;
+}
+
+#btn-agregarcarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid ;
+  border-width: 5px;
+  border-color: #0184A9;
+  border-radius: 100px;
+  background-image: url(/assets/images/water_bubbles.png);
+  background-size:cover; 
+  cursor: pointer;
+  box-shadow: 3px 3px 15px #1e1d2c8a;
+  width: 300px;
+  height: 100px;
+  margin:10%;
+}
+
+.carrito-icon {
+  width: 150px;
+  height: auto;
+}
+
+.shipping-section {
+  margin: 10%;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+#fecha-envio-btn {
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#fecha-envio-btn .enviobluet {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+  swiper-container {
+      margin: 5% 0;
+      width: 100%;
+      height: 300px;
+    }
+    swiper-slide {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    swiper-slide img {
+      width: 70%;
+      height: 70%;
+    }
+
+    #btns_compra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350PX;
+  margin: 5%;
+  margin-top: 0;
+}
+
+.otrosprod-section {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.otrosprodh {
+  background-color: #e3fcf9;
+  color: #2f768a;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 28px;
+  padding: 15px 30px;
+  margin-top: 100px;
+  border: 2px solid #0184A9;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-products {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #5ad2e2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px #0184A9;;
+  width: 200px;
+}
+
+.btn-products:hover {
+  background-color: #30e5f9;
+}
+
+.btn-products i {
+  font-size: 16px;
+}
+
+#btn-products-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}

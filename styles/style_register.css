@@ -157,3 +157,11 @@ body {
     margin: auto;
   }
 }
+
+
+@media screen and (max-width: 900px) {
+  .register-container {
+    background-color: #0684A9;
+  }
+  
+}
