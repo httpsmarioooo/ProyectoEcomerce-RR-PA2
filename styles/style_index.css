@@ -188,9 +188,10 @@ body {
 
 /* SECCIÓN COMENTARIOS */
 #comentarios {
+  width: 100vw;
   position: relative;
   padding-top: 200px;
-  overflow: visible;
+  overflow:hidden;
 }
 
 .svg-fondo {
@@ -213,7 +214,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   z-index: 2;
-  width: 100%;
+  width: 100vw;
   height: 350px;
   animation: scrollCarousel 60s linear infinite;
 }
@@ -286,6 +287,7 @@ body {
 #footer {
   background: #55b6c2;
   margin-top: -100px;
+  width: 100vw;
 }
 
 /* MEDIA QUERIES */
@@ -318,6 +320,9 @@ body {
   .home-journey2 {
     width: 90vw;
     max-width: 600px;
+  }
+  .logo-journey2{ 
+    width:70%;
   }
 }
 
@@ -378,6 +383,10 @@ body {
     padding: 0.5rem;
     border-radius: 18px;
   }
+  .logo-journey2{ 
+    width:90%;
+    height: auto;
+  }
 
   .display-right button {
     width: 90vw;
@@ -398,6 +407,14 @@ body {
   .imagenes-home {
     gap: 20px;
     padding: 0 0.2rem;
+  }
+  .imagenes-home img{
+    width:90vw;
+    height: auto;
+  }
+  .avanzado-container img{
+    width: 90vw;
+    height: auto;
   }
 
   .home-journey3 {
