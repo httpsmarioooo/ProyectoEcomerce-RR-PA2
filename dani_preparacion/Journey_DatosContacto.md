@@ -9,7 +9,7 @@
 ## 👩‍💻 Desarrolladora
 **Nombre:** Daniela Santacruz
 🔗 [LinkedIn](https://www.linkedin.com/in/developer-daniela-santacruz-frontend/)  
-📧 Correo: dani@gmail.com  
+📧 Correo: daniellesaint09@gmail.com  
 🐙 [GitHub Personal](https://github.com/DanielleSaint)
 
 ---
@@ -17,7 +17,7 @@
 ## 👩‍💻 Desarrollador
 **Nombre:** Carlos Mario Torres
 🔗 [LinkedIn](https://www.linkedin.com/in/carlosmariotp/)  
-📧 Correo: 
+📧 Correo: carlosmariobig14@gmail.com
 🐙 [GitHub Personal](https://github.com/httpsmarioooo)
 
 ---
@@ -25,7 +25,7 @@
 ## 👩‍💻 Desarrolladora
 **Nombre:** MJ Gonzalez
 🔗 [LinkedIn](https://www.linkedin.com/in/mj-gonzalez-bustos/)  
-📧 Correo: 
+📧 Correo: themjtechnique@gmail.com
 🐙 [GitHub Personal](https://github.com/CodingtheMJ)
 
 ---
@@ -33,7 +33,7 @@
 ## 👩‍💻 Desarrollador
 **Nombre:** Gabriel Pinilla
 🔗 [LinkedIn](https://www.linkedin.com/in/gabriel-pinilla-disenador-desarrollador/)  
-📧 Correo: 
+📧 Correo: gabopc98@gmail.com
 🐙 [GitHub Personal](https://github.com/gabriel-pinilla-c)
 
 ---
