@@ -19,7 +19,7 @@ formulario.addEventListener('submit', (e) => {
     // Validación del teléfono colombiano
     const regexTelefonoColombia = /^(?:\+57\s?)?(3\d{2}|60[1-8])[-\s]?\d{3}[-\s]?\d{4}$/;
     if (!regexTelefonoColombia.test(telefono)) {
-        alert("Introduce un número de teléfono colombiano válido. Ej: 3001234567 o +57 604 123 4567");
+        alert("Introduce un número de teléfono válido. Ej: 3001234567 o +57 604 123 4567");
         return;
     }
  

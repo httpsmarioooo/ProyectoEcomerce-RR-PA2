@@ -87,6 +87,15 @@ input#remember{
     font-size: 13px;
     margin-bottom: 0;
 }
+
+label {
+    font-family: 'Nunito', sans-serif !important;
+    color: #0184A9;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
 h6.divider{
     font-family: 'Fredoka', sans-serif !important;
     color: #02537d !important;
@@ -146,4 +155,16 @@ h6.divider{
     padding: 40px 40px 32px;
     margin: 40px 0;
 }
+}
+
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.6em;
+  border-radius: 9px;
+  border: 2px solid rgba(0,0,0,.1);
+  outline-color: #717171;
+  font-size: 1em;
 }

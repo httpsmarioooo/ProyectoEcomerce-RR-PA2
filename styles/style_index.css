@@ -20,6 +20,7 @@ body {
   color: #000000;
   font-size: 16px;
   font-weight: 900;
+  
 }
 
 .display-right2 {
@@ -212,13 +213,12 @@ body {
   justify-content: center;
   align-items: flex-start;
   z-index: 2;
-  width: 100%;
+  width: max-content;
   height: 350px;
-  animation: scrollCarousel 60s linear infinite;
+  animation: scrollCarousel 50s linear infinite;
 }
 
 .comentario-circular {
-  flex: 0 0 auto;
   background: #f5f5f5;
   border-radius: 50%;
   width: 260px;
@@ -310,15 +310,15 @@ body {
   }
 
   .comentario-circular {
-    width: 180px;
-    height: 180px;
-    padding: 8px;
+    width: 160px;
+    height: 160px;
+    padding: 12px 6px 6px 6px;
   }
 
   .comentario-circular span,
   .comentario-circular p,
   .comentario-circular h5 {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
 
   .home-journey3,
@@ -342,15 +342,21 @@ body {
 
 @media (max-width: 600px) {
   .comentario-circular {
-    width: 147px;
-    height: 147px;
-    padding: 5px;
+    width: 120px;
+    height: 120px;
+    padding: 8px;
   }
 
-  .comentario-circular span,
-  .comentario-circular p,
-  .comentario-circular h5 {
+  .comentario-circular span {
+    font-size: 0.7rem;
+  }
+
+  .comentario-circular p {
     font-size: 0.6rem;
+  }
+
+  .comentario-circular h5 {
+    font-size: 0.7rem;
   }
 
   .home-journey2 {
