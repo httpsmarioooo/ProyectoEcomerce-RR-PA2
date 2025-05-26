@@ -8,12 +8,13 @@ CREATE TABLE usuarios (
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
 )ENGINE=InnoDB;
 
--- INSERT INTO usuarios (correo, contrasena, nombre, telefono, rol) VALUES
--- ('ana@mail.com', 'pass123', 'Ana Pérez', '3001234567', 'cliente'),
--- ('juan@mail.com', 'pass456', 'Juan Díaz', '3107654321', 'cliente'),
--- ('maria@mail.com', 'pass789', 'María Gómez', '3209988776', 'admin'),
--- ('luis@mail.com', 'pass000', 'Luis Torres', '3001112233', 'cliente'),
--- ('sofia@mail.com', 'pass111', 'Sofía Ríos', '3159998888', 'cliente');
+-- /////////////// Ingreso de datos en entidad usuarios ///////////////
+--     INSERT INTO usuarios (correo, contrasena, nombre, telefono, rol) VALUES
+--     ('ana@mail.com', 'pass123', 'Ana Pérez', '3001234567', 'cliente'),
+--     ('juan@mail.com', 'pass456', 'Juan Díaz', '3107654321', 'cliente'),
+--     ('maria@mail.com', 'pass789', 'María Gómez', '3209988776', 'admin'),
+--     ('luis@mail.com', 'pass000', 'Luis Torres', '3001112233', 'cliente'),
+--     ('sofia@mail.com', 'pass111', 'Sofía Ríos', '3159998888', 'cliente');
 
 CREATE TABLE productos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -27,10 +28,13 @@ CREATE TABLE productos (
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP
 )ENGINE=InnoDB;
 
-
-
-
-
+-- /////////////// Ingreso de datos en entidad productos ///////////////
+--     INSERT INTO productos (titulo, descripcion, precio, categoria, nivel, edad_recomendada, imagen_url) VALUES
+--     ("Cubos de Apilamiento Sensoriales de Madera", "Estos cubos ofrecen experiencias sensoriales variadas mediante texturas (lisa, rugosa, tela suave), colores vibrantes y sonidos suaves como cascabeles. Fomentan la exploración táctil y visual, la coordinación ojo-mano y la comprensión de tamaños y orden. Son ideales para juegos compartidos y construcción de torres.", 85000, "motricidad", "leve", "3-5", "../assets/imgProductos/leve-Cubos.png"),
+--     ("Set de Plastilina Terapéutica con Diferentes Resistencias", "La plastilina terapéutica, con niveles de resistencia suave, media y dura, brinda estimulación táctil y propioceptiva. Amasarla, estirarla y moldearla relaja y ayuda a enfocar la atención. Además, es una actividad compartida que permite crear figuras juntos o seguir instrucciones sencillas, promoviendo la interacción.", 45000, "sensoriales", "leve", "6-8", "../assets/imgProductos/leve-Plastilina.png"),
+--     ("Libro Interactivo con Solapas y Texturas", "Los libros interactivos con solapas, texturas y elementos sorpresa atraen mucho a los niños. Estimulan la curiosidad, la exploración táctil y visual, y favorecen el desarrollo del lenguaje cuando se leen en conjunto, nombrando objetos y acciones, fortaleciendo la comunicación y la conexión entre adultos y niños.", 35000, "lenguaje-comunicacion", "leve", "3-5", "../assets/imgProductos/leve-Cuentos.png"),
+--     ("Pista de Canicas Sensorial con Luces y Sonidos Suaves", "Una pista de canicas con elementos sensoriales es visual y auditivamente atractiva. Las luces suaves y sonidos melódicos calman y estimulan de forma controlada. Seguir el recorrido de las canicas desarrolla la coordinación ojo-mano, el seguimiento visual y la comprensión de causa y efecto, ideal para jugar solos o en grupo.", 150000, "motricidad", "leve", "9-10", "../assets/imgProductos/leve-Pista_de_canicas.png"),
+--     ("TRAGIK", "El juguete educativo Montessori de Tragik, para niños de 3 a 5 años, apoya a niños autistas en su desarrollo. Incluye 30 tarjetas de palabras a doble cara y 64 bloques de letras de madera con colores vivos y dibujos animados que capturan la atención y facilitan el aprendizaje.", 60000, "lenguaje-comunicacion", "moderado", "3-5", "../assets/imgProductos/moderado-Tragik_1.png");
 
 CREATE TABLE pedidos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -41,6 +45,37 @@ CREATE TABLE pedidos (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 )ENGINE=InnoDB;
 
+-- /////////////// Ingreso de datos en entidad pedidos ///////////////
+--     INSERT INTO pedidos (usuario_id, fecha, estado, total) VALUES
+--     (1, '2024-05-01 10:15:00', 'pendiente', 85000),
+--     (2, '2024-05-02 14:30:00', 'pagado', 130000),
+--     (3, '2024-05-03 11:45:00', 'enviado', 60000),
+--     (4, '2024-05-04 09:20:00', 'entregado', 150000),
+--     (5, '2024-05-05 16:10:00', 'cancelado', 35000);
+--     (1, '2024-05-06 10:15:00', 'pagado', 150000),
+--     (2, '2024-05-07 14:30:00', 'entregado', 60000),
+--     (3, '2024-05-08 11:45:00', 'pendiente', 35000),
+--     (4, '2024-05-09 09:20:00', 'cancelado', 130000),
+--     (5, '2024-05-010 16:10:00', 'enviado', 85000);
+
+-- /////////////// Consultas realizadas en la entidad pedidos: ///////////////
+--     ///// Listar todos los pedidos con datos del usuario
+--         SELECT 
+--         p.id AS num_pedido,
+--         u.nombre AS cliente,
+--         p.fecha AS fecha_pedido,
+--         p.estado,
+--         p.total AS total_pedido
+--         FROM pedidos p
+--         JOIN usuarios u ON p.usuario_id = u.id;
+--     ///// Total de ventas por estado de pedido
+--         SELECT 
+--         estado,
+--         COUNT(*) AS total_pedidos,
+--         SUM(total) AS ventas_totales
+--         FROM pedidos
+--         GROUP BY estado;
+
 CREATE TABLE pedido_detalle (
     id INT PRIMARY KEY AUTO_INCREMENT,
     pedido_id INT,
@@ -50,3 +85,6 @@ CREATE TABLE pedido_detalle (
     FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
     FOREIGN KEY (producto_id) REFERENCES productos(id)
 ) ENGINE=InnoDB;
+
+-- /////////////// Ingreso de datos en entidad pedido_detalle ///////////////
+
