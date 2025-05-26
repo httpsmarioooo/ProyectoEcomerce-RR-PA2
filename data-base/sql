@@ -24,7 +24,6 @@ CREATE TABLE productos (
     nivel ENUM('leve', 'moderado', 'avanzado'),
     edad_recomendada VARCHAR(20),
     imagen_url VARCHAR(255),
-    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP
 )ENGINE=InnoDB;
 
 
