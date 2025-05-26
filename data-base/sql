@@ -1,0 +1,52 @@
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100),
+    telefono VARCHAR(30),
+    rol ENUM('admin', 'cliente') DEFAULT 'cliente',
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+)ENGINE=InnoDB;
+
+-- INSERT INTO usuarios (correo, contrasena, nombre, telefono, rol) VALUES
+-- ('ana@mail.com', 'pass123', 'Ana Pérez', '3001234567', 'cliente'),
+-- ('juan@mail.com', 'pass456', 'Juan Díaz', '3107654321', 'cliente'),
+-- ('maria@mail.com', 'pass789', 'María Gómez', '3209988776', 'admin'),
+-- ('luis@mail.com', 'pass000', 'Luis Torres', '3001112233', 'cliente'),
+-- ('sofia@mail.com', 'pass111', 'Sofía Ríos', '3159998888', 'cliente');
+
+CREATE TABLE productos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10,2) NOT NULL,
+    categoria VARCHAR(50),
+    nivel ENUM('leve', 'moderado', 'avanzado'),
+    edad_recomendada VARCHAR(20),
+    imagen_url VARCHAR(255),
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP
+)ENGINE=InnoDB;
+
+
+
+
+
+
+CREATE TABLE pedidos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    estado ENUM('pendiente', 'pagado', 'enviado', 'entregado', 'cancelado') DEFAULT 'pendiente',
+    total DECIMAL(10,2),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+)ENGINE=InnoDB;
+
+CREATE TABLE pedido_detalle (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    pedido_id INT,
+    producto_id INT,
+    cantidad INT,
+    precio_unitario DECIMAL(10,2),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+) ENGINE=InnoDB;
