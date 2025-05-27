@@ -86,4 +86,35 @@ CREATE TABLE pedido_detalle (
 ) ENGINE=InnoDB;
 
 -- /////////////// Ingreso de datos en entidad pedido_detalle ///////////////
+--      INSERT INTO pedido_detalle (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+--      (1, 1, 1, 85000),
+--      (2, 2, 1, 45000),
+--      (2, 3, 1, 85000),
+--      (3, 5, 1, 60000),
+--      (4, 4, 1, 150000),
+--      (5, 3, 1, 35000),
+--      (6, 4, 1, 150000),
+--      (7, 5, 1, 60000),
+--      (8, 3, 1, 35000),
+--      (9, 2, 1, 45000),
+--      (9, 3, 1, 85000),
+--      (10, 1, 1, 85000);
+-- /////////////// Consultas realizadas en la entidad pedidos: ///////////////
+--         ///// Productos mas vendidos
+--             SELECT 
+--             pr.titulo,
+--             SUM(pd.cantidad) AS total_vendidos
+--             FROM pedido_detalle pd
+--             JOIN productos pr ON pd.producto_id = pr.id
+--             GROUP BY pd.producto_id
+--             ORDER BY total_vendidos DESC;
+--         ///// Ventas por categoria
+--             SELECT 
+--             pr.categoria,
+--             SUM(pd.cantidad) AS total_vendidos,
+--             SUM(pd.cantidad * pd.precio_unitario) AS ingresos
+--             FROM pedido_detalle pd
+--             JOIN productos pr ON pd.producto_id = pr.id
+--             GROUP BY pr.categoria
+--             ORDER BY ingresos DESC;
 
