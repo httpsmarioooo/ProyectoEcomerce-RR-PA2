@@ -63,8 +63,7 @@ body::before {
 
 
 .container {
-    max-width: 480px;
-    width: 90%;
+    width: 90vh !important;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 2rem;
     border-radius: 20px;
@@ -126,4 +125,8 @@ h2 {
     border-radius: 10px;
     transition: opacity 0.5s ease;
 }
-  
+
+#btn-agregarJSON {
+ background-color: #67b4e7;
+ border-color: #1e4e79;
+}
