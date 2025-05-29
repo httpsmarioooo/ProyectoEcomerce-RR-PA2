@@ -15,7 +15,8 @@ section#home-journey {
 
 body {
   margin: 0;
-    background: linear-gradient(to bottom, #e7fdfd, #01BFC4,#9BD6D4,#9BD6D4,#9BD6D4,#02537D,#02537D,#02537D) !important;
+  background-color: #e3fcf9 !important;
+  /* background: linear-gradient(to bottom, #e7fdfd, #01BFC4,#9BD6D4,#9BD6D4,#9BD6D4,#02537D,#02537D,#02537D) !important; */
   font-family: "Nunito", sans-serif;
   color: #000000;
   font-size: 16px;
