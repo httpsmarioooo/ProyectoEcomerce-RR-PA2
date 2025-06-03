@@ -13,7 +13,7 @@
         // Redirige si no hay sesión de admin
         const usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioActivo'));
         if (!usuarioActivo || usuarioActivo.rol !== 'admin') {
-            window.location.href = "index.html";
+            window.location.href = "/index.html";
         }
     </script>
 
@@ -89,7 +89,7 @@
 
     <script>
         document.getElementById('btn-ir-inicio').addEventListener('click', function () {
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         });
     </script>
 
