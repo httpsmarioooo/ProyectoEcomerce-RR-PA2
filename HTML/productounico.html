@@ -22,42 +22,50 @@
   <div id="cart-container"></div>
 
 
-<!-- SECCIÓN PRODUCTO -->
-        <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1> <!--MODIFICABLE-->
-        <div class="container-imagen-producto">
-          <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
-          <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto"> <!--MODIFICABLE-->
-        </div>
+<!-- CONTENEDOR GENERAL -->
+<div class="producto-contenedor">
 
-        <div class="precio-carrito">
-          <h2>Precio</h2> 
-          <div id="precio">$50.000</div> <!--MODIFICABLE-->
-        </div>
+  <!-- IZQ -->
+  <div class="producto-imagenes">
+    <div class="container-imagen-producto">
+      <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
+      <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto"> <!--MODIFICABLE-->
+    </div>
+  </div>
 
-<!-- SECCIÓN AGREGAR CARRITO -->
-        <section id="btns_compra">
-          <button id="btn-agregarcarrito">
-            <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
-          </button>
+  <!-- DER -->
+  <div class="producto-info">
+    <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1> <!--MODIFICABLE-->
+    <div class="help-section">
+      <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
+      <div class="help-card">
+        <h2>¿En qué te ayuda?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p> <!--MODIFICABLE-->
+      </div>
+    </div>
 
-<!-- SECCIÓN ENVIO -->
-          <div class="shipping-section">
-              <button id="fecha-envio-btn">
-                <span id="fecha-texto">Tu fecha <br> de envío</span>
-                <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
-                <input type="text" id="fecha-envio-input" readonly>
-              </button>
-          </div>
-        </section>
+    <!-- PRECIO -->
+    <div class="precio-carrito">
+      <h2>Precio</h2> 
+      <div id="precio">$50.000</div> <!--MODIFICABLE-->
+    </div>
 
-<!-- SECCIÓN AYUDA -->
-        <div class="help-section">
-          <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
-          <div class="help-card">
-            <h2>¿En qué te ayuda?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p> <!--MODIFICABLE-->
-          </div>
-        </div>
+    <section id="btns">
+      <!-- btn CARRITO -->
+      <button id="btn-agregarcarrito">
+        <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
+      </button>
+
+      <!-- btn FECHA DE ENVÍO -->
+      <div class="shipping-section">
+        <button id="fecha-envio-btn">
+          <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
+          <input type="text" id="fecha-envio-input" readonly>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
 
 <!-- SECCIÓN CARRUSEL -->
 

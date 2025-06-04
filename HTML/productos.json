@@ -2,7 +2,7 @@
 [
     {
         "id": 1,
-        "titulo": "Cubos de Apilamiento Sensoriales de Madera",
+        "titulo": "CUBOS SENSORIALES",
         "descripcion": "Estos cubos ofrecen experiencias sensoriales variadas mediante texturas (lisa, rugosa, tela suave), colores vibrantes y sonidos suaves como cascabeles. Fomentan la exploración táctil y visual, la coordinación ojo-mano y la comprensión de tamaños y orden. Son ideales para juegos compartidos y construcción de torres.",
         "precio": 85000,
         "categoria" : "motricidad",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "titulo": "Set de Plastilina Terapéutica con Diferentes Resistencias",
+        "titulo": "PLASTILINAS TERAPÉUTICAS",
         "descripcion": "La plastilina terapéutica, con niveles de resistencia suave, media y dura, brinda estimulación táctil y propioceptiva. Amasarla, estirarla y moldearla relaja y ayuda a enfocar la atención. Además, es una actividad compartida que permite crear figuras juntos o seguir instrucciones sencillas, promoviendo la interacción.",
         "precio": 45000,
         "categoria" : "sensoriales",
@@ -22,7 +22,7 @@
     },
     {
         "id": 3,
-        "titulo": "Libro Interactivo con Solapas y Texturas",
+        "titulo": "LIBROS INTERACTIVOS",
         "descripcion": "Los libros interactivos con solapas, texturas y elementos sorpresa atraen mucho a los niños. Estimulan la curiosidad, la exploración táctil y visual, y favorecen el desarrollo del lenguaje cuando se leen en conjunto, nombrando objetos y acciones, fortaleciendo la comunicación y la conexión entre adultos y niños.",
         "precio": 35000,
         "categoria" : "lenguaje-comunicacion",
@@ -32,7 +32,7 @@
     },
     {
         "id": 4,
-        "titulo": "Pista de Canicas Sensorial con Luces y Sonidos Suaves",
+        "titulo": "PISTA DE CANICAS",
         "descripcion": "Una pista de canicas con elementos sensoriales es visual y auditivamente atractiva. Las luces suaves y sonidos melódicos calman y estimulan de forma controlada. Seguir el recorrido de las canicas desarrolla la coordinación ojo-mano, el seguimiento visual y la comprensión de causa y efecto, ideal para jugar solos o en grupo.",
         "precio": 150000,
         "categoria" : "motricidad",
@@ -42,7 +42,7 @@
     },
     {
         "id": 5,
-        "titulo": "TRAGIK",
+        "titulo": "TRAGIK (JUEGO EDUCATIVO)",
         "descripcion": "El juguete educativo Montessori de Tragik, para niños de 3 a 5 años, apoya a niños autistas en su desarrollo. Incluye 30 tarjetas de palabras a doble cara y 64 bloques de letras de madera con colores vivos y dibujos animados que capturan la atención y facilitan el aprendizaje.",
         "precio": 60000,
         "categoria" : "lenguaje-comunicacion",
@@ -52,7 +52,7 @@
     },
     {
         "id": 6,
-        "titulo": "GESTOS HASBRO",
+        "titulo": "GESTOS (JUEGO COMUNICATIVO)",
         "descripcion": "El juego Gestos de Hasbro, para niños de 6 a 8 años, fortalece áreas clave en niños con autismo, como la interacción social y la comunicación. Requiere turnos, colaboración y atención a los demás, fomentando el contacto visual, la empatía y el trabajo en equipo, mejorando habilidades sociales.",
         "precio": 130000,
         "categoria" : "habilidades-sociales-emociones",
@@ -62,7 +62,7 @@
     },
     {
         "id": 7,
-        "titulo": "Party & Co",
+        "titulo": "PARTY & CO (MULTIJUGADOR)",
         "descripcion": "Party & Co de Diset es ideal para niños autistas de 9 a 10 años. Sus dinámicas incluyen dibujos, música, gestos y preguntas que fomentan el trabajo en equipo y la interacción social. Además, estimula la comunicación verbal y no verbal, ayudando a expresar ideas y emociones de diversas formas.",
         "precio": 85000,
         "categoria" : "habilidades-sociales-emociones",
@@ -72,7 +72,7 @@
     },
     {
         "id": 8,
-        "titulo": "Exploding Kittens",
+        "titulo": "EXPLODING KITTENS (JUEGO DE CARTAS)",
         "descripcion": "Exploding Kittens es un juego dinámico que combina azar y humor para flexibilizar la rigidez cognitiva en niños del espectro. Los jugadores deben adaptarse a cambios inesperados, tolerar frustraciones y modificar estrategias, promoviendo habilidades sociales y cognitivas en un ambiente divertido y motivador.",
         "precio": 35000,
         "categoria" : "motricidad",
@@ -82,7 +82,7 @@
     },
     {
         "id": 9,
-        "titulo": "Manta de peso (Weighted Blanket)",
+        "titulo": "MANTA DE PESO",
         "descripcion": "La manta de peso ofrece presión profunda que regula el sistema sensorial, generando calma y seguridad. Mejora el sueño y reduce la ansiedad sin requerir acción activa del niño. Se usa en siestas, momentos de ansiedad o rutinas para favorecer la autorregulación sensorial de forma pasiva.",
         "precio": 150000,
         "categoria" : "sensoriales",
@@ -92,7 +92,7 @@
     },
     {
         "id": 10,
-        "titulo": "Espejo de las emociones",
+        "titulo": "ESPEJO DE LAS EMOCIONES",
         "descripcion": "El espejo de las emociones ayuda al niño a reconocer expresiones faciales al compararse con seis fotografías emocionales. Fomenta la imitación y la autoexploración emocional, fortaleciendo el lenguaje y la empatía. Es ideal para niños con TEA avanzado que necesitan apoyos visuales para comprender y expresar emociones.",
         "precio": 62000,
         "categoria" : "habilidades-sociales-emociones",

@@ -89,7 +89,9 @@
     border-radius: 25px;
     display: block;
     border: 1px solid rgb(212, 212, 212);
+    background-color: #f6fffe97;
   }
+  
   .card-title {
       font-weight: bold;
       font-family: 'Nunito', sans-serif !important;
