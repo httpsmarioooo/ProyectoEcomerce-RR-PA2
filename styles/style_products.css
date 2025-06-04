@@ -12,7 +12,7 @@
     margin: 0;
     position: relative;
     z-index: 0;
-    background-color: #ffffff !important;
+    background-color: #ffffff5c !important;
     font-family: 'Montserrat', sans-serif !important;
     color: #000000;
     font-size: 16px;
@@ -29,7 +29,7 @@
     background-repeat: repeat;
     background-position: top left;
     background-size: auto;
-    opacity: 60%;
+    opacity: 50%;
     z-index: -1;
     pointer-events: none;
   }
