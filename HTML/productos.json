@@ -8,7 +8,7 @@
         "categoria" : "motricidad",
         "nivel": "leve",
         "edad": "3-5",
-        "imagen": "/assets/imgProductos/leve/leve-Cubos.png"
+        "imagen": "/assets/imgProductos/leve/leve1-cubos.png"
     },
     {
         "id": 2,
@@ -18,7 +18,7 @@
         "categoria" : "sensoriales",
         "nivel": "leve",
         "edad": "6-8",
-        "imagen": "/assets/imgProductos/leve/leve-Plastilina.png"
+        "imagen": "/assets/imgProductos/leve/leve2-plastilina.png"
     },
     {
         "id": 3,
@@ -28,7 +28,7 @@
         "categoria" : "lenguaje-comunicacion",
         "nivel": "leve",
         "edad": "3-5",
-        "imagen": "/assets/imgProductos/leve/leve-Cuentos.png"
+        "imagen": "/assets/imgProductos/leve/leve3-cuentos.png"
     },
     {
         "id": 4,
@@ -38,7 +38,7 @@
         "categoria" : "motricidad",
         "nivel": "leve",
         "edad": "9-10",
-        "imagen": "/assets/imgProductos/leve/leve-Pista_de_canicas.png"
+        "imagen": "/assets/imgProductos/leve/leve4-canicas.png"
     },
     {
         "id": 5,
@@ -48,7 +48,7 @@
         "categoria" : "lenguaje-comunicacion",
         "nivel": "moderado",
         "edad": "3-5",
-        "imagen": "/assets/imgProductos/moderado/moderado-Tragik_1.png"
+        "imagen": "/assets/imgProductos/moderado/moderado1-tragik.png"
     },
     {
         "id": 6,
@@ -58,7 +58,7 @@
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "/assets/imgProductos/moderado/moderado-Gestos_2.png"
+        "imagen": "/assets/imgProductos/moderado/moderado2-gestos.png"
     },
     {
         "id": 7,
@@ -68,7 +68,7 @@
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "/assets/imgProductos/moderado/moderado-Party_yCo_1.png"
+        "imagen": "/assets/imgProductos/moderado/moderado3-partyco.png"
     },
     {
         "id": 8,
@@ -78,7 +78,7 @@
         "categoria" : "motricidad",
         "nivel": "moderado",
         "edad": "9-10",
-        "imagen": "/assets/imgProductos/moderado/moderado-Exploding_K_2.png"
+        "imagen": "/assets/imgProductos/moderado/moderado4-kittens.png"
     },
     {
         "id": 9,
@@ -88,7 +88,7 @@
         "categoria" : "sensoriales",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "/assets/imgProductos/avanzado/avanzado-MantaConPeso.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado1-manta.png"
     },
     {
         "id": 10,
@@ -98,6 +98,6 @@
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "/assets/imgProductos/avanzado/avanzado-espejo-de-las-emociones.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado2-espejo.png"
     }
 ]
