@@ -1,0 +1,27 @@
+#bluet{
+    margin:40px;
+}
+#bluet img{
+    width:30vw;
+    transform: scaleX(-1);
+}
+.form-check-input{
+    box-shadow: 1px 1px 2px #00000032 inset;
+}
+.text-center .btn{
+    background-color: #01BFC4;
+    border:0;
+    width:200px;
+}
+.swal2-popup{
+    font-family: fredoka;
+    color: #02537D;
+    background-color: #DCEFED;
+    border-radius: 30px;;
+}
+.swal2-popup button{
+    font-family: fredoka;
+    color: #DCEFED;
+    background-color: #01BFC4;
+    border-radius: 30px;;
+}
