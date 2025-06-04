@@ -12,7 +12,7 @@
     margin: 0;
     position: relative;
     z-index: 0;
-    background-color: #e0f7e654 !important;
+    background-color: #ffffff !important;
     font-family: 'Montserrat', sans-serif !important;
     color: #000000;
     font-size: 16px;
@@ -29,7 +29,7 @@
     background-repeat: repeat;
     background-position: top left;
     background-size: auto;
-    opacity: 50%;
+    opacity: 60%;
     z-index: -1;
     pointer-events: none;
   }
@@ -91,7 +91,7 @@
     border: 1px solid rgb(212, 212, 212);
     background-color: #f6fffe97;
   }
-  
+
   .card-title {
       font-weight: bold;
       font-family: 'Nunito', sans-serif !important;
