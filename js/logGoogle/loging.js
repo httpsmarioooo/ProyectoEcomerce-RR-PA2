@@ -6,10 +6,44 @@ loginForm.addEventListener('submit', (e) => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const validUser = users.find(user => user.email === email && user.password === password);
     if (!validUser) {
-        alert('Usuario y/o contraseña incorrectos!');
+        // alert('Usuario y/o contraseña incorrectos!');
+        // Mostrar alerta de error
+        Swal.fire({
+            title: 'Ingreso de sesión inválido',
+            text: 'Correo y/o contraseña incorrectos!',
+            imageUrl: '../../assets/images/bluet_advertencia.png', //% Imagen BlueT ingreso invalido
+            imageWidth: 120,
+            imageHeight: 120,
+            imageAlt: 'Ícono personalizado',
+            confirmButtonText: 'Corregir',
+            customClass: {
+                popup: 'mi-popup', //Clase del cuadro de la alerta
+                title: 'mi-titulo', //Clase del titulo de la alerta
+                htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
+                confirmButton: 'mi-boton' //Boton de confirmar
+            }
+        });
         return;
     }
-    alert(`Bienvenido ${validUser.name || validUser.email}`);
-    localStorage.setItem('login_success', JSON.stringify(validUser));
-    window.location.href = '/html/index.html';
+    // Mostrar alerta éxitosa
+        Swal.fire({
+            title: 'Ingreso de sesión éxitoso!',
+            text: `Bienvenido ${validUser.name || validUser.email}`,
+            imageUrl: '../../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
+            imageWidth: 120,
+            imageHeight: 120,
+            imageAlt: 'Ícono personalizado',
+            timer: 3000,
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                popup: 'mi-popup', //Clase del cuadro de la alerta
+                title: 'mi-titulo', //Clase del titulo de la alerta
+                htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
+                confirmButton: 'mi-boton' //Boton de confirmar
+            }
+        }).then(() => {
+            // alert(`Bienvenido ${validUser.name || validUser.email}`);
+            localStorage.setItem('login_success', JSON.stringify(validUser));
+            window.location.href = '../../index.html';
+        })
 });
