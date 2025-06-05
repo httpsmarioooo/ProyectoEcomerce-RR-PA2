@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const rutaImagen = producto.imagenUrl;
 
         card.innerHTML = `
-          <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
+          <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}" style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
             <img src="${rutaImagen}" class="imagen-card" alt="${producto.titulo}" onerror="this.src='/assets/images/placeholder.png'" style="border-radius: 20px; max-height: 200px; object-fit: cover;">
             <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
               <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
@@ -49,10 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al cargar productos:", error);
     });
 });
-
-
-
-
 
 // variables de selección
 let nivelesSeleccionados = [];
