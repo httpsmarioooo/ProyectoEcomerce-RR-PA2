@@ -3,8 +3,8 @@ loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.querySelector('#emailg').value.trim();
     const password = document.querySelector('#passwordg').value;
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const validUser = users.find(user => user.email === email && user.password === password);
+    const users = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
+    const validUser = users.find(user => user.correo === email && user.contrasena === password);
     if (!validUser) {
         // alert('Usuario y/o contraseña incorrectos!');
         // Mostrar alerta de error
@@ -28,7 +28,7 @@ loginForm.addEventListener('submit', (e) => {
     // Mostrar alerta éxitosa
         Swal.fire({
             title: 'Ingreso de sesión éxitoso!',
-            text: `Bienvenido ${validUser.name || validUser.email}`,
+            text: `Bienvenid@ ${validUser.nombre || validUser.correo}`,
             imageUrl: '../../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
             imageWidth: 120,
             imageHeight: 120,
@@ -43,7 +43,11 @@ loginForm.addEventListener('submit', (e) => {
             }
         }).then(() => {
             // alert(`Bienvenido ${validUser.name || validUser.email}`);
-            localStorage.setItem('login_success', JSON.stringify(validUser));
-            window.location.href = '../../index.html';
+            sessionStorage.setItem('usuarioActivo', JSON.stringify(validUser));
+            if (validUser.rol === 'admin') {
+                window.location.href = '../../HTML/admin.html';
+            } else {
+                window.location.href = '../../index.html';
+            }
         })
 });
