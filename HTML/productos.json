@@ -2,43 +2,43 @@
 [
     {
         "id": 1,
-        "titulo": "Cubos de Apilamiento Sensoriales de Madera",
+        "titulo": "Cubos Sensoriales de Madera",
         "descripcion": "Estos cubos ofrecen experiencias sensoriales variadas mediante texturas (lisa, rugosa, tela suave), colores vibrantes y sonidos suaves como cascabeles. Fomentan la exploración táctil y visual, la coordinación ojo-mano y la comprensión de tamaños y orden. Son ideales para juegos compartidos y construcción de torres.",
         "precio": 85000,
         "categoria" : "motricidad",
         "nivel": "leve",
         "edad": "3-5",
-        "imagen": "../assets/imgProductos/leve-Cubos.png"
+        "imagen": "/assets/imgProductos/leve/leve-Cubos.png"
     },
     {
         "id": 2,
-        "titulo": "Set de Plastilina Terapéutica con Diferentes Resistencias",
+        "titulo": "Set de Plastilina Terapéutica",
         "descripcion": "La plastilina terapéutica, con niveles de resistencia suave, media y dura, brinda estimulación táctil y propioceptiva. Amasarla, estirarla y moldearla relaja y ayuda a enfocar la atención. Además, es una actividad compartida que permite crear figuras juntos o seguir instrucciones sencillas, promoviendo la interacción.",
         "precio": 45000,
         "categoria" : "sensoriales",
         "nivel": "leve",
         "edad": "6-8",
-        "imagen": "../assets/imgProductos/leve-Plastilina.png"
+        "imagen": "/assets/imgProductos/leve/leve-Plastilina.png"
     },
     {
         "id": 3,
-        "titulo": "Libro Interactivo con Solapas y Texturas",
+        "titulo": "Libro Interactivo con Texturas",
         "descripcion": "Los libros interactivos con solapas, texturas y elementos sorpresa atraen mucho a los niños. Estimulan la curiosidad, la exploración táctil y visual, y favorecen el desarrollo del lenguaje cuando se leen en conjunto, nombrando objetos y acciones, fortaleciendo la comunicación y la conexión entre adultos y niños.",
         "precio": 35000,
         "categoria" : "lenguaje-comunicacion",
         "nivel": "leve",
         "edad": "3-5",
-        "imagen": "../assets/imgProductos/leve-Cuentos.png"
+        "imagen": "/assets/imgProductos/leve/leve-Cuentos.png"
     },
     {
         "id": 4,
-        "titulo": "Pista de Canicas Sensorial con Luces y Sonidos Suaves",
+        "titulo": "Pista de Canicas Sensorial",
         "descripcion": "Una pista de canicas con elementos sensoriales es visual y auditivamente atractiva. Las luces suaves y sonidos melódicos calman y estimulan de forma controlada. Seguir el recorrido de las canicas desarrolla la coordinación ojo-mano, el seguimiento visual y la comprensión de causa y efecto, ideal para jugar solos o en grupo.",
         "precio": 150000,
         "categoria" : "motricidad",
         "nivel": "leve",
         "edad": "9-10",
-        "imagen": "../assets/imgProductos/leve-Pista_de_canicas.png"
+        "imagen": "/assets/imgProductos/leve/leve-Pista_de_canicas.png"
     },
     {
         "id": 5,
@@ -48,17 +48,17 @@
         "categoria" : "lenguaje-comunicacion",
         "nivel": "moderado",
         "edad": "3-5",
-        "imagen": "../assets/imgProductos/moderado-Tragik_1.png"
+        "imagen": "/assets/imgProductos/moderado/moderado-Tragik_1.png"
     },
     {
         "id": 6,
-        "titulo": "GESTOS HASBRO",
+        "titulo": "Gestos Hasbro",
         "descripcion": "El juego Gestos de Hasbro, para niños de 6 a 8 años, fortalece áreas clave en niños con autismo, como la interacción social y la comunicación. Requiere turnos, colaboración y atención a los demás, fomentando el contacto visual, la empatía y el trabajo en equipo, mejorando habilidades sociales.",
         "precio": 130000,
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "../assets/imgProductos/moderado-Gestos_2.png"
+        "imagen": "/assets/imgProductos/moderado/moderado-Gestos_2.png"
     },
     {
         "id": 7,
@@ -68,7 +68,7 @@
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "moderado",
         "edad": "6-8",
-        "imagen": "../assets/imgProductos/moderado-Party_yCo_1.png"
+        "imagen": "/assets/imgProductos/moderado/moderado-Party_yCo_1.png"
     },
     {
         "id": 8,
@@ -78,17 +78,17 @@
         "categoria" : "motricidad",
         "nivel": "moderado",
         "edad": "9-10",
-        "imagen": "../assets/imgProductos/moderado-Exploding_K_2.png"
+        "imagen": "/assets/imgProductos/moderado/moderado-Exploding_K_2.png"
     },
     {
         "id": 9,
-        "titulo": "Manta de peso (Weighted Blanket)",
+        "titulo": "Manta de peso",
         "descripcion": "La manta de peso ofrece presión profunda que regula el sistema sensorial, generando calma y seguridad. Mejora el sueño y reduce la ansiedad sin requerir acción activa del niño. Se usa en siestas, momentos de ansiedad o rutinas para favorecer la autorregulación sensorial de forma pasiva.",
         "precio": 150000,
         "categoria" : "sensoriales",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos/avanzado-MantaConPeso.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado-MantaConPeso.png"
     },
     {
         "id": 10,
@@ -98,6 +98,6 @@
         "categoria" : "habilidades-sociales-emociones",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos/avanzado-espejo-de-las-emociones.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado-espejo-de-las-emociones.png"
     }
 ]

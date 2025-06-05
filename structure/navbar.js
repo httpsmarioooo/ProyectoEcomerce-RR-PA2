@@ -29,7 +29,7 @@ fetch("/components/navbar.html")
                 navList.appendChild(li);
                 document.getElementById('logout-btn').addEventListener('click', function () {
                     sessionStorage.removeItem('usuarioActivo');
-                    window.location.href = '/html/index.html';
+                    window.location.href = '/index.html';
                 });
             }
 

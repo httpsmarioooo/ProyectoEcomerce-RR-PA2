@@ -81,6 +81,12 @@ input#remember{
     border-radius: 4px;
     box-shadow: 0 2px 6px #a5a8a8a1 inset;
 }
+
+#togglePassword{
+    border: transparent;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px #a5a8a8a1 inset;
+}
 .checkbox label{
     font-family: 'Nunito', sans-serif !important;
     color: #0184A9;

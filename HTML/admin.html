@@ -13,7 +13,7 @@
         // Redirige si no hay sesión de admin
         const usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioActivo'));
         if (!usuarioActivo || usuarioActivo.rol !== 'admin') {
-            window.location.href = "index.html";
+            window.location.href = "/index.html";
         }
     </script>
 
@@ -82,16 +82,14 @@
                         style="max-height: 200px; display: none;">
                 </div>
 
-                <button type="submit" class="btn btn-success">Agregar al JSON</button>
-                <button type="button" class="btn btn-success" id="btn-ir-inicio">Inicio</button>
-
+                <button type="submit" class="btn btn-success" id="btn-agregarJSON">Agregar al Inventario</button>
             </form>
         </div>
     </div>
 
     <script>
         document.getElementById('btn-ir-inicio').addEventListener('click', function () {
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         });
     </script>
 
