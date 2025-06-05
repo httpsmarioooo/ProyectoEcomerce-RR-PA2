@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
               <div class="botones d-flex justify-content-between align-items-center mt-2">
                 <a href="#" class="btn-carrito-card">
-                  <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: 30px; height: auto;">
+                  <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
                 </a>
                 <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
               </div>
