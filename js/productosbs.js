@@ -9,14 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
       contenedor.innerHTML = '';
 
       data.forEach(producto => {
+        console.log("imagenUrl:", producto.imagenUrl);
         const card = document.createElement("div");
         card.id = `card-${producto.id}`;
         card.style.marginTop = "8px";
         card.style.marginBottom = "8px";
 
+        const rutaImagen = producto.imagenUrl;
+
         card.innerHTML = `
           <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
-            <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}" onerror="this.src='/assets/images/product-placeholder.jpg'" style="border-radius: 20px; max-height: 200px; object-fit: cover;">
+            <img src="${rutaImagen}" class="imagen-card" alt="${producto.titulo}" onerror="this.src='/assets/images/placeholder.png'" style="border-radius: 20px; max-height: 200px; object-fit: cover;">
             <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
               <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
               <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
@@ -33,13 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedor.appendChild(card);
       });
 
-      // Agregar eventos a botones del carrito
       contenedor.addEventListener("click", function(e) {
         if (e.target.classList.contains("imagen-carrito")) {
           e.preventDefault();
           const id = e.target.getAttribute("data-id");
           const productoSeleccionado = data.find(p => p.id == id);
-          agregarAlCarrito(productoSeleccionado); // Asegúrate de tener esta función definida
+          agregarAlCarrito(productoSeleccionado);
         }
       });
     })
@@ -47,6 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al cargar productos:", error);
     });
 });
+
+
+
+
+
 // variables de selección
 let nivelesSeleccionados = [];
 
