@@ -36,7 +36,16 @@ body {
   width: 100px;
   margin:0px;
 }
+#faq-section {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center
+}
+.accordion-body{
+  text-align: justify;
+}
 .card .card-body{
+  max-width: 500px;
   padding:30px;
 }
 .text-start .form-label{
@@ -58,7 +67,7 @@ body {
   margin:40px;
 }
 #bluet img{
-  width:30vw;
+  width:20vw;
   transform: scaleX(-1);
 }
 .form-check-input{
@@ -95,7 +104,12 @@ body {
   .form-container{
     flex-direction: column;
   }
-
+  #faq-section {
+  max-width: 80vw;
+}
+.accordion-body{
+  text-align: left;
+}
   #bluet {
     order: 2; /* Asegura que va después de .card-body */
   }

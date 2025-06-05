@@ -11,8 +11,9 @@ function mostrarCarrito() {
             const li = document.createElement('li');
             li.className = 'list-group-item d-flex justify-content-between align-items-center';
             li.innerHTML = `
-                <span>${prod.titulo} <small class="text-muted">($${prod.precio.toLocaleString()})</small></span>
-                <button class="btn btn-sm btn-remove" data-index="${idx}">&times;</button>
+            <img src="${prod.imagen}" alt="${prod.titulo}" class="imagen-carrito" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px; border-radius: 5px;">
+            <span>${prod.titulo} <small class="text-muted">($${prod.precio.toLocaleString()})</small></span>
+            <button class="btn btn-sm btn-remove" data-index="${idx}">&times;</button>
             `;
             lista.appendChild(li);
         });
