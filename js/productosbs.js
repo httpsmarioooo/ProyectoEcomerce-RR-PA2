@@ -1,53 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:8080/productos/ObtenerProductos")
-    .then(response => {
-      if (!response.ok) throw new Error("Error al obtener productos");
-      return response.json();
-    })
-    .then(data => {
-      const contenedor = document.getElementById("productos-container");
-      contenedor.innerHTML = '';
+    fetch("http://localhost:8080/productos/ObtenerProductos")
+        .then(response => {
+            if (!response.ok) throw new Error("Error al obtener productos");
+            return response.json();
+        })
+        .then(data => {
+            const contenedor = document.getElementById("productos-container");
+            contenedor.innerHTML = '';
 
-      data.forEach(producto => {
-        console.log("imagenUrl:", producto.imagenUrl);
-        const card = document.createElement("div");
-        card.id = `card-${producto.id}`;
-        card.style.marginTop = "8px";
-        card.style.marginBottom = "8px";
+            data.forEach(producto => {
+                console.log("imagenUrl:", producto.imagenUrl);
+                const card = document.createElement("div");
+                card.id = `card-${producto.id}`;
+                card.style.marginTop = "8px";
+                card.style.marginBottom = "8px";
 
-        const rutaImagen = producto.imagenUrl;
+                const rutaImagen = producto.imagenUrl;
 
-        card.innerHTML = `
-          <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}" style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
-            <img src="${rutaImagen}" class="imagen-card" alt="${producto.titulo}" onerror="this.src='/assets/images/placeholder.png'" style="border-radius: 20px; max-height: 200px; object-fit: cover;">
-            <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
-              <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
-              <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
-              <div class="botones d-flex justify-content-between align-items-center mt-2">
-                <a href="#" class="btn-carrito-card">
-                  <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
-                </a>
-                <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
-              </div>
-            </div>
-          </div>
-        `;
+                card.innerHTML = `
+  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}" 
+       style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
+       
+    <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 20px;">
+      <img src="${rutaImagen}" 
+           class="imagen-card" 
+           alt="${producto.titulo}" 
+           onerror="this.src='/assets/images/placeholder.png'" 
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+    </div>
+    
+    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+      <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
+      <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
+      <div class="botones d-flex justify-content-between align-items-center mt-2">
+        <a href="#" class="btn-carrito-card">
+          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
+        </a>
+        <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
+      </div>
+    </div>
+  </div>
+`;
 
-        contenedor.appendChild(card);
-      });
 
-      contenedor.addEventListener("click", function(e) {
-        if (e.target.classList.contains("imagen-carrito")) {
-          e.preventDefault();
-          const id = e.target.getAttribute("data-id");
-          const productoSeleccionado = data.find(p => p.id == id);
-          agregarAlCarrito(productoSeleccionado);
-        }
-      });
-    })
-    .catch(error => {
-      console.error("Error al cargar productos:", error);
-    });
+                contenedor.appendChild(card);
+            });
+
+            contenedor.addEventListener("click", function (e) {
+                if (e.target.classList.contains("imagen-carrito")) {
+                    e.preventDefault();
+                    const id = e.target.getAttribute("data-id");
+                    const productoSeleccionado = data.find(p => p.id == id);
+                    agregarAlCarrito(productoSeleccionado);
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Error al cargar productos:", error);
+        });
 });
 
 // variables de selección
@@ -167,7 +177,7 @@ function actualizarVistaCarrito() {
             offcanvasBody.appendChild(list);
 
             // Evento para eliminar productos del carrito
-            list.addEventListener('click', function(e) {
+            list.addEventListener('click', function (e) {
                 if (e.target.classList.contains('btn-remove')) {
                     const idx = e.target.getAttribute('data-index');
                     carrito.splice(idx, 1);
