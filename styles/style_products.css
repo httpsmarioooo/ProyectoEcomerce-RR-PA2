@@ -293,66 +293,84 @@
     border-radius: 50%;
   }
 
-  /*-------------------Mínimo 800px y máximo 1190px--------------------*/
-  @media (min-width: 800px) and (max-width: 1190px) {
-    .contenedor-grid-filtros{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas: "aside" "main";
-      justify-items: center;
-    }
-    .filtro-categoria{
-      flex-direction: row;
-      text-align: center;
-    }
-    .categoria-filtros{
-      display: flex;
-      flex-direction: row;
-      height: auto;
-    }
-    .checkbox-label {
-      width: 100%;
-      font-size: 0.8rem;
-      color: #000;
-    }
-    .checkbox-label input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      margin-right: 10px;
-      accent-color: #999;
-    }
-    #filtro-edad {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    #filtro-edad strong{
-      text-align: center;
-      width: 100%;
-    }
-    .grupo-filtros-edad-vertical{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      gap: 10px;
-    }
-    .img-filtro {
-      width: 150px;
-      height: 150px;
-    }
-    #productos-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+/* RESPONSIVE DESIGN */
+
+/*-------------------Mínimo 800px y máximo 1190px--------------------*/
+@media (min-width: 800px) and (max-width: 1190px) {
+  .contenedor-grid-filtros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside" "main";
+    justify-items: center;
+  }
+  
+  .filtros-laterales {
+    background-color: rgba(220, 239, 237, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .filtro-categoria{
+    flex-direction: row;
+    text-align: center;
+  }
+  .categoria-filtros{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100px;
+  }
+  .checkbox-label {
+    width: 100%;
+    font-size: 0.8rem;
+    color: #000;
+  }
+  .checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #999;
+  }
+  #filtro-edad {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #filtro-edad strong{
+    text-align: center;
+    width: 100%;
+  }
+  .grupo-filtros-edad-vertical{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+  .img-filtro {
+    width: 150px;
+    height: 150px;
+  }
+  #productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   #filtro-nivel {
     flex-wrap: wrap;
     gap: 5vw;
     padding-left: 0;
     justify-content: center;
+    padding: 25px 15px;
+    margin: 60px 0 50px;
+    background: linear-gradient(135deg, rgba(220, 239, 237, 0.8) 0%, rgba(220, 239, 237, 0.4) 100%);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(2, 83, 125, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .btn-verMas {
@@ -366,97 +384,113 @@
   }
 }
 
-  /*----------------------máximo 790px----------------------*/
-  @media (max-width: 790px) {
-    #card-custom {
-      width: 190px;
-      margin: 3px 3px 0;
-      padding: 8px 8px 5px;
-    }
-    .imagen-card {
-      height: 130px;
-    }
-    .card-title {
-      font-size: 13px;
-    }
-    .card-price {
-      font-size: 15px;
-    }
-    .botones{
-      align-items: baseline;
-      justify-content: baseline;
-      width: 100%;
-    }
+/*----------------------máximo 790px----------------------*/
+@media (max-width: 790px) {
+  #card-custom {
+    width: 190px;
+    margin: 10px;
+    padding: 8px 8px 5px;
+  }
+  .imagen-card {
+    height: 130px;
+  }
+  .card-title {
+    font-size: 13px;
+  }
+  .card-price {
+    font-size: 15px;
+  }
+  .botones{
+    align-items: baseline;
+    justify-content: baseline;
+    width: 100%;
+  }
 
-    img.btn-nivel {
-      width: 130px;
-      height: auto;
-      margin-right: 0;
-    }
-    .contenedor-grid-filtros{
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto 1fr;
-      grid-template-areas: "aside" "main";
-      margin: 1%;
-      justify-items: center;
-    }
-    aside{
-      width: 100%;
-      justify-content: center;
-    }
-    .filtro-categoria{
-      flex-direction: row;
-      text-align: center;
-      width: 100%;
-    }
-    .categoria-filtros{
-      display: flex;
-      flex-direction: row;
-      height: auto;
-    }
-    .checkbox-label {
-      width: 100%;
-      font-size: 0.7rem;
-      color: #000;
-    }
-    .checkbox-label input[type="checkbox"] {
-      width: 13px;
-      height: 13px;
-      margin-right: 3px;
-      accent-color: #999;
-    }
-    #filtro-edad {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    #filtro-edad strong{
-      text-align: center;
-      width: 100%;
-    }
-    .grupo-filtros-edad-vertical{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      gap: 3px;
-    }
-    .img-filtro {
-      width: 100px;
-      height: 110px;
-    }
-    #productos-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  img.btn-nivel {
+    width: 130px;
+    height: auto;
+    margin-right: 0;
+  }
+  .contenedor-grid-filtros{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside" "main";
+    margin: 1%;
+    justify-items: center;
+  }
+  aside{
+    width: 100%;
+    justify-content: center;
+  }
   
+  .filtros-laterales {
+    background-color: rgba(220, 239, 237, 0.9);
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+  }
+  
+  .filtro-categoria{
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+  }
+  .categoria-filtros{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100px;
+  }
+  .checkbox-label {
+    width: 100%;
+    font-size: 0.7rem;
+    color: #000;
+  }
+  .checkbox-label input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+    accent-color: #999;
+  }
+  #filtro-edad {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #filtro-edad strong{
+    text-align: center;
+    width: 100%;
+  }
+  .grupo-filtros-edad-vertical{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 3px;
+  }
+  .img-filtro {
+    width: 100px;
+    height: 110px;
+  }
+  #productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   #filtro-nivel {
     flex-wrap: wrap;
     gap: 3vw;
     padding-left: 0;
     justify-content: center;
+    padding: 18px 12px;
+    margin: 35px 0 25px;
+    background: linear-gradient(135deg, rgba(220, 239, 237, 0.8) 0%, rgba(220, 239, 237, 0.4) 100%);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(2, 83, 125, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .btn-verMas {
@@ -472,102 +506,119 @@
   }
 }
 
-  /*-------------------máximo 400px--------------------*/
-  @media (max-width: 400px) {
-    #card-custom {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-    }
-    .imagen-card {
-      width: 30%;
-      height: 150px;
-    }
-    .card-body{
-      width: 70%;
-    }
-    .card-title {
-      font-size: 13px;
-    }
-    .card-price {
-      font-size: 15px;
-    }
-    .botones{
-      align-items: baseline;
-      justify-content: baseline;
-      width: 100%;}
+/*-------------------máximo 400px--------------------*/
+@media (max-width: 400px) {
+  #card-custom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .imagen-card {
+    width: 30%;
+    height: 150px;
+  }
+  .card-body{
+    width: 70%;
+  }
+  .card-title {
+    font-size: 13px;
+  }
+  .card-price {
+    font-size: 15px;
+  }
+  .botones{
+    align-items: baseline;
+    justify-content: baseline;
+    width: 100%;
+  }
+
+  img.btn-nivel {
+    width: 130px;
+    height: auto;
+    margin-right: 0;
+  }
+  .contenedor-grid-filtros{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside" "main";
+    margin-left: 1%;
+    margin-right: 2%;
+    justify-items: center;
+  }
+  aside{
+    width: 100%;
+    justify-content: center;
+  }
   
-    img.btn-nivel {
-      width: 130px;
-      height: auto;
-      margin-right: 0;
-    }
-    .contenedor-grid-filtros{
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto 1fr;
-      grid-template-areas: "aside" "main";
-      margin-left: 1%;
-      margin-right: 2%;
-      justify-items: center;
-    }
-    aside{
-      width: 100%;
-      justify-content: center;
-    }
-    .filtro-categoria{
-      flex-direction: row;
-      text-align: center;
-      width: 100%;
-    }
-    .categoria-filtros{
-      display: flex;
-      flex-direction: row;
-      height: auto;
-    }
-    .checkbox-label {
-      width: 100%;
-      font-size: 0.7rem;
-      color: #000;
-    }
-    .checkbox-label input[type="checkbox"] {
-      width: 13px;
-      height: 13px;
-      margin-right: 3px;
-      accent-color: #999;
-    }
-    #filtro-edad {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    #filtro-edad strong{
-      text-align: center;
-      width: 100%;
-    }
-    .grupo-filtros-edad-vertical{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      gap: 3px;
-    }
-    .img-filtro {
-      width: 95px;
-      height: 110px;
-    }
-    #productos-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+  .filtros-laterales {
+    background-color: rgba(220, 239, 237, 0.95);
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+  }
+  
+  .filtro-categoria{
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+  }
+  .categoria-filtros{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100px;
+  }
+  .checkbox-label {
+    width: 280px;
+    font-size: 0.7rem;
+    color: #000;
+  }
+  .checkbox-label input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+    accent-color: #999;
+  }
+  #filtro-edad {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #filtro-edad strong{
+    text-align: center;
+    width: 100%;
+  }
+  .grupo-filtros-edad-vertical{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 3px;
+  }
+  .img-filtro {
+    width: 95px;
+    height: 110px;
+  }
+  #productos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   #filtro-nivel {
     flex-wrap: wrap;
     gap: 2vw;
     padding-left: 0;
     justify-content: center;
+    padding: 15px 10px;
+    margin: 25px 0 20px;
+    background: linear-gradient(135deg, rgba(220, 239, 237, 0.8) 0%, rgba(220, 239, 237, 0.4) 100%);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(2, 83, 125, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .btn-verMas {
@@ -580,5 +631,163 @@
   .btn-carrito-card {
     width: 100%;
     max-width: 260px;
+    padding: 0 0.5rem;
+  }
+
+  .filtros-laterales {
+    background-color: rgba(220, 239, 237, 0.95);
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .categoria-filtros {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: fit-content;
+  }
+
+  .filtro-categoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .checkbox-label {
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: calc(50% - 4px);
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+  }
+
+  #filtro-edad {
+    text-align: center;
+  }
+
+  .grupo-filtros-edad-vertical {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .img-filtro {
+    width: 60px;
+    height: 60px;
+  }
+
+  #productos-container {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    max-width: 300px;
+    margin: 20px;
+    padding: 0;
+  }
+
+  #card-custom {
+    max-width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .imagen-card {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .card-price {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .botones {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .btn-carrito-card,
+  .btn-verMas {
+    height: 35px;
+    font-size: 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .imagen-carrito {
+    width: 20px;
+    height: 20px;
+  }
+
+  #filtro-nivel {
+    gap: 10px;
+    margin: 25px 0 20px;
+  }
+
+  .btn-nivel {
+    width: 100px;
+  }
+
+  .titulos-filtros {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 20px 0 15px;
+  }
+}
+
+/* AJUSTES ESPECÍFICOS PARA PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 320px) {
+  .contenedor-grid-filtros {
+    padding: 0 0.25rem;
+  }
+
+  .checkbox-label {
+    font-size: 0.75rem;
+  }
+
+  .img-filtro {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-nivel {
+    width: 90px;
+  }
+
+  #card-custom {
+    padding: 10px;
+    margin: 50px;
+  }
+
+  .imagen-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-carrito-card,
+  .btn-verMas {
+    height: 32px;
+    font-size: 11px;
   }
 }

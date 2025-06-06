@@ -51,7 +51,7 @@ main {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('../assets/images/intentofondo.svg');
+  background-image: url('../assets/images/sadstatue.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,8 +67,7 @@ main {
   font-size: 40PX;
   font-weight: 900;
   margin-bottom: 20px;
-  margin-top: 5%;
-  padding: 100px;
+  margin-top: 0;
   color: #235563;
 }
 
@@ -80,7 +79,8 @@ main {
   align-items: center;
   height: 100%;
   padding: 20px;
-  margin: 0;
+  margin: 50px;
+  margin-top: 0px;
 }
 
 .container-imagen-producto{
@@ -89,7 +89,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 500px;
-  height: fit-content;
+  height: 500px;
   padding: 0;
 }
 
@@ -124,6 +124,7 @@ main {
   width: 500px;
   z-index: 1;
   position: relative;
+  bottom: 10%;
 }
 
 
@@ -133,13 +134,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f473;
+  background-color: #6ebadb36;
   border-radius: 20px;
   height: 610px;
 }
 
-
 /* EN QUÉ TE AYUDA */
+
 .help-section {
   display: flex;
   position: relative;
@@ -147,19 +148,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 20%;
 }
-
-
-.bluet-help {
-  position: absolute;
-  top: -150px;
-  transform: scalex(-1);
-  right: 2px;
-  width: 13rem;
-  height: auto;
-  z-index: 3;
-}
-
 
 .help-card {
   font-family: 'nunito';
@@ -167,20 +157,56 @@ main {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-size: 20px;
-  width: 100%;
+  width: 90%;
   max-width: 700px;
   height: auto;
   color: #1a3e48;
   padding: 2%;
   z-index: 1;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
+#imagen-izquierda {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.help-card h2 {
-  margin: 0 0 0.5rem 0;
+.bluet-help {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: auto;
+  z-index: 3;
+}
+
+#texto-derecha {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#texto-derecha p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+#help-h2 {
   font-size: 20px;
   font-weight: bold;
   color: #1a3e48;
+  background-color: #0184A9;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  text-align: center;
+  z-index: 2;
 }
 
 
@@ -191,14 +217,13 @@ main {
   align-items: center;
   margin-top: 50px;
   font-family: 'Nunito';
-  font-weight: 800;
   color: #235563;
 }
 
 
 #precio {
-  font-size: 70px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 800;
   text-align: center;
   color: #235563;
 }
@@ -221,7 +246,7 @@ main {
 
 #btn-agregarcarrito {
   position: relative;
-  width: 300px;
+  width: 200px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -247,12 +272,16 @@ main {
 
 #fecha-envio-btn { /*Botón*/
   position: relative;
-  width: 300px;
+  width: 200px;
   border: none;
   background: transparent;
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.2s ease;
+}
+
+#fecha-envio-btn:hover {
+  transform: scale(1.05);
 }
 
 
@@ -281,11 +310,11 @@ main {
 #fecha-envio-btn #fecha-texto { /*Texto Seleccionar*/
   position: absolute;
   top: 55%;
-  left: 60%;
+  left: 63%;
   transform: translate(-50%, -50%);
   color: #168cb7;
   font-weight: 1000;
-  font-size: 20px;
+  font-size: 12px;
   z-index: 2;
   pointer-events: none;
   font-family: 'Nunito';
