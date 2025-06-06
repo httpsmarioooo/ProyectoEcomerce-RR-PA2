@@ -1,275 +1,202 @@
-/*IMPORTAR FUENTES*/
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+  /*IMPORTAR FUENTES*/
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat&family=Nunito:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Combo&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Combo&family=Fredoka:wght@300..700&family=Joti+One&family=Knewave&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+Grund:wght@100..400&family=Slackey&display=swap');
 
-                                              /*ESTILO GENERAL*/
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  margin: 0;
-  background-color: #e3fcf9 !important;
-  font-family: 'Montserrat', sans-serif !important;
-  color: #000000;
-  font-size: 16px;
-  font-weight: 900;
-}
-.contenedor-grid-filtros{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-areas: "aside" "main";
-}
-#productos-container {
-  padding-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-h1 {
-  text-align: center !important; 
-  font-family: 'Fredoka', sans-serif !important;
-  color: #02537d !important;
-  font-size: 40px !important;
-  margin-top: 60px !important;
-  margin-bottom: 0 !important;
-}
-#card-custom {
-  width: 18rem;
-  background-color: #DCEFED;
-  border-radius: 25px;
-  border: none;
-  margin: 5px 15px 0;
-  padding: 15px 15px 5px;
-  box-sizing: border-box;
-  transition: width 0.3s ease;
-}
-.card {
-    box-shadow: 0 2px 8px rgba(5, 5, 5, 0.384);
-    transition: box-shadow 0.2s;
-}
-.card:hover {
-    box-shadow: 0 4px 16px rgba(221, 221, 221, 0.11);
-    transition: box-shadow 0.2s;
-}
-.imagen-card {
-  width: 100%;
-  height: 250px;
-  object-fit: contain;
-  border-radius: 25px;
-  display: block;
-  border: 1px solid rgb(212, 212, 212);
-}
-.card-title {
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif !important;
-    font-size: 16px;
-}
-.card-price {
-    font-size: 18px;
-    font-weight: bolder;
-    font-family: 'Nunito', sans-serif !important;
-    color: #02537D;
-}
-.botones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.btn-carrito-card{
-    background-color: transparent;
-    border-radius: 15px;
-    padding: 4px;
-    text-decoration: none;
-    /* border:1px solid #01BFC4; */
-    object-fit: contain;
-    position: relative;
-    width: 40%;
-}
-.imagen-carrito{
-    width: 80px;
-    animation: moverCarrito 2s linear infinite alternate;
-}
-@keyframes moverCarrito {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(15px);}
-}
-.btn-verMas{
-    background-color: #01BFC4;
-    border-radius: 15px;
-    padding: 10px;
-    text-decoration: none;
-    font-family: "fredoka";
-    font-size: 17px;
-    text-align: center;
-    color: #02537D;
-    border:0;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-}
-.btn-verMas:hover {
-  color: azure;
-}
-.btn-verMas strong{
-    margin: 0;
+                                                /*ESTILO GENERAL*/
+  * {
     padding: 0;
-    line-height: 1;
-}
-/* ------FILTROS------ */
-.filtros-container {
-  display: flex;
-  gap: 2rem;
-}
-.filtros-laterales {
-  width: 200px;
-}
-.categoria-filtros {
-  margin-top: 10px;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-/* .grupo-filtros,
-.grupo-filtros-edad-vertical {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.grupo-filtros-edad-vertical {
-  flex-direction: column;
-  gap: 0;
-  margin-top: 0;
-} */
-.filtro-opcion {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-.filtro-subrayado label {
-  text-decoration: underline;
-  font-weight: bold;
-}
-.checkbox-label {
-  align-items: center;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #000;
-}
-.checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  accent-color: #999;
-}
-.form-check-input {
-  margin-right: 0.5rem;
-}
-.edad-circulo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  gap: 1rem;
-}
-.edad-circulo span {
-  font-size: 1rem;
-}
-.edad-circulo input[type="checkbox"] {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  appearance: none;
-  background-color: #ccc;
-  display: inline-block;
-  position: relative;
-}
-.edad-circulo input[type="checkbox"]:checked {
-  background-color: #666;
-}
-.img-filtro {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  cursor: pointer;
-  border: 2px solid rgba(221, 221, 221, 0.158);
-  box-shadow: 0 2px 8px rgba(5, 5, 5, 0.082);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-.btn-filtro-edad{
-  margin: 5px;
-}
-.btn-filtro-edad input:checked + .img-filtro {
-  border-color: #02537D;
-  background-color: #DCEFED;
-  box-shadow: 0 0 5px rgba(2, 83, 125, 0.5);
-}
-#filtro-nivel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-.btn-nivel {
-  width: 180px;
-  height: auto;
-  cursor: pointer;
-  opacity: 1;
-  transition: 0.3s;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-.btn-nivel.activo {
-  border: 3px solid #0077aa;
-  padding: 5px;
-  border-radius: 50%;
-}
-.nivel-pill {
-  border: 2px solid #000;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
-  cursor: pointer;
-  position: relative;
-}
-.nivel-pill input[type="checkbox"] {
-  display: none;
-}
-.nivel-pill input[type="checkbox"]:checked + span,
-.nivel-pill input[type="checkbox"]:checked {
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-}
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    position: relative;
+    z-index: 0;
+    background-color: #ffffff5c !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-size: 16px;
+  }
 
-/*-------------------Mínimo 800px y máximo 1190px--------------------*/
-@media (min-width: 800px) and (max-width: 1190px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/FONDOPRODUCTOS.svg);
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: auto;
+    opacity: 50%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
   .contenedor-grid-filtros{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: "aside" "main";
-    justify-items: center;
+
   }
-  .filtro-categoria{
-    flex-direction: row;
-    text-align: center;
+
+  .titulos-filtros {
+    font-weight: bold;
+    font-family: 'Fredoka';
+    color: #02537D;
+    font-size: 20px;
   }
-  .categoria-filtros{
+
+  #productos-container {
+    padding-top: 0px;
     display: flex;
-    flex-direction: row;
-    height: auto;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+  }
+  h1 {
+    text-align: center !important; 
+    font-family: 'Fredoka', sans-serif;
+    color: #02537d !important;
+    font-size: 50px !important;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-weight: bolder !important;
+  }
+
+  #card-custom {
+    width: 18rem;
+    background-color: #DCEFED;
+    border-radius: 25px;
+    border: none;
+    margin: 5px 15px 0;
+    padding: 15px 15px 5px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+  }
+  .card {
+      box-shadow: 0 2px 8px rgba(5, 5, 5, 0.384);
+      transition: box-shadow 0.2s;
+  }
+  .card:hover {
+      box-shadow: 0 4px 16px rgba(221, 221, 221, 0.11);
+      transition: box-shadow 0.2s;
+  }
+  .imagen-card {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 25px;
+    display: block;
+    border: 1px solid rgb(212, 212, 212);
+    background-color: #f6fffe97;
+  }
+
+  .card-title {
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif !important;
+      font-size: 16px;
+  }
+  .card-price {
+      font-size: 18px;
+      font-weight: bolder;
+      font-family: 'Nunito', sans-serif !important;
+      color: #02537D;
+  }
+  .botones{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 20px;
+      margin: 10px;
+      width: 100%;
+  }
+  .btn-carrito-card{
+      background-color: #2dc4c956;
+      border-radius: 15px;
+      padding: 2px;
+      padding-bottom: 60px;
+      text-decoration: none;
+      border:1px solid #01bec456;
+      display: absolute;
+      width: 1800px;
+      height: 60px;
+  }
+
+  .imagen-carrito{
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      height: auto;
+  }
+
+  .btn-carrito-card:hover {
+      box-shadow:  0 4px 16px #01bec47c;
+      transition: box-shadow 0.2s;
+  }
+
+  .btn-verMas{
+      background-color: #2dc4c956;
+      border:1px solid #01bec456;
+      border-radius: 15px;
+      padding: 5px;
+      text-decoration: none;
+      font-family: "fredoka";
+      font-size: 15px;
+      text-align: center;
+      color: #03547f;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 1500px;
+      height: 65px;
+      font-weight: 610 !important;
+  }
+
+  .btn-verMas:hover {
+      box-shadow:  0 4px 16px #01bec47c;
+      transition: box-shadow 0.2s;
+  }
+
+  /* ------FILTROS------ */
+  .filtros-container {
+    display: flex;
+    gap: 2rem;
+  }
+  .filtros-laterales {
+    width: 200px;
+  }
+  .categoria-filtros {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* .grupo-filtros,
+  .grupo-filtros-edad-vertical {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .grupo-filtros-edad-vertical {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  } */
+  .filtro-opcion {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .filtro-subrayado label {
+    text-decoration: underline;
+    font-weight: bold;
   }
   .checkbox-label {
-    width: 100%;
-    font-size: 0.8rem;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
     color: #000;
   }
   .checkbox-label input[type="checkbox"] {
@@ -278,239 +205,380 @@ h1 {
     margin-right: 10px;
     accent-color: #999;
   }
-  #filtro-edad {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  .form-check-input {
+    margin-right: 0.5rem;
   }
-  #filtro-edad strong{
-    text-align: center;
-    width: 100%;
-  }
-  .grupo-filtros-edad-vertical{
+  .edad-circulo {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  .edad-circulo span {
+    font-size: 1rem;
+  }
+  .edad-circulo input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    appearance: none;
+    background-color: #ccc;
+    display: inline-block;
+    position: relative;
+  }
+  .edad-circulo input[type="checkbox"]:checked {
+    background-color: #666;
   }
   .img-filtro {
     width: 150px;
     height: 150px;
+    object-fit: contain;
+    cursor: pointer;
+    border: 2px solid rgba(221, 221, 221, 0.158);
+    box-shadow: 0 2px 8px rgba(5, 5, 5, 0.082);
+    border-radius: 50%;
+    transition: all 0.3s ease;
   }
-  #productos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .btn-filtro-edad{
+    margin: 5px;
   }
-}
-/*----------------------máximo 790px----------------------*/
-@media (max-width: 790px) {
-  #card-custom {
-    width: 190px;
-    margin: 3px 3px 0;
-    padding: 8px 8px 5px;
-  }
-  .imagen-card {
-    height: 130px;
-  }
-  .card-title {
-    font-size: 13px;
-  }
-  .card-price {
-    font-size: 15px;
-  }
-  .botones{
-    align-items: baseline;
-    justify-content: baseline;
-    width: 100%;
-  }
-  .btn-carrito-card{
-    padding: 2px;
-    width: 100%;
-  }
-  .imagen-carrito{
-    width: 100%;
-    animation: none 2s linear infinite alternate;
-  }
-  .btn-verMas{
-    border-radius: 15px;
-    padding: 8px;
-    font-size: 14px;
-    width: 90%;
+  .btn-filtro-edad input:checked + .img-filtro {
+    border-color: #02537D;
+    background-color: #DCEFED;
+    box-shadow: 0 0 5px rgba(2, 83, 125, 0.5);
   }
   #filtro-nivel {
-    gap: 3px;
-  }
-  img.btn-nivel {
-    width: 130px;
-    height: auto;
-    margin-right: 0;
-  }
-  .contenedor-grid-filtros{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "aside" "main";
-    margin: 1%;
-    justify-items: center;
-  }
-  aside{
-    width: 100%;
+    display: flex;
     justify-content: center;
+    gap: 130px;
+    margin-bottom: 20px;
+    padding-left: 350px;
+    padding-top: 80px;
   }
-  .filtro-categoria{
-    flex-direction: row;
-    text-align: center;
-    width: 100%;
-  }
-  .categoria-filtros{
-    display: flex;
-    flex-direction: row;
+  .btn-nivel {
+    width: 180px;
     height: auto;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-right: 10px;
   }
-  .checkbox-label {
-    width: 100%;
-    font-size: 0.7rem;
-    color: #000;
+  .btn-nivel.activo {
+    border: 3px solid #0077aa;
+    padding: 5px;
+    border-radius: 50%;
   }
-  .checkbox-label input[type="checkbox"] {
-    width: 13px;
-    height: 13px;
-    margin-right: 3px;
-    accent-color: #999;
-  }
-  #filtro-edad {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  #filtro-edad strong{
-    text-align: center;
-    width: 100%;
-  }
-  .grupo-filtros-edad-vertical{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 3px;
-  }
-  .img-filtro {
+  .nivel-pill {
+    border: 2px solid #000;
+    border-radius: 50%;
     width: 100px;
-    height: 110px;
-  }
-  #productos-container {
+    height: 100px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    cursor: pointer;
+    position: relative;
+  }
+  .nivel-pill input[type="checkbox"] {
+    display: none;
+  }
+  .nivel-pill input[type="checkbox"]:checked + span,
+  .nivel-pill input[type="checkbox"]:checked {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  /*-------------------Mínimo 800px y máximo 1190px--------------------*/
+  @media (min-width: 800px) and (max-width: 1190px) {
+    .contenedor-grid-filtros{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "aside" "main";
+      justify-items: center;
+    }
+    .filtro-categoria{
+      flex-direction: row;
+      text-align: center;
+    }
+    .categoria-filtros{
+      display: flex;
+      flex-direction: row;
+      height: auto;
+    }
+    .checkbox-label {
+      width: 100%;
+      font-size: 0.8rem;
+      color: #000;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      accent-color: #999;
+    }
+    #filtro-edad {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    #filtro-edad strong{
+      text-align: center;
+      width: 100%;
+    }
+    .grupo-filtros-edad-vertical{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 10px;
+    }
+    .img-filtro {
+      width: 150px;
+      height: 150px;
+    }
+    #productos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  #filtro-nivel {
+    flex-wrap: wrap;
+    gap: 5vw;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .btn-verMas {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-carrito-card {
+    width: 100%;
+    max-width: 300px;
   }
 }
-/*-------------------máximo 400px--------------------*/
-@media (max-width: 400px) {
-  #card-custom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+  /*----------------------máximo 790px----------------------*/
+  @media (max-width: 790px) {
+    #card-custom {
+      width: 190px;
+      margin: 3px 3px 0;
+      padding: 8px 8px 5px;
+    }
+    .imagen-card {
+      height: 130px;
+    }
+    .card-title {
+      font-size: 13px;
+    }
+    .card-price {
+      font-size: 15px;
+    }
+    .botones{
+      align-items: baseline;
+      justify-content: baseline;
+      width: 100%;
+    }
+
+    img.btn-nivel {
+      width: 130px;
+      height: auto;
+      margin-right: 0;
+    }
+    .contenedor-grid-filtros{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "aside" "main";
+      margin: 1%;
+      justify-items: center;
+    }
+    aside{
+      width: 100%;
+      justify-content: center;
+    }
+    .filtro-categoria{
+      flex-direction: row;
+      text-align: center;
+      width: 100%;
+    }
+    .categoria-filtros{
+      display: flex;
+      flex-direction: row;
+      height: auto;
+    }
+    .checkbox-label {
+      width: 100%;
+      font-size: 0.7rem;
+      color: #000;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 13px;
+      height: 13px;
+      margin-right: 3px;
+      accent-color: #999;
+    }
+    #filtro-edad {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    #filtro-edad strong{
+      text-align: center;
+      width: 100%;
+    }
+    .grupo-filtros-edad-vertical{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 3px;
+    }
+    .img-filtro {
+      width: 100px;
+      height: 110px;
+    }
+    #productos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+  #filtro-nivel {
+    flex-wrap: wrap;
+    gap: 3vw;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .btn-verMas {
+    width: 90%;
+    max-width: 280px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-carrito-card {
     width: 100%;
+    max-width: 280px;
   }
-  .imagen-card {
-    width: 30%;
-    height: 150px;
+}
+
+  /*-------------------máximo 400px--------------------*/
+  @media (max-width: 400px) {
+    #card-custom {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+    .imagen-card {
+      width: 30%;
+      height: 150px;
+    }
+    .card-body{
+      width: 70%;
+    }
+    .card-title {
+      font-size: 13px;
+    }
+    .card-price {
+      font-size: 15px;
+    }
+    .botones{
+      align-items: baseline;
+      justify-content: baseline;
+      width: 100%;}
+  
+    img.btn-nivel {
+      width: 130px;
+      height: auto;
+      margin-right: 0;
+    }
+    .contenedor-grid-filtros{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "aside" "main";
+      margin-left: 1%;
+      margin-right: 2%;
+      justify-items: center;
+    }
+    aside{
+      width: 100%;
+      justify-content: center;
+    }
+    .filtro-categoria{
+      flex-direction: row;
+      text-align: center;
+      width: 100%;
+    }
+    .categoria-filtros{
+      display: flex;
+      flex-direction: row;
+      height: auto;
+    }
+    .checkbox-label {
+      width: 100%;
+      font-size: 0.7rem;
+      color: #000;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 13px;
+      height: 13px;
+      margin-right: 3px;
+      accent-color: #999;
+    }
+    #filtro-edad {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    #filtro-edad strong{
+      text-align: center;
+      width: 100%;
+    }
+    .grupo-filtros-edad-vertical{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 3px;
+    }
+    .img-filtro {
+      width: 95px;
+      height: 110px;
+    }
+    #productos-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  #filtro-nivel {
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding-left: 0;
+    justify-content: center;
   }
-  .card-body{
-    width: 70%;
-  }
-  .card-title {
+
+  .btn-verMas {
+    width: 95%;
+    max-width: 260px;
+    padding: 8px;
     font-size: 13px;
   }
-  .card-price {
-    font-size: 15px;
-  }
-  .botones{
-    align-items: baseline;
-    justify-content: baseline;
+
+  .btn-carrito-card {
     width: 100%;
-  }
-  .btn-carrito-card{
-    padding: 2px;
-    width: 100%;
-  }
-  .imagen-carrito{
-    width: 100%;
-    animation: none 2s linear infinite alternate;
-  }
-  .btn-verMas{
-    border-radius: 15px;
-    padding: 8px;
-    font-size: 14px;
-    width: 90%;
-  }
-  #filtro-nivel {
-    gap: 3px;
-  }
-  img.btn-nivel {
-    width: 130px;
-    height: auto;
-    margin-right: 0;
-  }
-  .contenedor-grid-filtros{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "aside" "main";
-    margin-left: 1%;
-    margin-right: 2%;
-    justify-items: center;
-  }
-  aside{
-    width: 100%;
-    justify-content: center;
-  }
-  .filtro-categoria{
-    flex-direction: row;
-    text-align: center;
-    width: 100%;
-  }
-  .categoria-filtros{
-    display: flex;
-    flex-direction: row;
-    height: auto;
-  }
-  .checkbox-label {
-    width: 100%;
-    font-size: 0.7rem;
-    color: #000;
-  }
-  .checkbox-label input[type="checkbox"] {
-    width: 13px;
-    height: 13px;
-    margin-right: 3px;
-    accent-color: #999;
-  }
-  #filtro-edad {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  #filtro-edad strong{
-    text-align: center;
-    width: 100%;
-  }
-  .grupo-filtros-edad-vertical{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 3px;
-  }
-  .img-filtro {
-    width: 95px;
-    height: 110px;
-  }
-  #productos-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 260px;
   }
 }
