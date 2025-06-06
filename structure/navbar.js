@@ -4,10 +4,12 @@ fetch("/components/navbar.html")
         document.getElementById("navbar").innerHTML = data;
 
         setTimeout(function() {
-            const usuarioActivo = sessionStorage.getItem('usuarioActivo');
+            // const usuarioActivo = sessionStorage.getItem('usuarioActivo');
+            const isUserAuthenticated = isAuthenticated();
+            const userInfo = getUserInfo();
 
             // Elimina el <li> del botón ingresar principal si hay sesión
-            if (usuarioActivo) {
+            if (isUserAuthenticated) {
                 const loginLi = document.querySelector('.btn-ingresar')?.closest('li');
                 if (loginLi) loginLi.remove();
 
@@ -17,7 +19,7 @@ fetch("/components/navbar.html")
 
             // Navbar principal: botón cerrar sesión
             const navList = document.querySelector('.navbar-nav.align-items-center');
-            if (usuarioActivo && navList && !document.getElementById('logout-btn')) {
+            if (isUserAuthenticated && navList && !document.getElementById('logout-btn')) {
                 const li = document.createElement('li');
                 li.className = 'nav-item';
                 li.innerHTML = `
@@ -28,14 +30,19 @@ fetch("/components/navbar.html")
                 `;
                 navList.appendChild(li);
                 document.getElementById('logout-btn').addEventListener('click', function () {
-                    sessionStorage.removeItem('usuarioActivo');
-                    window.location.href = '/index.html';
+                    // sessionStorage.removeItem('usuarioActivo');
+                    // window.location.href = '/index.html';
+
+                    // Usar las funciones de api.js para cerrar sesión
+                    removeToken();
+                    removeUserInfo();
+                    window.location.href = '../index.html';
                 });
             }
 
             // Offcanvas cerrar sesión
             const offcanvasMenu = document.querySelector('.offcanvas-body .d-flex');
-            if (usuarioActivo && offcanvasMenu && !document.getElementById('logout-btn-off')) {
+            if (isUserAuthenticated && offcanvasMenu && !document.getElementById('logout-btn-off')) {
                 const li = document.createElement('li');
                 li.className = 'nav-item';
                 li.innerHTML = `
@@ -48,8 +55,13 @@ fetch("/components/navbar.html")
                 `;
                 offcanvasMenu.appendChild(li);
                 document.getElementById('logout-btn-off').addEventListener('click', function () {
-                    sessionStorage.removeItem('usuarioActivo');
-                    window.location.href = '/html/index.html';
+                    // sessionStorage.removeItem('usuarioActivo');
+                    // window.location.href = '/html/index.html';
+
+                    // Usar las funciones de api.js para cerrar sesión
+                    removeToken();
+                    removeUserInfo();
+                    window.location.href = '/index.html';
                 });
             }
         }, 300);

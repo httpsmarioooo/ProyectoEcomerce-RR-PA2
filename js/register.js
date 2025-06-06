@@ -28,48 +28,59 @@ formulario.addEventListener('submit', (e) => {
         // alert("Las contraseñas no coinciden");
         return mostrarAlertaError('Las contraseñas no coinciden', '');
     }
+    // Registrar usuario en el backend
+    registrarUsuario(usuario, nombre, correo, telefono, contrasena);
 
-    // Verificación del correo
-    const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
-    const usuarioCreado = usuarios.find(user => user.correo === correo);
-    if (usuarioCreado) {
-        // return alert("El usuario ya está registrado");
-        return mostrarAlertaError('Error!', 'El usuario ya está registrado!');
-    }
-    
-    const nuevoId = usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1;
-    // Agregar a la lista y al localStorage
-    usuarios.push({
-        id: nuevoId,
-        usuario: usuario,
-        nombre: nombre,
-        correo: correo,
-        telefono: telefono,
-        contrasena: contrasena,
-        rol: 'cliente',
-        registradoPor: 'local'
-    });
+    // codigo comentado ---
+});
 
-    localStorage.setItem('listaUsuarios', JSON.stringify(usuarios));
-    // alert("Registro completado");
-    Swal.fire({
+//registrar un usuario en el backend
+async function registrarUsuario(usuario, nombre, correo, telefono, contrasena) {
+    try {
+        const response = await fetch(`${API_URL}/usuarios`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: nombre,
+                correo: correo,
+                contrasena: contrasena,
+                telefono: telefono,
+                rol: 'cliente',
+                proveedor: 'local'
+            })
+        });
+
+        if (!response.ok) {
+            // Si el servidor devuelve un error (por ejemplo, correo duplicado)
+            const errorData = await response.text();
+            return mostrarAlertaError('Error al registrar', errorData || 'El usuario ya está registrado!');
+        }
+
+        // Registro exitoso
+        Swal.fire({
             title: 'Registro Exitoso!',
-            imageUrl: '../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
+            imageUrl: '../assets/images/BLUET.png',
             imageWidth: 120,
             imageHeight: 120,
             imageAlt: 'Ícono personalizado',
             confirmButtonText: 'Aceptar',
             customClass: {
-                popup: 'mi-popup', //Clase del cuadro de la alerta
-                title: 'mi-titulo', //Clase del titulo de la alerta
-                htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
-                confirmButton: 'mi-boton' //Boton de confirmar
+                popup: 'mi-popup',
+                title: 'mi-titulo',
+                htmlContainer: 'mi-subtitulo',
+                confirmButton: 'mi-boton'
             }
         }).then(() => {
             window.location.href = '../HTML/login.html';
-        })
-        
-});
+        });
+    } catch (error) {
+        console.error('Error al registrar usuario:', error);
+        mostrarAlertaError('Error de conexión', 'No se pudo conectar con el servidor. Intenta nuevamente más tarde.');
+    }
+}
+
 function mostrarAlertaError(titulo, texto) {
     Swal.fire({
         title: titulo,
@@ -88,24 +99,42 @@ function mostrarAlertaError(titulo, texto) {
     });
 }
 
-//Conexion Base de datos
-// function registrarUsuario() {
-//     const data = {
-//     nombre: document.getElementById('nombre').value,
-//     correo: document.getElementById('correo').value,
-//     contrasena: document.getElementById('contrasena').value,
-//     telefono: document.getElementById('telefono').value,
-//     };
+// // Verificación del correo
+//     const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
+//     const usuarioCreado = usuarios.find(user => user.correo === correo);
+//     if (usuarioCreado) {
+//         // return alert("El usuario ya está registrado");
+//         return mostrarAlertaError('Error!', 'El usuario ya está registrado!');
+//     }
+    
+//     const nuevoId = usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1;
+//     // Agregar a la lista y al localStorage
+//     usuarios.push({
+//         id: nuevoId,
+//         usuario: usuario,
+//         nombre: nombre,
+//         correo: correo,
+//         telefono: telefono,
+//         contrasena: contrasena,
+//         rol: 'cliente',
+//         registradoPor: 'local'
+//     });
 
-//     fetch("http://localhost:8080/api/users/register", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(data)
-//     })
-//     .then(res => res.json())
-//     .then(response => {
-//     alert("Usuario registrado correctamente");
-//     console.log(response);
-//     })
-//     .catch(error => console.error("Error:", error));
-// }
+//     localStorage.setItem('listaUsuarios', JSON.stringify(usuarios));
+//     // alert("Registro completado");
+//     Swal.fire({
+//             title: 'Registro Exitoso!',
+//             imageUrl: '../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
+//             imageWidth: 120,
+//             imageHeight: 120,
+//             imageAlt: 'Ícono personalizado',
+//             confirmButtonText: 'Aceptar',
+//             customClass: {
+//                 popup: 'mi-popup', //Clase del cuadro de la alerta
+//                 title: 'mi-titulo', //Clase del titulo de la alerta
+//                 htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
+//                 confirmButton: 'mi-boton' //Boton de confirmar
+//             }
+//         }).then(() => {
+//             window.location.href = '../HTML/login.html';
+//         })
