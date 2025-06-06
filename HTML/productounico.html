@@ -21,29 +21,21 @@
   <!-- Aquí se cargará el carrito -->
   <div id="cart-container"></div>
 
-
 <!-- CONTENEDOR GENERAL -->
 <div class="producto-contenedor">
 
   <!-- IZQ -->
   <div class="producto-imagenes">
     <div class="container-imagen-producto">
+         <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1> <!--MODIFICABLE-->
       <img src="../assets/images/plataformaproducto.png" alt="Plataforma" class="plataforma">
-      <img src="../assets/imgProductos/leve-Plastilina.png" alt="Producto" class="producto"> <!--MODIFICABLE-->
+      <img src="../assets/imgProductos/leve/leve2-plastilina.png" alt="Producto" class="producto"> <!--MODIFICABLE-->
     </div>
   </div>
 
   <!-- DER -->
-  <div class="producto-info">
-    <h1 id="nombre-producto">NOMBRE DEL PRODUCTO</h1> <!--MODIFICABLE-->
-    <div class="help-section">
-      <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="help-bubble">
-      <div class="help-card">
-        <h2>¿En qué te ayuda?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p> <!--MODIFICABLE-->
-      </div>
-    </div>
 
+  <div class="producto-info">
     <!-- PRECIO -->
     <div class="precio-carrito">
       <h2>Precio</h2> 
@@ -53,17 +45,27 @@
     <section id="btns">
       <!-- btn CARRITO -->
       <button id="btn-agregarcarrito">
-        <img src="../assets/images/CARRITOBLUET2.png" alt="Carrito" class="carrito-icon">
+        <img src="../assets/images/CARRITOBLUET.png" alt="Carrito" class="carrito-icon">
       </button>
 
-      <!-- btn FECHA DE ENVÍO -->
-      <div class="shipping-section">
-        <button id="fecha-envio-btn">
-          <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
-          <input type="text" id="fecha-envio-input" readonly>
-        </button>
+<!-- SECCIÓN ENVIO -->
+          <div class="shipping-section">
+              <button id="fecha-envio-btn">
+                <span id="fecha-texto">Elegir fecha <br>  de envío</span>
+                <img src="../assets/images/BLUETENVIO.png" alt="BLUETENVIO" class="enviobluet">
+                <input type="text" id="fecha-envio-input" readonly>
+              </button>
+          </div>
+        </section>
+
+    <div class="help-section">
+      <img src="../assets/images/bluet_globo.png" alt="Burbuja diálogo" class="bluet-help">
+      <div class="help-card">
+        <h2>¿En qué te ayuda?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p> <!--MODIFICABLE-->
       </div>
-    </section>
+    </div>
+
   </div>
 </div>
 
