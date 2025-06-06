@@ -18,8 +18,8 @@ body {
   }
   
 .overlay {
+    width: 50vw;
         background-color: rgba(89, 148, 203, 0.386);
-        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,10 +60,11 @@ body::before {
         transform: translateY(-100%);
     }
 }
-
+#formularios{
+    display: flex;
+    }
 
 .container {
-    width: 90vh !important;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 2rem;
     border-radius: 20px;
@@ -71,7 +72,6 @@ body::before {
     position: relative;
     z-index: 1;
 }
-
 
 h2 {
     text-align: center;
@@ -126,7 +126,21 @@ h2 {
     transition: opacity 0.5s ease;
 }
 
-#btn-agregarJSON {
+#btn-agregarJSON,#btn-editarBD {
  background-color: #67b4e7;
  border-color: #1e4e79;
+}
+#btn-eliminarBD {
+ background-color: #e76767;
+ border-color: #9c1b1b;
+}
+
+@media (max-width: 900px){
+    .overlay {
+        width: 100vw;
+    }
+    
+    #formularios{
+    flex-direction: column;
+    }
 }
