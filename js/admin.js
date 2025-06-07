@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => {
                 console.log("Respuesta del servidor:", response);
                 alert("Producto actualizado correctamente.");
-                agregarForm.reset();
+                editarForm.reset();
             })
             .catch(error => {
                 console.error("Error en la solicitud:", error);
