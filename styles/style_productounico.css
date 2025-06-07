@@ -47,7 +47,7 @@ main {
   padding-left: 0;
 }
 
-.producto-contenedor::before {
+/* .producto-contenedor::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -58,7 +58,7 @@ main {
   background-attachment: fixed;
   opacity: 0.5;
   z-index: -1;
-}
+} */
 
 /* IZQ */
 #nombre-producto {
@@ -68,7 +68,7 @@ main {
   font-weight: 900;
   margin-bottom: 20px;
   margin-top: 0;
-  color: #235563;
+  color: #02537d;
 }
 
 /* PRODUCTO IMG Y PLATAFORMA */
@@ -97,7 +97,7 @@ main {
   width: 20rem;
   height: auto;
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
   z-index: 2;
@@ -124,7 +124,7 @@ main {
   width: 500px;
   z-index: 1;
   position: relative;
-  bottom: 10%;
+  bottom: 30%;
 }
 
 
@@ -156,14 +156,14 @@ main {
   background-color: #e3f8fc;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-size: 20px;
+  font-size: 14px;
   width: 90%;
   max-width: 700px;
   height: auto;
   color: #1a3e48;
   padding: 2%;
   z-index: 1;
-  margin-top: -20px;
+  margin-top: -100px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -180,8 +180,8 @@ main {
   position: relative;
   top: 0;
   left: 0;
-  width: 8rem;
-  height: auto;
+  width: 12rem;
+  height: 12rem;
   z-index: 3;
 }
 
@@ -217,7 +217,7 @@ main {
   align-items: center;
   margin-top: 50px;
   font-family: 'Nunito';
-  color: #235563;
+  color: #02537d;
 }
 
 
@@ -225,7 +225,7 @@ main {
   font-size: 35px;
   font-weight: 800;
   text-align: center;
-  color: #235563;
+  color: #02537d;
 }
 
 
