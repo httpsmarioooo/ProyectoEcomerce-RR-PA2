@@ -34,6 +34,10 @@ body {
   border: none;
 }
 
+#h2quees{
+  color: #02537d;
+}
+
 /* SECCIONES PRINCIPALES */
 #home-journey,
 .severity-container {
