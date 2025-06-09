@@ -1,24 +1,9 @@
-const signupForm = document.querySelector('#signupForm');
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    const name = document.querySelector('#nameg').value.trim();
-    const email = document.querySelector('#emailg').value.trim();
-    const password = document.querySelector('#passwordg').value;
-
-    if (!name || !email || !password) {
-        return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
-    }
-    // Registrar usuario con Google en el backend
-    registrarGoogleUsuario(name, email, password);
-
-    // codigo comentado ---
-});
 // Función para registrar un usuario con Google en el backend
 async function registrarGoogleUsuario(nombre, correo, contrasena) {
     try {
         // Registrar directamente al usuario con Google
-        const checkResponse = await fetch(`${API_URL}/usuarios`, {
+        const checkResponse = await fetch(`${API_URL}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,9 +17,9 @@ async function registrarGoogleUsuario(nombre, correo, contrasena) {
                 proveedor: 'google'
             })
         });
-        if (!response.ok) {
+        if (!checkResponse.ok) {
             // Si el servidor devuelve un error (por ejemplo, correo duplicado)
-            const errorData = await response.text();
+            const errorData = await checkResponse.text();
             return mostrarAlertaError('Error al registrar', errorData || 'El usuario ya está registrado!');
         }
         // Mostrar alerta de éxito
@@ -77,6 +62,24 @@ function mostrarAlertaError(titulo, texto) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const signupForm = document.querySelector('#signupForm');
+    signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.querySelector('#nameg').value.trim();
+        const email = document.querySelector('#emailg').value.trim();
+        const password = document.querySelector('#passwordg').value;
+
+        if (!name || !email || !password) {
+            return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
+        }
+        // Registrar usuario con Google en el backend
+        registrarGoogleUsuario(name, email, password);
+
+        // codigo comentado ---
+    })
+});
 
 // const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 // const isUserRegistered = usuarios.find(user => user.correo === email);

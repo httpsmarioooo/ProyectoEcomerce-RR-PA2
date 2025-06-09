@@ -7,30 +7,11 @@
 //     }
 // })();
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    const btnIngresar = document.querySelectorAll('.social-btn')[0];
 
-    btnIngresar.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const correo = document.getElementById('email').value.trim();
-        const contrasena = document.getElementById('password').value;
-
-        if (!correo || !contrasena) {
-            // alert('Por favor, completa todos los campos.');
-            return mostrarAlertaError('Error al ingresar datos','Por favor completa todos los campos requeridos!');
-        }
-        // Llamada a la API para iniciar sesión
-        loginUsuario(correo, contrasena);
-
-        // codigo comentado--
-    });
-});
 // Función para iniciar sesión con el backend
 async function loginUsuario(correo, contrasena) {
     try {
-        const response = await fetch(`${API_URL}/usuarios/login`, {
+        const response = await fetch(`${API_URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,18 +27,15 @@ async function loginUsuario(correo, contrasena) {
         }
 
         const data = await response.json();
+        console.log('Token recibido:', data);
+        saveToken(data);
         
         // Guardar información del usuario en localStorage
         saveUserInfo({
-            id: data.id,
-            nombre: data.nombre,
-            correo: data.correo,
-            rol: data.rol,
-            proveedor: data.proveedor
+            correo: correo,
+            nombre: correo.split('@')[0],
+            rol: 'cliente'
         });
-
-        // Guardar el token JWT
-        saveToken(data.token);
         
         // Mostrar alerta de éxito
         Swal.fire({
@@ -104,6 +82,28 @@ function mostrarAlertaError(titulo, texto) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    const btnIngresar = document.querySelectorAll('.social-btn')[0];
+
+    btnIngresar.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const correo = document.getElementById('email').value.trim();
+        const contrasena = document.getElementById('password').value;
+
+        if (!correo || !contrasena) {
+            // alert('Por favor, completa todos los campos.');
+            return mostrarAlertaError('Error al ingresar datos','Por favor completa todos los campos requeridos!');
+        }
+        // Llamada a la API para iniciar sesión
+        loginUsuario(correo, contrasena);
+
+        // codigo comentado--
+
+    });
+});
+
 
 //         const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 //         const usuario = usuarios.find(u => u.correo === correo && u.contrasena === contrasena);

@@ -1,43 +1,8 @@
-const formulario = document.querySelector("#formulario");
-
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const usuario = document.querySelector("#usuario").value;
-    const nombre = document.querySelector("#nombre").value;
-    const correo = document.querySelector("#correo").value;
-    const telefono = document.querySelector("#telefono").value;
-    const contrasena = document.querySelector("#contrasena").value;
-    const confirmar = document.querySelector("#confirmar").value;
-
-    // Validación de campos vacíos
-    if (!usuario || !nombre || !correo || !telefono || !contrasena || !confirmar) {
-        // alert("Completa todos los campos.");
-        return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
-    }
-
-    // Validación del teléfono colombiano
-    const regexTelefonoColombia = /^(?:\+57\s?)?(3\d{2}|60[1-8])[-\s]?\d{3}[-\s]?\d{4}$/;
-    if (!regexTelefonoColombia.test(telefono)) {
-        // alert("Introduce un número de teléfono válido. Ej: 3001234567 o +57 604 123 4567");
-        return mostrarAlertaError('Error al ingresar número de teléfono', 'Introduce un número válido. Ej: 3001234567 o +57 604 123 4567');
-    }
-
-    // Confirmar contraseñas
-    if (contrasena !== confirmar) {
-        // alert("Las contraseñas no coinciden");
-        return mostrarAlertaError('Las contraseñas no coinciden', '');
-    }
-    // Registrar usuario en el backend
-    registrarUsuario(usuario, nombre, correo, telefono, contrasena);
-
-    // codigo comentado ---
-});
 
 //registrar un usuario en el backend
 async function registrarUsuario(usuario, nombre, correo, telefono, contrasena) {
     try {
-        const response = await fetch(`${API_URL}/usuarios`, {
+        const response = await fetch(`${API_URL}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -98,6 +63,45 @@ function mostrarAlertaError(titulo, texto) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.querySelector("#formulario");
+
+    formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const usuario = document.querySelector("#usuario").value;
+    const nombre = document.querySelector("#nombre").value;
+    const correo = document.querySelector("#correo").value;
+    const telefono = document.querySelector("#telefono").value;
+    const contrasena = document.querySelector("#contrasena").value;
+    const confirmar = document.querySelector("#confirmar").value;
+
+    // Validación de campos vacíos
+    if (!usuario || !nombre || !correo || !telefono || !contrasena || !confirmar) {
+        // alert("Completa todos los campos.");
+        return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
+    }
+
+    // Validación del teléfono colombiano
+    const regexTelefonoColombia = /^(?:\+57\s?)?(3\d{2}|60[1-8])[-\s]?\d{3}[-\s]?\d{4}$/;
+    if (!regexTelefonoColombia.test(telefono)) {
+        // alert("Introduce un número de teléfono válido. Ej: 3001234567 o +57 604 123 4567");
+        return mostrarAlertaError('Error al ingresar número de teléfono', 'Introduce un número válido. Ej: 3001234567 o +57 604 123 4567');
+    }
+
+    // Confirmar contraseñas
+    if (contrasena !== confirmar) {
+        // alert("Las contraseñas no coinciden");
+        return mostrarAlertaError('Las contraseñas no coinciden', '');
+    }
+    // Registrar usuario en el backend
+    registrarUsuario(usuario, nombre, correo, telefono, contrasena);
+
+    // codigo comentado ---
+    })
+});
+
+
 
 // // Verificación del correo
 //     const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];

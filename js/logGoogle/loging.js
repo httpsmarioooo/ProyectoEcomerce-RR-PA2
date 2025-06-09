@@ -1,25 +1,9 @@
-const loginForm = document.querySelector('#loginForm');
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = document.querySelector('#emailg').value.trim();
-    const password = document.querySelector('#passwordg').value;
-
-    if (!email || !password) {
-        return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
-    }
-    
-    // Llamada a la API para iniciar sesión con Google
-    loginGoogleUsuario(email, password);
-
-    // codigo comentado ---
-});
 
 // Función para iniciar sesión con Google en el backend
 async function loginGoogleUsuario(correo, contrasena) {
     try {
         // Primero intentamos iniciar sesión con las credenciales proporcionadas
-        const response = await fetch(`${API_URL}/usuarios/login-google`, {
+        const response = await fetch(`${API_URL}/auth/login-google`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,19 +21,20 @@ async function loginGoogleUsuario(correo, contrasena) {
             }
             throw new Error(`Error HTTP: ${response.status}`);
         }
-
-        const data = await response.json();
+        // Obtener el token como texto
+        const data = await response.text();
+        console.log('Token recibido:', data);
+        // Guardar el token JWT
+        saveToken(data);
         
         // Guardar información del usuario en localStorage
         saveUserInfo({
-            id: data.id,
-            nombre: data.nombre,
-            correo: data.correo,
-            rol: data.rol,
-            proveedor: data.proveedor
+            orreo: correo,
+            nombre: correo.split('@')[0],
+            rol: 'cliente',
+            proveedor: 'google'
         });
-        // Guardar el token JWT
-        saveToken(data.token);
+        
         
         // Mostrar alerta de éxito
         Swal.fire({
@@ -67,12 +52,7 @@ async function loginGoogleUsuario(correo, contrasena) {
                 confirmButton: 'mi-boton'
             }
         }).then(() => {
-            // Redirigir según el rol del usuario
-            if (data.rol === 'ADMIN' || data.rol === 'admin')  {
-                window.location.href = '../../HTML/admin.html';
-            } else {
-                window.location.href = '../../index.html';
-            }
+            window.location.href = '../../index.html';
         });
     } catch (error) {
         console.error('Error al iniciar sesión con Google:', error);
@@ -97,6 +77,26 @@ function mostrarAlertaError(titulo, texto) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+const loginForm = document.querySelector('#loginForm');
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector('#emailg').value.trim();
+    const password = document.querySelector('#passwordg').value;
+
+    if (!email || !password) {
+        return mostrarAlertaError('Error al ingresar datos', 'Por favor completa todos los campos requeridos!');
+    }
+    
+    // Llamada a la API para iniciar sesión con Google
+    loginGoogleUsuario(email, password);
+
+    // codigo comentado ---
+    });
+});
+
+
 
 // const users = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 // const validUser = users.find(user => user.correo === email && user.contrasena === password);
