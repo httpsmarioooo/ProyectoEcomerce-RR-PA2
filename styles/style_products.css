@@ -95,10 +95,11 @@
   .card-title {
       font-weight: bold;
       font-family: 'Nunito', sans-serif !important;
-      font-size: 16px;
+      font-size: 15px;
+      width: 253px;
   }
   .card-price {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bolder;
       font-family: 'Nunito', sans-serif !important;
       color: #02537D;

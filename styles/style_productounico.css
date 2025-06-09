@@ -53,7 +53,7 @@ main {
 #nombre-producto {
   text-align: center;
   font-family: 'Fredoka';
-  font-size: 40PX;
+  font-size: 35px;
   font-weight: 900;
   margin-bottom: 40px;
   margin-top: 0;
@@ -109,14 +109,6 @@ main {
   }
 }
 
-/* .plataforma {
-  display: block;
-  width: 500px;
-  z-index: 1;
-  position: relative;
-  bottom: 30%;
-} */
-
 
 /* DER */
 .producto-info {
@@ -167,7 +159,7 @@ main {
   border-radius: 50px;
   box-shadow: 10px 10px 20px #6ca0ad;
   font-size: 14px;
-  width: 88%;
+  width: 85%;
   height: auto;
   color: #02537d;
   padding: 2%;
@@ -246,6 +238,7 @@ main {
   font-size: 23px;
   margin-top: 0px;
   padding-top: 0px;
+  text-align: center;
 }
 
 #medidas{
@@ -393,11 +386,10 @@ main {
       justify-content: center;
       font-size: 20px;
       font-family: "nunito";
-
-
     }
+
     swiper-slide div {
-      background-color: #2ea7c973;
+      background-color: #2ea7c982;
       border-radius: 50%;
       width: 300px;
       height: 300px;
@@ -413,6 +405,18 @@ main {
       height: 70%;
     }
 
+.hotrosprod{
+  margin: 3%;
+  font-size: 16px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  color: #02537d;
+  text-align: center;
+}
+
+.no-estilo-enlace{
+  text-decoration: none;
+}
 
    .btn-products {
   display: flex;
@@ -456,123 +460,565 @@ main {
   margin-top: 32px;
 }
 
+/* ===============================================
+   MEDIA QUERIES RESPONSIVE
+   =============================================== */
 
-/* Media queries para responsividad */
-@media screen and (max-width: 1024px) {
+/* Extra Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+  .producto-contenedor {
+    margin: 80px auto;
+    max-width: 1400px;
+  }
+
   #nombre-producto {
-    margin-top: 20%;
+    font-size: 45px;
   }
-  .producto-layout {
+
+  .headers-infoprod {
+    font-size: 32px;
+  }
+
+  .textos-infoprod {
+    font-size: 25px;
+    line-height: 1.6;
+  }
+}
+
+/* Large Screens (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .producto-contenedor {
+    margin: 60px 80px;
+    min-height: 600px;
+    height: auto;
+  }
+
+  .producto {
+    width: 90%;
+    max-width: 400px;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+
+  .bluet-help {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .headers-infoprod {
+    font-size: 28px;
+  }
+
+  .textos-infoprod {
+    font-size: 21px;
+  }
+
+  #texto-derecha p {
+    font-size: 16px;
+  }
+
+  #btn-agregarcarrito, #fecha-envio-btn {
+    width: 180px;
+  }
+}
+
+/* Medium Screens (768px to 991px) - Tablets */
+@media (max-width: 991px) and (min-width: 768px) {
+  .producto-contenedor {
     flex-direction: column;
-    align-items: center;
+    margin: 40px 30px;
+    padding: 20px;
+    border-radius: 30px;
+    height: auto;
+    min-height: auto;
   }
- 
-  .shipping-section {
+
+  .producto-imagenes {
     width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
- 
-  .onda-icon {
+
+  .container-imagen-producto {
     width: 100%;
-    max-width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
- 
-  #fecha-envio-btn {
-    right: 5%;
+
+  .producto {
+    width: 100%;
+    max-width: 300px;
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 auto;
   }
-.btn-products {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  gap: 8px;
-  background-color: #5ad2e2;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px #0184A9;;
-  width: 200px;
-}
 
-
-.btn-products:hover {
-  background-color: #30e5f9;
-}
-
-
-.btn-products i {
-  font-size: 16px;
-}
-
-
-#btn-products-div {
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
-}
-.shipping-section {
-  margin: 5%;
-  width: 300px;
-  height: 150px;
-}
-#btn-agregarcarrito {
-  width: 300px;
-  height: 120px;
-  margin:5%;
-}
-.help-bubble {
-  top:20px;
-  width: 20vw;
-   left:-35%;
-}
-.help-card{
-  width:85vw;
-}
-swiper-slide div {
-      width: 200px;
-      height: 200px;
+  @keyframes dance {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg) scale(1);
     }
-}
-@media screen and (max-width: 788px) {
+    25% {
+      transform: translateY(-6px) rotate(-1deg) scale(1.01);
+    }
+    50% {
+      transform: translateY(-10px) rotate(0deg) scale(1.02);
+    }
+    75% {
+      transform: translateY(-6px) rotate(1deg) scale(1.01);
+    }
+  }
+
+  .producto-info {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    border-radius: 30px;
+    margin-top: 0;
+    padding: 20px;
+    position: relative;
+  }
+
   #nombre-producto {
-    margin-top: 30%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
+  .help-section {
+    margin-top: 5%;
+    position: relative;
+    z-index: 2;
+  }
 
-  #btns_compra{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.shipping-section {
-  margin-top: 20%;
-  width: 300px;
-  height: 150px;
-}
-.help-section {
-margin-top: 10%;
-}.help-bubble {
-  position: relative;
-  top:10px;
-  z-index: 2;
-}
-}
-@media screen and (max-width: 428px) {
-  .container-imagen-producto{
-    width: 90vw;
+  .help-card {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+    padding: 20px;
+    position: relative;
+    z-index: 3;
   }
-  .plataforma{
-    width:90vw;
+
+  .bluet-help {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 15px;
   }
-  .producto{
-    width:50vw;
-    bottom:50px;
+
+  #texto-derecha p {
+    font-size: 16px;
+  }
+
+  .headers-infoprod {
+    font-size: 24px;
+  }
+
+  .textos-infoprod {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #btns {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  #btn-agregarcarrito, #fecha-envio-btn {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  swiper-container {
+    height: auto;
+    min-height: 400px;
+    padding: 20px 0;
+  }
+
+  swiper-slide div {
+    width: 220px;
+    height: 220px;
+  }
+
+  .otrosprodh {
+    font-size: 24px;
+    margin-top: 80px;
   }
 }
 
+/* Small Screens (576px to 767px) - Large Mobile */
+@media (max-width: 767px) and (min-width: 576px) {
+  .producto-contenedor {
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px 15px;
+    border-radius: 25px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .producto-imagenes {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .container-imagen-producto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 240px;
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 auto;
+  }
+
+  .producto-info {
+    width: 100%;
+    height: auto;
+    min-height: 550px;
+    border-radius: 25px;
+    border-width: 5px;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  #nombre-producto {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .help-section {
+    margin-top: 3%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .help-card {
+    flex-direction: column;
+    margin-top: 15px;
+    width: 95%;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .bluet-help {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 10px;
+  }
+
+  #texto-derecha p {
+    font-size: 14px;
+  }
+
+  #help-h2 {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .precio-carrito {
+    margin-top: 5%;
+  }
+
+  .headers-infoprod {
+    font-size: 20px;
+  }
+
+  .textos-infoprod {
+    font-size: 16px;
+  }
+
+  #btns {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  #btn-agregarcarrito, #fecha-envio-btn {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  #fecha-envio-btn #fecha-texto {
+    font-size: 10px;
+  }
+
+  swiper-container {
+    height: 320px;
+    margin-top: 30px;
+  }
+
+  swiper-slide div {
+    width: 180px;
+    height: 180px;
+  }
+
+  swiper-slide {
+    font-size: 16px;
+  }
+
+  .otrosprodh {
+    font-size: 20px;
+    margin-top: 60px;
+    padding: 12px 20px;
+  }
+
+  .btn-products {
+    width: 170px;
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* Extra Small Screens (up to 575px) - Mobile */
+@media (max-width: 575px) {
+  html, body, main {
+    background-attachment: scroll;
+  }
+
+  .producto-contenedor {
+    flex-direction: column;
+    margin: 15px;
+    padding: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 15px #6ca0ad;
+    height: auto;
+    min-height: auto;
+  }
+
+  .producto-imagenes {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .container-imagen-producto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 200px;
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 auto;
+  }
+
+  .producto-info {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 20px;
+    border-width: 4px;
+    padding: 15px;
+    margin-top: 0;
+  }
+
+  #nombre-producto {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .help-section {
+    margin-top: 2%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .help-card {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 98%;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    box-shadow: 5px 5px 15px #6ca0ad;
+    position: relative;
+    z-index: 3;
+  }
+
+  .bluet-help {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 8px;
+  }
+
+  #texto-derecha p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  #help-h2 {
+    width: 140px;
+    height: 35px;
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .precio-carrito {
+    margin-top: 4%;
+  }
+
+  .headers-infoprod {
+    font-size: 16px;
+  }
+
+  .textos-infoprod {
+    font-size: 14px;
+  }
+
+  #btns {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  #btn-agregarcarrito, #fecha-envio-btn {
+    width: 100%;
+    max-width: 140px;
+  }
+
+  #fecha-envio-btn #fecha-texto {
+    font-size: 9px;
+  }
+
+  swiper-container {
+    height: 250px;
+    margin-top: 25px;
+  }
+
+  swiper-slide div {
+    width: 130px;
+    height: 130px;
+    border-width: 3px;
+  }
+
+  swiper-slide {
+    font-size: 14px;
+  }
+
+  .otrosprodh {
+    font-size: 18px;
+    margin-top: 40px;
+    padding: 10px 15px;
+  }
+
+  .btn-products {
+    width: 150px;
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* Very Small Screens (up to 400px) - Very Small Mobile */
+@media (max-width: 400px) {
+  .producto-contenedor {
+    margin: 10px;
+    padding: 10px 8px;
+  }
+
+  .producto-imagenes {
+    height: 180px;
+    margin-bottom: 15px;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  .producto-info {
+    min-height: 450px;
+    padding: 12px;
+  }
+
+  #nombre-producto {
+    font-size: 18px;
+  }
+
+  .help-card {
+    margin-top: 8px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .bluet-help {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #texto-derecha p {
+    font-size: 11px;
+  }
+
+  .headers-infoprod {
+    font-size: 14px;
+  }
+
+  .textos-infoprod {
+    font-size: 12px;
+  }
+
+  #btn-agregarcarrito, #fecha-envio-btn {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  swiper-container {
+    height: 220px;
+  }
+
+  swiper-slide div {
+    width: 110px;
+    height: 110px;
+  }
+
+  .btn-products {
+    width: 130px;
+    font-size: 11px;
+  }
+
+  .otrosprodh {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
