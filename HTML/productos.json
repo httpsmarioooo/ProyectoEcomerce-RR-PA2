@@ -52,7 +52,7 @@
     },
     {
         "id": 6,
-        "titulo": "GESTOS (JUEGO COMUNICATIVO)",
+        "titulo": "GESTOS (JUEGO EXPRESIVO)",
         "descripcion": "El juego Gestos de Hasbro, para niños de 6 a 8 años, fortalece áreas clave en niños con autismo, como la interacción social y la comunicación. Requiere turnos, colaboración y atención a los demás, fomentando el contacto visual, la empatía y el trabajo en equipo, mejorando habilidades sociales.",
         "precio": 130000,
         "categoria" : "habilidades-sociales-emociones",
@@ -72,7 +72,7 @@
     },
     {
         "id": 8,
-        "titulo": "EXPLODING KITTENS (JUEGO DE CARTAS)",
+        "titulo": "EXPLODING KITTENS (CARTAS)",
         "descripcion": "Exploding Kittens es un juego dinámico que combina azar y humor para flexibilizar la rigidez cognitiva en niños del espectro. Los jugadores deben adaptarse a cambios inesperados, tolerar frustraciones y modificar estrategias, promoviendo habilidades sociales y cognitivas en un ambiente divertido y motivador.",
         "precio": 35000,
         "categoria" : "motricidad",
