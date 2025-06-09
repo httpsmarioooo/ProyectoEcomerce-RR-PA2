@@ -29,10 +29,29 @@
   <!-- Aquí se cargará el carrito -->
 <div id="cart-container"></div>
   <!------------------------------->
-<section id="formularios">
+    <section id="productosDB">
+        <h2><strong>Lista de Productos</strong></h2>
+        <table>
+            <thead id="headerTab">
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Categoria</th>
+                    <th>Nivel</th>
+                    <th>Edad</th>
+                    <th>Ruta Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+            </tbody>
+        </table>
+    </section>
+    <section id="formularios">
     <div class="overlay p-5">
         <div class="container" >
-            <h2 class="text-center">AGREGAR PRODUCTO</h2>
+            <h2 class="text-center"><strong>Agregar Producto</strong></h2>
             <form id="agregarForm">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título</label>
@@ -97,7 +116,7 @@
     
     <div class="overlay p-5">
         <div class="container" >
-            <h2 class="text-center">EDITAR PRODUCTO</h2>
+            <h2 class="text-center"><strong>Editar Producto</strong></h2>
             <form id="editarForm">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Id</label>
@@ -106,22 +125,22 @@
 
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título</label>
-                    <input type="text" class="form-control" id="tituloEdit" required>
+                    <input type="text" class="form-control" id="tituloEdit" >
                 </div>
                 
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Descripción</label>
-                    <textarea class="form-control" id="descripcionEdit" rows="3" maxlength="250" required></textarea>
+                    <textarea class="form-control" id="descripcionEdit" rows="3" maxlength="250" ></textarea>
                 </div>
                 
                 <div class="mb-3">
                     <label for="precio" class="form-label">Precio (COP)</label>
-                    <input type="number" class="form-control" id="precioEdit" required>
+                    <input type="number" class="form-control" id="precioEdit" >
                 </div>
                 
                 <div class="mb-3">
                     <label for="categoria" class="form-label">Categoría</label>
-                    <select class="form-select" id="categoriaEdit" required>
+                    <select class="form-select" id="categoriaEdit" >
                         <option value="Motricidad">Motricidad</option>
                         <option value="LenguajeComunicación">Lenguaje y comunicación</option>
                         <option value="HablidadesSocialesEmociones">Hablidades sociales y emociones</option>
@@ -131,7 +150,7 @@
                 
                 <div class="mb-3">
                     <label for="nivel" class="form-label">Nivel</label>
-                    <select class="form-select" id="nivelEdit" required>
+                    <select class="form-select" id="nivelEdit" >
                         <option value="leve">Leve</option>
                         <option value="moderado">Moderado</option>
                         <option value="avanzado">Avanzado</option>
@@ -140,7 +159,7 @@
                 
                 <div class="mb-3">
                     <label for="edad" class="form-label">Edad recomendada</label>
-                    <select class="form-select" id="edadEdit" required>
+                    <select class="form-select" id="edadEdit" >
                         <option value="3-5">3-5</option>
                         <option value="6-8">6-8</option>
                         <option value="9-10">9-10</option>
