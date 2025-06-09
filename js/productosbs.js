@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:8080/productos/ObtenerProductos")
+    fetch("https://jatprpnjb2.us-east-1.awsapprunner.com")
         .then(response => {
             if (!response.ok) throw new Error("Error al obtener productos");
             return response.json();
