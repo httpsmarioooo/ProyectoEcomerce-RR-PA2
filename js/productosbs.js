@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="card-custom" class="card categoria-${normalizar(producto.categoria)} nivel-${normalizar(producto.nivel)} edad-${normalizar(producto.edadRecomendada || producto.edad)}" > 
                 <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}">
                 <div class="card-body">
-                    <h5 class="card-title"><strong>${producto.titulo}</h5>
+                    <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
                     <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                     <div class="botones">
                         <a href="/HTML/product_details/producto${producto.id}.html"id="${producto.id}" class="btn-verMas">VER MÁS</a>
@@ -207,8 +207,8 @@ function mostrarToast(mensaje) {
 function normalizar(str) {
     return str
         .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quita tildes
-        .replace(/\s+y\s+/g, "-") // reemplaza " y " por guion
-        .replace(/\s+/g, "-") // reemplaza espacios por guion
-        .replace(/[^a-z0-9\-]/g, ""); // elimina caracteres especiales
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+y\s+/g, "-y-") // importante!
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9\-]/g, "");
 }
