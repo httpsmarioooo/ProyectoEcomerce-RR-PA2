@@ -208,6 +208,7 @@ function normalizar(str) {
     return str
         .toLowerCase()
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quita tildes
-        .replace(/\s+/g, "-") // reemplaza espacios por guiones
-        .replace(/[^a-z0-9\-]/g, ""); // quita caracteres especiales
+        .replace(/\s+y\s+/g, "-") // reemplaza " y " por guion
+        .replace(/\s+/g, "-") // reemplaza espacios por guion
+        .replace(/[^a-z0-9\-]/g, ""); // elimina caracteres especiales
 }
