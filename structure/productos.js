@@ -35,10 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                         <div class="botones">
                             <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET.png"  data-id="${producto.id}"class="imagen-carrito" alt="BlueT.Carrito"></a>
-<<<<<<<<< Temporary merge branch 1
                             <a href="../HTML/producto${producto.id}.html" target="_blank" id="${producto.id}" class="btn-verMas"><strong>Ver mas</strong></a>
-=========
->>>>>>>>> Temporary merge branch 2
                         </div>
                     </div>
                 </div>`;
@@ -74,12 +71,12 @@ let nivelesSeleccionados = [];
 function aplicarFiltros() {
     // Def const y obtener valores
     const edades = [];
-    document.querySelectorAll('.filtro-edad:checked').forEach(el => {
+    document.querySelectorAll('input.filtro-edad:checked').forEach(el => {
         edades.push(el.value);
     });
 
     const categorias = [];
-    document.querySelectorAll('.filtro-categoria:checked').forEach(el => {
+    document.querySelectorAll('input.filtro-categoria:checked').forEach(el => {
         categorias.push(el.value);
     });
 
@@ -141,7 +138,7 @@ botonesNivel.forEach(btn => {
     });
 });
 
-document.querySelectorAll('.filtro-edad, .filtro-categoria').forEach(input => {
+document.querySelectorAll('input.filtro-edad, input.filtro-categoria').forEach(input => {
     input.addEventListener('change', aplicarFiltros);
 });
 
