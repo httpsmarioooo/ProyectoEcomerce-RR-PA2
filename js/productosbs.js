@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach(producto => {
                 // console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
-                card.id = `card-${producto.id}`;
+                card.id = card-${producto.id};
                 // card.style.marginTop = "8px";
                 // card.style.marginBottom = "8px";
 
@@ -84,21 +84,21 @@ function aplicarFiltros() {
         // Verificar filtros activados
         let coincideEdad = (edades.length === 0);
         edades.forEach(edad => {
-            if (claseCard.contains(`edad-${edad}`)) {
+            if (claseCard.contains(edad-${edad})) {
                 coincideEdad = true;
             }
         });
 
         let coincideCategoria = (categorias.length === 0);
         categorias.forEach(cat => {
-            if (claseCard.contains(`categoria-${cat}`)) {
+            if (claseCard.contains(categoria-${cat})) {
                 coincideCategoria = true;
             }
         });
 
         let coincideNivel = (niveles.length === 0);
         niveles.forEach(niv => {
-            if (claseCard.contains(`nivel-${niv}`)) {
+            if (claseCard.contains(nivel-${niv})) {
                 coincideNivel = true;
             }
         });
@@ -152,7 +152,7 @@ function actualizarVistaCarrito() {
     const total = carrito.reduce((sum, prod) => sum + (prod.precio || 0), 0);
     const totalCarrito = document.getElementById('totalCarrito');
     if (totalCarrito) {
-        totalCarrito.textContent = `$${total.toLocaleString()}`;
+        totalCarrito.textContent = $${total.toLocaleString()};
     }
 
     // Mostrar productos en el carrito
