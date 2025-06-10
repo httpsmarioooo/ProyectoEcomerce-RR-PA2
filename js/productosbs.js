@@ -9,38 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.innerHTML = '';
 
             data.forEach(producto => {
-                console.log("imagenUrl:", producto.imagenUrl);
+                // console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
                 card.id = `card-${producto.id}`;
-                card.style.marginTop = "8px";
-                card.style.marginBottom = "8px";
+                // card.style.marginTop = "8px";
+                // card.style.marginBottom = "8px";
 
-                const rutaImagen = producto.imagenUrl;
-
+                // Usar los nombres de propiedades correctos según tu backend
                 card.innerHTML = `
-  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}"
-    style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
-       
-    <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 20px;">
-      <img src="${rutaImagen}" 
-           class="imagen-card" 
-           alt="${producto.titulo}" 
-           onerror="this.src='/assets/images/placeholder.png'" 
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-    </div>
-    
-    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
-      <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
-      <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
-      <div class="botones d-flex justify-content-between align-items-center mt-2">
-        <a href="#" class="btn-carrito-card">
-          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
-        </a>
-        <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
-      </div>
-    </div>
-  </div>
-`;
+            <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
+                <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
+                <div class="card-body" style="margin-bottom: 0;padding-bottom: 0;">
+                    <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
+                    <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
+                    <div class="botones">
+                        <a href="/HTML/product_details/producto${producto.id}.html"id="${producto.id}" class="btn-verMas">VER MÁS</a>
+                        <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET2.png"  data-id="${producto.id}"class="imagen-carrito" alt="BlueT.Carrito"></a>
+                    </div>
+                </div>
+            </div>
+        `;
 
 
                 contenedor.appendChild(card);
