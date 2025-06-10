@@ -205,14 +205,15 @@ function mostrarToast(mensaje) {
 }
 
 function normalizar(str) {
+    if (!str) return "";
+    
     return str
-        .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .replace(/[\s_]+/g, "-")
-        .replace(/-y-|-e-/, "-")
-        .replace(/[^a-z0-9\-]/g, "")
-        .replace(/&/g, "y")
-        .replace(/\s+y\s+/g, "-y-")
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9\-]/g, "");
+        .toLowerCase()                              // Convertir a minúsculas
+        .normalize("NFD")                           // Normalizar caracteres Unicode
+        .replace(/[\u0300-\u036f]/g, "")           // Eliminar acentos
+        .trim()                                     // Eliminar espacios al inicio y final
+        .replace(/\s+/g, "-")                      // Convertir espacios múltiples a un solo guión
+        .replace(/[^a-z0-9\-]/g, "")               // Eliminar caracteres especiales excepto guiones
+        .replace(/-+/g, "-")                       // Convertir múltiples guiones a uno solo
+        .replace(/^-+|-+$/g, "");                  // Eliminar guiones al inicio y final
 }
