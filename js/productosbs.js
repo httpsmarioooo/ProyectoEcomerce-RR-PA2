@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
                 card.id = `card-${producto.id}`;
-                ard.style.marginTop = "8px";
+                card.style.marginTop = "8px";
                 card.style.marginBottom = "8px";
 
                 // Usar los nombres de propiedades correctos según tu backend
