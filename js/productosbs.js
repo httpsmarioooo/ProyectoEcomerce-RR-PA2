@@ -208,7 +208,11 @@ function normalizar(str) {
     return str
         .toLowerCase()
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .replace(/\s+y\s+/g, "-y-") // importante!
+        .replace(/[\s_]+/g, "-")
+        .replace(/-y-|-e-/, "-")
+        .replace(/[^a-z0-9\-]/g, "")
+        .replace(/&/g, "y")
+        .replace(/\s+y\s+/g, "-y-")
         .replace(/\s+/g, "-")
         .replace(/[^a-z0-9\-]/g, "");
 }
