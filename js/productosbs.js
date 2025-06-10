@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="card-custom" class="card categoria-${normalizar(producto.categoria)} nivel-${normalizar(producto.nivel)} edad-${normalizar(producto.edadRecomendada || producto.edad)}" > 
                 <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}">
                 <div class="card-body">
-                    <h5 class="card-title"><strong>${producto.titulo}</h5>
+                    <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
                     <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                     <div class="botones">
                         <a href="/HTML/product_details/producto${producto.id}.html"id="${producto.id}" class="btn-verMas">VER MÁS</a>
