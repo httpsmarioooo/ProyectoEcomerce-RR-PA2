@@ -91,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const categoria = document.getElementById('categoriaEdit').value.trim() || data.categoria;
             const nivel = document.getElementById('nivelEdit').value.trim() || data.nivel;
             const edad = document.getElementById('edadEdit').value.trim() || data.edadRecomendada;
-            const imagen = document.getElementById('imagenEdit').value.trim() || data.imagenUrl;
+            const imagen = document.getElementById('imagenEdit').value.trim();
+            const archivo = imagen.files[0] || data.imagenURL;
  
  
             const dataFinal = {
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 categoria: categoria,
                 nivel: nivel,
                 edadRecomendada: edad,
-                imagenUrl:imagen
+                imagenUrl:archivo,
             };
  
             fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/editar/${id}`, {
