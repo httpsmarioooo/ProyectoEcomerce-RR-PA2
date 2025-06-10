@@ -14,11 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.id = `card-${producto.id}`;
                 card.style.marginTop = "8px";
                 card.style.marginBottom = "8px";
-
-                // Usar los nombres de propiedades correctos según tu backend
                 card.innerHTML = `
             <div id="card-custom" class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
-                <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
+                <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}">
                 <div class="card-body">
                     <h5 class="card-title"><strong>${producto.titulo}</h5>
                     <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
