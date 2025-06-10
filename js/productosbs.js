@@ -70,10 +70,19 @@ function aplicarFiltros() {
         const claseCard = card.classList;
 
         // Verificar filtros activados
-        let coincideEdad = (edades.length === 0) || edades.some(edad => claseCard.contains(`edad-${edad}`));
+        let coincideEdad = (edades.length === 0);
+        edades.forEach(edad => {
+            if (claseCard.contains(`edad-${edad}`)) {
+                coincideEdad = true;
+            }
+        });
 
-
-        let coincideCategoria = (categorias.length === 0) || categorias.some(cat => claseCard.contains(`categoria-${cat}`));
+        let coincideCategoria = (categorias.length === 0);
+        categorias.forEach(cat => {
+            if (claseCard.contains(`categoria-${cat}`)) {
+                coincideCategoria = true;
+            }
+        });
 
         let coincideNivel = (niveles.length === 0);
         niveles.forEach(niv => {
