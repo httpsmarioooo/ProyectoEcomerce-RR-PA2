@@ -142,7 +142,7 @@ body {
   }
 }
 
-.toast {
+.toast .d-flex {
   background: #02537D;
   color: #fff;
   border-radius: 8px;
@@ -152,9 +152,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-.d-flex {
-  display: flex !important;
-}
+
 
 .btn-remove:hover {
   background: #c0392b !important;
