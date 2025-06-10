@@ -47,6 +47,7 @@ main {
   overflow: hidden;
   padding-left: 0;
   box-shadow: 10px 15px 20px #6ca0ad;
+  overflow: hidden;
 }
 
 /* IZQ */
@@ -122,6 +123,9 @@ main {
   border: #0184A9;
   border-style: dotted;
   border-width: 7px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .producto-info::before {
@@ -220,6 +224,7 @@ main {
   margin-top: 3%;
   padding: 0px;
   margin-bottom: 0px;
+  flex: 1;
 }
 
 
@@ -294,6 +299,19 @@ main {
 
 /*Envio*/
 
+#fecha-envio-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
 #fecha-envio-btn { /*Botón*/
   position: relative;
   width: 200px;
@@ -302,6 +320,7 @@ main {
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.2s ease;
+  min-height: 60px;
 }
 
 #fecha-envio-btn:hover {
@@ -343,6 +362,11 @@ main {
   z-index: 2;
   pointer-events: none;
   font-family: 'Nunito';
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-line;
 }
 
 

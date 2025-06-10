@@ -1,6 +1,6 @@
 //JAVA SCRIPT HECHO POR DANIELA & TATIANA//
 document.getElementById ("valor1").addEventListener("mouseover",function () { 
-    document.getElementById ("respuesta1").innerHTML= "<strong> Impacto Social: </strong> Nuestra plataforma busca impactar de muchas maneras; visibilizando un trastorno psicológico tan incomprendido como el TEA, apoyando fundaciones que comparten nuestra visión, educando a personas neurotípicas y dando más productos a la mano para cualquier usuario que se vea involucrado con el TEA."
+    document.getElementById ("respuesta1").innerHTML= "<strong> Impacto Social: </strong> Nuestra plataforma busca impactar visibilizando el TEA, educando a personas neurotípicas y ofreciendo productos accesibles para cualquier usuario involucrado con el TEA, promoviendo comprensión e inclusión."
 })
 document.getElementById ("valor2").addEventListener("mouseover",function () {
     document.getElementById ("respuesta2").innerHTML= " <strong> Desarrollo del Comercio Igualitario: </strong> Creemos que la oportunidad del actual mercado se basa en la igualdad y en que todo el mundo se sienta bienvenido a comprar productos para cumplir con sus deseos y necesidades."
