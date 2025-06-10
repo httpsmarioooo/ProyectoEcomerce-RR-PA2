@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const rutaImagen = producto.imagenUrl;
 
                 card.innerHTML = `
-  <div id="card-custom" class="card h-100 custom-card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}">
-       
+  <div class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}">
     <div class="card-img-container">
       <img src="${rutaImagen}" 
            class="imagen-card" 
@@ -27,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     <div class="card-body">
       <h5 class="card-title">${producto.titulo}</h5>
-      <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
-      <div class="botones d-flex justify-content-between align-items-center mt-2">
+      <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
+      <div class="botones">
         <a href="#" class="btn-carrito-card">
           <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito">
         </a>
-        <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
+        <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas">Ver más</a>
       </div>
     </div>
   </div>
