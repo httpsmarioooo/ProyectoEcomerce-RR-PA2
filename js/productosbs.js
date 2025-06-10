@@ -76,7 +76,8 @@ function aplicarFiltros() {
         let coincideCategoria = categorias.length === 0 || categorias.some(cat => claseCard.contains(`categoria-${cat}`));
         let coincideNivel = niveles.length === 0 || niveles.some(niv => claseCard.contains(`nivel-${niv}`));
 
-        card.style.display = (coincideEdad && coincideCategoria && coincideNivel) ? "" : "none";
+        const mostrar = coincideEdad && coincideCategoria && coincideNivel;
+        card.classList.toggle("oculto", !mostrar); // Requiere clase .oculto en CSS con `display: none;`
     });
 }
 
@@ -149,9 +150,7 @@ function mostrarToast(mensaje) {
     const container = document.getElementById('toast-container');
     if (!container) return;
     const toast = document.createElement('div');
-    toast.className = 'toast align-items-center border-0 show';
-    toast.style.minWidth = '220px';
-    toast.style.marginBottom = '10px';
+    toast.className = 'toast align-items-center border-0 show toast-temporal';
     toast.innerHTML = `
         <div class="toast d-flex">
             <div class="toast-body">${mensaje}</div>
