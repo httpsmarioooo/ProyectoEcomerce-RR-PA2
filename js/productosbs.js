@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Usar los nombres de propiedades correctos según tu backend
                 card.innerHTML = `
-            <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
+            <div id="card-custom" class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
                 <img src="${producto.imagen}" class="imagen-card" alt="${producto.titulo}">
-                <div class="card-body" style="margin-bottom: 0;padding-bottom: 0;">
-                    <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
+                <div class="card-body">
+                    <h5 class="card-title"><strong>${producto.titulo}</h5>
                     <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                     <div class="botones">
                         <a href="/HTML/product_details/producto${producto.id}.html"id="${producto.id}" class="btn-verMas">VER MÁS</a>
