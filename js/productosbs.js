@@ -9,30 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.innerHTML = '';
 
             data.forEach(producto => {
-                // console.log("imagenUrl:", producto.imagenUrl);
+                console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
-                card.id = card-${producto.id};
-                // card.style.marginTop = "8px";
-                // card.style.marginBottom = "8px";
+                card.id = `card-${producto.id}`;
+                card.style.marginTop = "8px";
+                card.style.marginBottom = "8px";
 
                 const rutaImagen = producto.imagenUrl;
 
                 card.innerHTML = `
-  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}">
+  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}"
+    style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
        
-    <div class="img-container">
+    <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 20px;">
       <img src="${rutaImagen}" 
            class="imagen-card" 
            alt="${producto.titulo}" 
-           onerror="this.src='/assets/images/placeholder.png'">
+           onerror="this.src='/assets/images/placeholder.png'" 
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
     </div>
     
-    <div class="card-body">
+    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
       <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
       <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
       <div class="botones d-flex justify-content-between align-items-center mt-2">
         <a href="#" class="btn-carrito-card">
-          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito">
+          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
         </a>
         <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
       </div>
@@ -84,21 +86,21 @@ function aplicarFiltros() {
         // Verificar filtros activados
         let coincideEdad = (edades.length === 0);
         edades.forEach(edad => {
-            if (claseCard.contains(edad-${edad})) {
+            if (claseCard.contains(`edad-${edad}`)) {
                 coincideEdad = true;
             }
         });
 
         let coincideCategoria = (categorias.length === 0);
         categorias.forEach(cat => {
-            if (claseCard.contains(categoria-${cat})) {
+            if (claseCard.contains(`categoria-${cat}`)) {
                 coincideCategoria = true;
             }
         });
 
         let coincideNivel = (niveles.length === 0);
         niveles.forEach(niv => {
-            if (claseCard.contains(nivel-${niv})) {
+            if (claseCard.contains(`nivel-${niv}`)) {
                 coincideNivel = true;
             }
         });
@@ -152,7 +154,7 @@ function actualizarVistaCarrito() {
     const total = carrito.reduce((sum, prod) => sum + (prod.precio || 0), 0);
     const totalCarrito = document.getElementById('totalCarrito');
     if (totalCarrito) {
-        totalCarrito.textContent = $${total.toLocaleString()};
+        totalCarrito.textContent = `$${total.toLocaleString()}`;
     }
 
     // Mostrar productos en el carrito
