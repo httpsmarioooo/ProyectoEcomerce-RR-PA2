@@ -76,11 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
  
  document.getElementById('btn-editarBD').addEventListener('click', function (event) {
     event.preventDefault();
- 
+
     const id = document.getElementById('id').value;
     const imagenInput = document.getElementById('imagenEdit');
-   
- 
+
     fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/${id}`)
         .then(response => response.json())
         .then(data => {
@@ -91,41 +90,41 @@ document.addEventListener('DOMContentLoaded', function () {
             const categoria = document.getElementById('categoriaEdit').value.trim() || data.categoria;
             const nivel = document.getElementById('nivelEdit').value.trim() || data.nivel;
             const edad = document.getElementById('edadEdit').value.trim() || data.edadRecomendada;
-            const imagen = document.getElementById('imagenEdit'); // input de tipo file
-            const archivo = imagen.files[0]; // puede ser imagen o cualquier archivo
-            let imagenUrl = data.imagenUrl; // valor por defecto, si no se sube nada
 
-        if (archivo) {
-            const esImagen = archivo.type.startsWith('image/');
-            imagenUrl = esImagen ? 'Imagen' : 'Archivo'; 
-            
+            const archivo = imagenInput.files[0];
 
-        const dataFinal = {
-            titulo: titulo,
-            descripcion: descripcion,
-            precio: precio,
-            categoria: categoria,
-            nivel: nivel,
-            edadRecomendada: edad,
-            imagenUrl: imagenUrl, 
-        };
- 
-            fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/editar/${id}`, {
+            let imagenUrl = data.imagenUrl; // valor por defecto (por si no se carga una nueva imagen)
+            if (archivo) {
+                imagenUrl = `/assets/imgProductos/${nivel}/${archivo.name}`;
+            }
+
+            const dataFinal = {
+                titulo: titulo,
+                descripcion: descripcion,
+                precio: precio,
+                categoria: categoria,
+                nivel: nivel,
+                edadRecomendada: edad,
+                imagenUrl: imagenUrl
+            };
+
+            fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/${id}`, {
                 method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(dataFinal)
             })
-                .then(res => res.text())
-                .then(response => {
-                    console.log("Respuesta del servidor:", response);
-                    alert("Producto actualizado correctamente.");
-                    editarForm.reset();
-                })
-                .catch(error => {
-                    console.error("Error en la solicitud:", error);
-                });
+            .then(res => res.text())
+            .then(response => {
+                console.log("Producto editado:", response);
+                alert("Producto actualizado correctamente.");
+                cargarProductos(); // recargar tabla si es necesario
+            })
+            .catch(error => {
+                console.error("Error al editar producto:", error);
+            });
+        })
+        .catch(error => {
+            console.error("Error al obtener producto:", error);
         });
 });
  
