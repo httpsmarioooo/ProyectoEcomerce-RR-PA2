@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 categoria: categoria,
                 nivel: nivel,
                 edadRecomendada: edad,
-                //imagenUrl: `/assets/imgProductos/${nivel}/${archivo.name}`
+                imagenUrl: `/assets/imgProductos/${nivel}/${archivo.name}`
             };
 
             fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/editar/${id}`, {
