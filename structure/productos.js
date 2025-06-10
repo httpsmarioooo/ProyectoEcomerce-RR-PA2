@@ -2,23 +2,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     fetch('productos.json')
     .then(response => response.json())
-    // .then(productosDesdeJSON  => {
-    //     const productosLocales = JSON.parse(localStorage.getItem('productosAct')) || [];
-    //     const productosCombinados = [...productosDesdeJSON, ...productosLocales];
+    .then(productosDesdeJSON  => {
+        const productosLocales = JSON.parse(localStorage.getItem('productosAct')) || [];
+        const productosCombinados = [...productosDesdeJSON, ...productosLocales];
 
-    //     //Map para filtrar duplicados por id
-    //     const mapProductos = new Map();
+        //Map para filtrar duplicados por id
+        const mapProductos = new Map();
 
-    //     productosCombinados.forEach(producto => {
-    //     if (!mapProductos.has(producto.id)) {
-    //         mapProductos.set(producto.id, producto);
-    //     }
-    //     });
+        productosCombinados.forEach(producto => {
+        if (!mapProductos.has(producto.id)) {
+            mapProductos.set(producto.id, producto);
+        }
+        });
 
-    //     const todosLosProductos = Array.from(mapProductos.values());
+        const todosLosProductos = Array.from(mapProductos.values());
 
-    //     const container = document.getElementById('productos-container'); // ID contenedor productos
-    //     container.innerHTML = '';
+        const container = document.getElementById('productos-container'); // ID contenedor productos
+        container.innerHTML = '';
 
         todosLosProductos.forEach(producto => {
             const card = document.createElement('div');
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
                         <h3 class="card-price">$ ${producto.precio.toLocaleString()}</h3>
                         <div class="botones">
-                            <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET.png"  data-id="${producto.id}"class="imagen-carrito" alt="BlueT.Carrito"></a>
-                            <a href="../HTML/producto${producto.id}.html" target="_blank" id="${producto.id}" class="btn-verMas"><strong>Ver mas</strong></a>
+                            <a href="/HTML/product_details/producto${producto.id}.html"id="${producto.id}" class="btn-verMas">VER MÁS</a>
+                            <a href="#" class="btn-carrito-card"><img src="../assets/images/CARRITOBLUET2.png"  data-id="${producto.id}"class="imagen-carrito" alt="BlueT.Carrito"></a>
                         </div>
                     </div>
                 </div>`;
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-    //     aplicarFiltros(); // Llamar función filtros luego de crear cards
-    // });
+        aplicarFiltros(); // Llamar función filtros luego de crear cards
+    });
 });
 
 // variables de selección
@@ -71,12 +71,12 @@ let nivelesSeleccionados = [];
 function aplicarFiltros() {
     // Def const y obtener valores
     const edades = [];
-    document.querySelectorAll('input.filtro-edad:checked').forEach(el => {
+    document.querySelectorAll('.filtro-edad:checked').forEach(el => {
         edades.push(el.value);
     });
 
     const categorias = [];
-    document.querySelectorAll('input.filtro-categoria:checked').forEach(el => {
+    document.querySelectorAll('.filtro-categoria:checked').forEach(el => {
         categorias.push(el.value);
     });
 
@@ -138,7 +138,7 @@ botonesNivel.forEach(btn => {
     });
 });
 
-document.querySelectorAll('input.filtro-edad, input.filtro-categoria').forEach(input => {
+document.querySelectorAll('.filtro-edad, .filtro-categoria').forEach(input => {
     input.addEventListener('change', aplicarFiltros);
 });
 
