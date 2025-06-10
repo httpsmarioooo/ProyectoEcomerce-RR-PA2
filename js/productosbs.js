@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.innerHTML = '';
 
             data.forEach(producto => {
-                // console.log("imagenUrl:", producto.imagenUrl);
+                console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
                 card.id = `card-${producto.id}`;
-                // card.style.marginTop = "8px";
-                // card.style.marginBottom = "8px";
+                card.style.marginTop = "8px";
+                card.style.marginBottom = "8px";
 
                 // Usar los nombres de propiedades correctos según tu backend
                 card.innerHTML = `
