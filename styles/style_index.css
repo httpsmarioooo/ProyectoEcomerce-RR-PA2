@@ -100,9 +100,9 @@ body {
 /* HOME JOURNEY 3 */
 .home-journey3 {
   display: flex;
-  justify-content: center; /* Espacio entre los elementos */
-  align-items: center; /* Alineación vertical */
-  gap: 2rem; /* Espacio entre ellos */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   padding: 8rem;
   background-image: url(/assets/images/white_bubbles.png);
   background-size: contain;
@@ -328,6 +328,16 @@ body {
 }
 
 @media (max-width: 900px) {
+  .display-left {
+    width: 100%;
+    align-items: center;
+  }
+  .display-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+  }
   .comentarios-carousel {
     gap: 40px;
     padding: 0 5px;
@@ -360,14 +370,10 @@ body {
   }
 
   .home-journey2 {
-    width: 80vw;
-    max-width: 80vw;
+    width: 90vw;
+    max-width: 100vw;
     padding: 0.7rem;
   }
-  .severity-container img{
-  height: auto;
-  width:60vw;
-}
 }
 
 @media (max-width: 600px) {
@@ -384,10 +390,9 @@ body {
   }
 
   .home-journey2 {
-    width: 90vw;
+    width: 98vw;
     max-width: 100vw;
     padding: 0.5rem;
-    border-radius: 30px;
   }
   .logo-journey2{ 
     width:90%;
@@ -395,7 +400,8 @@ body {
   }
 
 
-  .display-right button {
+  .display-right button,
+  .butom-center-index button {
     width: 90vw;
     min-width: 180px;
     padding: 12px;
@@ -427,4 +433,38 @@ body {
 }
 .comentarios-carousel::-webkit-scrollbar {
   display: none;
+}
+
+
+.butom-center-index {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.butom-center-index button {
+    background-color: #01bfc4;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 6px #616161;
+}
+
+@media (max-width: 900px) {
+  .severity-container img {
+    width: 60vw;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .severity-container img {
+    width: 90vw;
+    height: auto;
+  }
 }
