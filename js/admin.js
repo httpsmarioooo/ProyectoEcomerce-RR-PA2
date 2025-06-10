@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const agregarForm = document.getElementById('agregarForm');
     const editarForm = document.getElementById('editarForm')
     const tablaProductos = document.getElementById('tablaProductos')
- 
+
     if (!agregarForm) {
         console.error("Formulario no encontrado.");
         return;
     }
- 
+
     cargarProductos();
- 
+
     agregarForm.addEventListener('submit', function (event) {
         event.preventDefault();
- 
+
         const titulo = document.getElementById('titulo').value;
         const descripcion = document.getElementById('descripcion').value;
         const precio = parseFloat(document.getElementById('precio').value);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const edad = document.getElementById('edad').value;
         const imagen = document.getElementById('imagen');
         const archivo = imagen.files[0];
- 
+
         if (!archivo) {
             alert("Por favor, sube una imagen.");
             return;
@@ -72,13 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 .catch(error => console.error('Error al cargar productos:', error));
         }
     });
- 
- 
+
+
  document.getElementById('btn-editarBD').addEventListener('click', function (event) {
     event.preventDefault();
 
     const id = document.getElementById('id').value;
     const imagenInput = document.getElementById('imagenEdit');
+   
 
     fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/${id}`)
         .then(response => response.json())
@@ -90,13 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const categoria = document.getElementById('categoriaEdit').value.trim() || data.categoria;
             const nivel = document.getElementById('nivelEdit').value.trim() || data.nivel;
             const edad = document.getElementById('edadEdit').value.trim() || data.edadRecomendada;
-
-            const archivo = imagenInput.files[0];
-
-            let imagenUrl = data.imagenUrl; // valor por defecto (por si no se carga una nueva imagen)
-            if (archivo) {
-                imagenUrl = `/assets/imgProductos/${nivel}/${archivo.name}`;
-            }
+            const imagen = document.getElementById('imagenEdit') || data.imagenUrl;
+            const archivo = imagen.files[0];
 
             const dataFinal = {
                 titulo: titulo,
@@ -105,33 +101,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 categoria: categoria,
                 nivel: nivel,
                 edadRecomendada: edad,
-                imagenUrl: imagenUrl
+                imagenUrl: `/assets/imgProductos/${nivel}/${archivo.name}`
             };
 
-            fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/${id}`, {
+            fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/editar/${id}`, {
                 method: "PUT",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(dataFinal)
             })
-            .then(res => res.text())
-            .then(response => {
-                console.log("Producto editado:", response);
-                alert("Producto actualizado correctamente.");
-                cargarProductos(); // recargar tabla si es necesario
-            })
-            .catch(error => {
-                console.error("Error al editar producto:", error);
-            });
-        })
-        .catch(error => {
-            console.error("Error al obtener producto:", error);
+                .then(res => res.text())
+                .then(response => {
+                    console.log("Respuesta del servidor:", response);
+                    alert("Producto actualizado correctamente.");
+                    editarForm.reset();
+                })
+                .catch(error => {
+                    console.error("Error en la solicitud:", error);
+                });
         });
 });
- 
+
     document.getElementById('btn-eliminarBD').addEventListener('click', function (event) {
         event.preventDefault();
         const id = document.getElementById('id').value.trim();
- 
+
         fetch(`https://jatprpnjb2.us-east-1.awsapprunner.com/productos/borrar/${id}`, {
             method: "DELETE"
         })
