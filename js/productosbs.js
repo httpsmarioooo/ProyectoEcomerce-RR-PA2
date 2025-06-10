@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.style.marginTop = "8px";
                 card.style.marginBottom = "8px";
                 card.innerHTML = `
-            <div id="card-custom" class="card categoria-${normalizar(producto.categoria)} nivel-${normalizar(producto.nivel)} edad-${normalizar(producto.edadRecomendada || producto.edad)}" > 
+            <div id="card-custom" class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada || producto.edad}" >
                 <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}">
                 <div class="card-body">
                     <h5 class="card-title" style="color: #02537D;"><strong>${producto.titulo}</strong></h5>
