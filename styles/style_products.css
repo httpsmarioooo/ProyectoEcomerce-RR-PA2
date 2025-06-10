@@ -793,3 +793,14 @@
     font-size: 11px;
   }
 }
+
+.toast .d-flex {
+  background: #02537D;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
