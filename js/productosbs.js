@@ -9,32 +9,30 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.innerHTML = '';
 
             data.forEach(producto => {
-                console.log("imagenUrl:", producto.imagenUrl);
+                // console.log("imagenUrl:", producto.imagenUrl);
                 const card = document.createElement("div");
                 card.id = `card-${producto.id}`;
-                card.style.marginTop = "8px";
-                card.style.marginBottom = "8px";
+                // card.style.marginTop = "8px";
+                // card.style.marginBottom = "8px";
 
                 const rutaImagen = producto.imagenUrl;
 
                 card.innerHTML = `
-  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}" 
-       style="width: 18rem; background-color: #DCEFED; border-radius: 25px; border: none; margin: 5px 5px 0; padding: 15px 15px 5px;">
+  <div id="card-custom" class="card h-100 categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edadRecomendada}">
        
-    <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 20px;">
+    <div class="img-container">
       <img src="${rutaImagen}" 
            class="imagen-card" 
            alt="${producto.titulo}" 
-           onerror="this.src='/assets/images/placeholder.png'" 
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+           onerror="this.src='/assets/images/placeholder.png'">
     </div>
     
-    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+    <div class="card-body">
       <h5 class="card-title" style="color: #02537D;">${producto.titulo}</h5>
       <h3 class="card-price"><strong>$ ${producto.precio.toLocaleString()}</strong></h3>
       <div class="botones d-flex justify-content-between align-items-center mt-2">
         <a href="#" class="btn-carrito-card">
-          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito" style="width: auto; height: 50px;">
+          <img src="/assets/images/CARRITOBLUET.png" data-id="${producto.id}" class="imagen-carrito" alt="Agregar al carrito">
         </a>
         <a href="/HTML/product_details/producto${producto.id}.html" id="${producto.id}" class="btn-verMas"><strong>Ver más</strong></a>
       </div>
