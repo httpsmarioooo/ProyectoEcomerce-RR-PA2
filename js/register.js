@@ -1,8 +1,8 @@
-
+import { API_URL } from './api.js';
 //registrar un usuario en el backend
 async function registrarUsuario(usuario, nombre, correo, telefono, contrasena) {
     try {
-        const response = await fetch(`${API_URL}/auth/register`, {
+        const response = await fetch(`${API_URL}/auth/usuarios/registro`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -96,49 +96,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Registrar usuario en el backend
     registrarUsuario(usuario, nombre, correo, telefono, contrasena);
-
-    // codigo comentado ---
     })
 });
-
-
-
-// // Verificación del correo
-//     const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
-//     const usuarioCreado = usuarios.find(user => user.correo === correo);
-//     if (usuarioCreado) {
-//         // return alert("El usuario ya está registrado");
-//         return mostrarAlertaError('Error!', 'El usuario ya está registrado!');
-//     }
-    
-//     const nuevoId = usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1;
-//     // Agregar a la lista y al localStorage
-//     usuarios.push({
-//         id: nuevoId,
-//         usuario: usuario,
-//         nombre: nombre,
-//         correo: correo,
-//         telefono: telefono,
-//         contrasena: contrasena,
-//         rol: 'cliente',
-//         registradoPor: 'local'
-//     });
-
-//     localStorage.setItem('listaUsuarios', JSON.stringify(usuarios));
-//     // alert("Registro completado");
-//     Swal.fire({
-//             title: 'Registro Exitoso!',
-//             imageUrl: '../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
-//             imageWidth: 120,
-//             imageHeight: 120,
-//             imageAlt: 'Ícono personalizado',
-//             confirmButtonText: 'Aceptar',
-//             customClass: {
-//                 popup: 'mi-popup', //Clase del cuadro de la alerta
-//                 title: 'mi-titulo', //Clase del titulo de la alerta
-//                 htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
-//                 confirmButton: 'mi-boton' //Boton de confirmar
-//             }
-//         }).then(() => {
-//             window.location.href = '../HTML/login.html';
-//         })

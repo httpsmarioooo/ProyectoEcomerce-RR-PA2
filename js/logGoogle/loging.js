@@ -1,17 +1,20 @@
-
+import { API_URL } from '../api.js';
 // Función para iniciar sesión con Google en el backend
 async function loginGoogleUsuario(correo, contrasena) {
     try {
         // Primero intentamos iniciar sesión con las credenciales proporcionadas
-        const response = await fetch(`${API_URL}/auth/login-google`, {
+        const response = await fetch(`${API_URL}/auth/usuarios/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
-                correo, 
-                nombre: correo.split('@')[0], //nombre por defecto
-                contrasena: contrasena
+                correo,
+                contrasena,
+                proveedor: 'google'
+                // correo, 
+                // nombre: correo.split('@')[0], //nombre por defecto
+                // contrasena: contrasena
             })
         });
 
@@ -22,19 +25,18 @@ async function loginGoogleUsuario(correo, contrasena) {
             throw new Error(`Error HTTP: ${response.status}`);
         }
         // Obtener el token como texto
-        const data = await response.text();
+        const data = await response.json();
         console.log('Token recibido:', data);
         // Guardar el token JWT
-        saveToken(data);
+        saveToken(data.token);
         
         // Guardar información del usuario en localStorage
         saveUserInfo({
-            orreo: correo,
+            correo: correo,
             nombre: correo.split('@')[0],
             rol: 'cliente',
             proveedor: 'google'
         });
-        
         
         // Mostrar alerta de éxito
         Swal.fire({
@@ -91,57 +93,5 @@ loginForm.addEventListener('submit', (e) => {
     
     // Llamada a la API para iniciar sesión con Google
     loginGoogleUsuario(email, password);
-
-    // codigo comentado ---
     });
 });
-
-
-
-// const users = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
-// const validUser = users.find(user => user.correo === email && user.contrasena === password);
-// if (!validUser) {
-//     // alert('Usuario y/o contraseña incorrectos!');
-//     // Mostrar alerta de error
-//     Swal.fire({
-//         title: 'Ingreso de sesión inválido',
-//         text: 'Correo y/o contraseña incorrectos!',
-//         imageUrl: '../../assets/images/bluet_advertencia.png', //% Imagen BlueT ingreso invalido
-//         imageWidth: 120,
-//         imageHeight: 120,
-//         imageAlt: 'Ícono personalizado',
-//         confirmButtonText: 'Corregir',
-//         customClass: {
-//             popup: 'mi-popup', //Clase del cuadro de la alerta
-//             title: 'mi-titulo', //Clase del titulo de la alerta
-//             htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
-//             confirmButton: 'mi-boton' //Boton de confirmar
-//         }
-//     });
-//     return;
-// }
-// // Mostrar alerta éxitosa
-//     Swal.fire({
-//         title: 'Ingreso de sesión éxitoso!',
-//         text: `Bienvenid@ ${validUser.nombre || validUser.correo}`,
-//         imageUrl: '../../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
-//         imageWidth: 120,
-//         imageHeight: 120,
-//         imageAlt: 'Ícono personalizado',
-//         timer: 3000,
-//         confirmButtonText: 'Aceptar',
-//         customClass: {
-//             popup: 'mi-popup', //Clase del cuadro de la alerta
-//             title: 'mi-titulo', //Clase del titulo de la alerta
-//             htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
-//             confirmButton: 'mi-boton' //Boton de confirmar
-//         }
-//     }).then(() => {
-//         // alert(`Bienvenido ${validUser.name || validUser.email}`);
-//         sessionStorage.setItem('usuarioActivo', JSON.stringify(validUser));
-//         if (validUser.rol === 'admin') {
-//             window.location.href = '../../HTML/admin.html';
-//         } else {
-//             window.location.href = '../../index.html';
-//         }
-//     })

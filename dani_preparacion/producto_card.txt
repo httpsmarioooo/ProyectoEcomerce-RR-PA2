@@ -1,26 +1,22 @@
 [
-
-    
     {
         id-11
-        "titulo": "Pictogramas o Tablero de Comunicación PECS",
-        "descripcion": "Facilita la comunicación funcional en niños no verbales o con dificultades del lenguaje, permitiéndoles expresar deseos, emociones y pensamientos mediante imágenes. Promueve el lenguaje receptivo y expresivo, fomenta la autonomía y reduce la frustración por no poder comunicarse verbalmente. Se puede usar en hogar, colegio o salidas, e incluye tarjetas plastificadas, tablero de velcro y pictogramas por categorías.",
+        "titulo": "PICTOGRAMAS (TABLA COMUNICATIVA)",
+        "descripcion": "Este tablero de comunicación con pictogramas te permite apoyar el lenguaje de forma visual, clara y accesible. Ayuda a expresar necesidades, emociones o deseos sin necesidad de hablar, lo que reduce la frustración y facilita la participación en el día a día. Es una herramienta poderosa para fomentar la autonomía, el lenguaje y la interacción, tanto en casa como en la escuela o en terapia. Ideal para establecer rutinas visuales y acompañar cada paso con mayor seguridad y entendimiento.",
         "precio": 65000,
         "categoria": "lenguaje y comunicación",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos/avanzado-pictogramas.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado3-pictogramas.png"
     },
-
-
     {
         id-12
-        "titulo": "Clasificador colores y formas",
-        "descripcion": "Estimula la motricidad fina mediante el agarre y clasificación de piezas con formas y colores variados. Promueve la discriminación visual, el pensamiento lógico, la secuenciación y la autorregulación emocional. Ideal para juego estructurado e interacción guiada, con piezas seguras, coloridas y resistentes, en una caja contenedora de madera o plástico libre de BPA (tóxico Bisfenol A).",
+        "titulo": "CLASIFICADOR DE COLORES Y FORMAS",
+        "descripcion": "Esta caja de clasificación te invita a ordenar formas y colores mientras desarrollas la motricidad fina y el pensamiento lógico. Al encajar piezas, diferenciar colores y seguir patrones, ejercitas la atención, la coordinación y la concentración. Es una actividad clara y repetitiva que calma, organiza y prepara para aprendizajes futuros. Puedes jugar solo o en compañía, compartiendo turnos y describiendo lo que ves. Simple, estructurada y visualmente satisfactoria.",
         "precio": 90000,
         "categoria": "motricidad",
         "nivel": "avanzado",
         "edad": "todas-edades",
-        "imagen": "../assets/imgProductos/avanzado-clasificador-colores-formas.png"
+        "imagen": "/assets/imgProductos/avanzado/avanzado4-clasificador.png"
     }
 ]

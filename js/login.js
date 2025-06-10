@@ -7,11 +7,11 @@
 //     }
 // })();
 
-
+import { API_URL } from './api.js';
 // Función para iniciar sesión con el backend
 async function loginUsuario(correo, contrasena) {
     try {
-        const response = await fetch(`${API_URL}/auth/login`, {
+        const response = await fetch(`${API_URL}/auth/usuarios/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,12 +28,12 @@ async function loginUsuario(correo, contrasena) {
 
         const data = await response.json();
         console.log('Token recibido:', data);
-        saveToken(data);
+        saveToken(data.token);
         
         // Guardar información del usuario en localStorage
         saveUserInfo({
             correo: correo,
-            nombre: correo.split('@')[0],
+            nombre: data.nombre,
             rol: 'cliente'
         });
         
@@ -83,7 +83,6 @@ function mostrarAlertaError(titulo, texto) {
     });
 }
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
     const btnIngresar = document.querySelectorAll('.social-btn')[0];
 
     btnIngresar.addEventListener('click', function (e) {
@@ -98,41 +97,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         // Llamada a la API para iniciar sesión
         loginUsuario(correo, contrasena);
-
-        // codigo comentado--
-
     });
 });
-
-
-//         const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
-//         const usuario = usuarios.find(u => u.correo === correo && u.contrasena === contrasena);
-
-//         if (usuario) {
-//             sessionStorage.setItem('usuarioActivo', JSON.stringify(usuario));
-//             // alert('¡Inicio de sesión exitoso!');
-//             // Mostrar alerta éxitosa
-//             Swal.fire({
-//                 title: 'Ingreso de sesión éxitoso!',
-//                 text: `Bienvenid@ ${usuario.nombre || usuario.correo}`,
-//                 imageUrl: '../assets/images/BLUET.png', //% Imagen BlueT ingreso exitoso
-//                 imageWidth: 120,
-//                 imageHeight: 120,
-//                 imageAlt: 'Ícono personalizado',
-//                 confirmButtonText: 'Aceptar',
-//                 customClass: {
-//                     popup: 'mi-popup', //Clase del cuadro de la alerta
-//                     title: 'mi-titulo', //Clase del titulo de la alerta
-//                     htmlContainer: 'mi-subtitulo', //Clase del subtitulo de la alerta
-//                     confirmButton: 'mi-boton' //Boton de confirmar
-//                 }
-//             }).then(() => {
-//                 if (usuario.rol === 'admin') {
-//                     window.location.href = '../HTML/admin.html';
-//                 } else {
-//                     window.location.href = '../index.html';
-//             }})
-//         } else {
-//             // alert('Correo o contraseña incorrectos.');
-//             return mostrarAlertaError('Ingreso de sesión inválido','Correo y/o contraseña incorrectos!');
-//         }

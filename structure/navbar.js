@@ -1,3 +1,4 @@
+// import { API_URL, isAuthenticated } from './api.js';
 fetch("/components/navbar.html")
     .then(res => res.text())
     .then(data => {
