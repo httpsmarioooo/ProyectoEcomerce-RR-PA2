@@ -428,3 +428,24 @@ body {
 .comentarios-carousel::-webkit-scrollbar {
   display: none;
 }
+
+
+.butom-center-index {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.butom-center-index button {
+    background-color: #01bfc4;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 6px #616161;
+}
