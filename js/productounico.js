@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-// ================= CALENDARIO =====================
-const fechaBtn = document.getElementById("fecha-envio-btn");
-const fechaInput = document.getElementById("fecha-envio-input");
-const fechaTexto = document.getElementById("fecha-texto");
+  // ================= CALENDARIO =====================
+  const fechaBtn = document.getElementById("fecha-envio-btn");
+  const fechaInput = document.getElementById("fecha-envio-input");
+  const fechaTexto = document.getElementById("fecha-texto");
 
-const today = new Date();
-today.setDate(today.getDate() + 3);
+  const today = new Date();
+  today.setDate(today.getDate() + 3);
 
-const fp = flatpickr(fechaInput, {
-  minDate: today,
-  dateFormat: "Y-m-d",
-  onClose: (selectedDates, dateStr) => {
-    if (dateStr) {
-      fechaTexto.textContent = dateStr;
-    }
-  },
-});
+  const fp = flatpickr(fechaInput, {
+    minDate: today,
+    dateFormat: "Y-m-d",
+    onClose: (selectedDates, dateStr) => {
+      if (dateStr) {
+        fechaTexto.textContent = `Fecha elegida:\n${dateStr}`;
+      }
+    },
+  });
 
-fechaBtn.addEventListener("click", () => {
-  fp.open();
-});
+  fechaBtn.addEventListener("click", () => {
+    fp.open();
+  });
 
 
   // ================= CARRITO =====================
