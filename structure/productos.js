@@ -78,10 +78,10 @@ function aplicarFiltros() {
         edades.push(el.value);
     });
 
-    const categorias = [];
-    document.querySelectorAll('.filtro-categoria:checked').forEach(el => {
-        categorias.push(el.value);
-    });
+const categorias = [];
+document.querySelectorAll('.filtro-categoria:checked').forEach(el => {
+    categorias.push(normalizar(el.value)); // Aplicar normalizar aquí también
+});
 
     const niveles = nivelesSeleccionados; // array niveles
 
