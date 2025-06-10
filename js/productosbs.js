@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.style.marginTop = "8px";
                 card.style.marginBottom = "8px";
                 card.innerHTML = `
-            <div id="card-custom" class="card categoria-${producto.categoria} nivel-${producto.nivel} edad-${producto.edad}" > 
+            <div id="card-custom" class="card categoria-${normalizar(producto.categoria)} nivel-${normalizar(producto.nivel)} edad-${normalizar(producto.edadRecomendada || producto.edad)}" > 
                 <img src="${producto.imagenUrl}" class="imagen-card" alt="${producto.titulo}">
                 <div class="card-body">
                     <h5 class="card-title"><strong>${producto.titulo}</h5>
@@ -202,4 +202,12 @@ function mostrarToast(mensaje) {
 
     // Cerrar manualmente
     toast.querySelector('.btn-close').onclick = () => toast.remove();
+}
+
+function normalizar(str) {
+    return str
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quita tildes
+        .replace(/\s+/g, "-") // reemplaza espacios por guiones
+        .replace(/[^a-z0-9\-]/g, ""); // quita caracteres especiales
 }
