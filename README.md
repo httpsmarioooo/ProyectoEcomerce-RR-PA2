@@ -69,10 +69,13 @@ Bienvenido a nuestra plataforma de e-commerce especializada en productos didáct
 </p>
 
 
-  # BackEnd
-
-  <a href="https://github.com/DanielleSaint/back-end-Journey/tree/developfinal">
-
+# BackEnd
+  
+<a href="https://github.com/DanielleSaint/back-end-Journey/tree/developfinal">
+<sub>
+<b>Daniela Santacruz</b>
+</sub>
+</a>
 
 
 <p align="center">
