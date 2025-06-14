@@ -63,12 +63,9 @@ Bienvenido a nuestra plataforma de e-commerce especializada en productos didáct
 ## 🛠 Tecnologías y Herramientas
 
 <p align="center">
-<img src="https://img.shields.io/badge/HTML5-28ff97?style=flat">
-<img src="https://img.shields.io/badge/CSS3-28ffff?style=flat">
-<img src="https://img.shields.io/badge/JavaScript-8a28ff?style=flat">
-<img src="https://img.shields.io/badge/Bootstrap-2852ff?style=flat">
-<img src="https://img.shields.io/badge/Figma-ff0000?style=flat">
-<img src="https://img.shields.io/badge/VsCode-ffc100?style=flat">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+  </a>
 </p>
 
 <p align="center">
