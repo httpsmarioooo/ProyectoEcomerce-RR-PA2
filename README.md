@@ -63,13 +63,20 @@ Bienvenido a nuestra plataforma de e-commerce especializada en productos didáct
 ## 🛠 Tecnologías y Herramientas
 
 <p align="center">
-<img src="https://img.shields.io/badge/HTML5-28ff97?style=flat">
-<img src="https://img.shields.io/badge/CSS3-28ffff?style=flat">
-<img src="https://img.shields.io/badge/JavaScript-8a28ff?style=flat">
-<img src="https://img.shields.io/badge/Bootstrap-2852ff?style=flat">
-<img src="https://img.shields.io/badge/Figma-ff0000?style=flat">
-<img src="https://img.shields.io/badge/VsCode-ffc100?style=flat">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,bootstrap,js" />
+  </a>
 </p>
+
+
+# BackEnd
+  
+<a href="https://github.com/DanielleSaint/back-end-Journey/tree/developfinal">
+<sub>
+<b>Ir al repositorio</b>
+</sub>
+</a>
+
 
 <p align="center">
 <img src="./assets/images/BLUET.png" width=400px>
