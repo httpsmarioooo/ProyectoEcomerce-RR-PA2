@@ -68,10 +68,10 @@ Bienvenido a nuestra plataforma de e-commerce especializada en productos didáct
   </a>
 </p>
 
-<p align="center">
+
   # BackEnd
-  <a>https://github.com/DanielleSaint/back-end-Journey/tree/developfinal</a>
-</p>
+
+  <a href="https://github.com/DanielleSaint/back-end-Journey/tree/developfinal">
 
 
 
