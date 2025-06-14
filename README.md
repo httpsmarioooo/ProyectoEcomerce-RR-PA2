@@ -64,7 +64,7 @@ Bienvenido a nuestra plataforma de e-commerce especializada en productos didáct
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+    <img src="https://skillicons.dev/icons?i=git,docker,html,css,js,java,mysql,postman" />
   </a>
 </p>
 
